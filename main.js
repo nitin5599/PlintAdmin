@@ -412,7 +412,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"main-content\">\n    <div class=\"container-fluid\">\n        <i class=\"row mb-5 ml-2 fa fa-arrow-left\" (click)=\"goBack()\" aria-hidden=\"true\"></i>\n      <div *ngIf=\"this.count == false || this.items == null; else elseBlock\"></div>\n            <ng-template #elseBlock>\n                <button [routerLink]=\"['/usertrip/start-trip/', this.user_id]\" mat-raised-button color=\"primary\">START TRIP</button>\n            </ng-template>\n\n        <!-- <button *ngIf=\"this.items == null\" (click)=\"StartTrip()\"  mat-raised-button color=\"primary\">START TRIP</button> -->\n\n<div class=\"row \">\n    <div class=\"col-md-12\">\n      <div class=\"card\">\n        <div  class=\"card-header rounded mdc-elevation--z6 card-header\">\n            <h4 class=\"card-title \">User Trips</h4>\n            <p class=\"card-category \">user's trip info</p>\n        </div>\n        <div class=\"card-body rounded mdc-elevation--z6\">\n            <div  class=\"table-responsive\">\n                <table class=\"table\">\n                    <thead class=\" text-black\">\n                        <th>Start Time</th>\n                        <th>End Time</th>\n                        <th>Starting Bal.</th>\n                        <th>Current Bal.</th>\n                        <th>Reimbursement Bal.</th>\n                        <th>Generate Sheet</th>\n                        <th>Status</th>\n                        <th>Action</th>\n                    </thead>\n                    <tbody>\n                        <tr  *ngFor=\"let data of items\">\n                            <td>{{data.started_at | date:'dd/MM/yyyy'}}</td>\n                            <td>{{data.ended_at | date:'dd/MM/yyyy'}}</td> \n                            <td>\n                                <li style=\"list-style: none;\" *ngFor=\"let s_bal of data.starting_balance\">{{s_bal.holding.amount}} {{s_bal.holding.currency}}</li>\n                            </td>\n                            <td>\n                                  <li style=\"list-style: none;\" *ngFor=\"let c_bal of data.current_balance\">{{c_bal.amount}} {{c_bal.currency}}</li>\n                            </td> \n                            <td>\n                                  <li style=\"list-style: none;\" *ngFor=\"let r_bal of data.reimbursement_balance\">{{r_bal.amount}} {{r_bal.currency}}</li>\n                            </td> \n                            <td *ngIf=\"data.expense_sheet_url == ''\"></td>\n                            <td *ngIf=\"data.expense_sheet_url\">\n                                <a mat-raised-button color=\"warn\" href=\"{{data.expense_sheet_url}}\">Generate</a>\n                            </td>\n                            <td style=\"color:green;font-weight: 600;\" *ngIf=\"data.ongoing == true\">Active</td>\n                            <td style=\"color:blue;font-weight: 600;\" *ngIf=\"data.ongoing == false\">Completed</td>\n                            <td>   \n                                <div class=\"example-button-row\">\n                                   <a mat-button  [routerLink]=\"['/transactions/', this.user_id , data._id, data.ongoing]\">View</a>\n                                </div>\n                            </td>\n                        </tr>\n                    </tbody>\n                </table>\n    </div>\n  </div>\n</div>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"main-content\">\n    <div class=\"container-fluid\">\n        <i class=\"row mb-5 ml-2 fa fa-arrow-left\" (click)=\"goBack()\" aria-hidden=\"true\"></i>\n      <div *ngIf=\"this.count == false; else elseBlock\"></div>\n            <ng-template #elseBlock>\n                <button [routerLink]=\"['/usertrip/start-trip/', this.user_id]\" mat-raised-button color=\"primary\">START TRIP</button>\n            </ng-template>\n\n        <!-- <button *ngIf=\"this.items == null\" (click)=\"StartTrip()\"  mat-raised-button color=\"primary\">START TRIP</button> -->\n\n<div class=\"row \">\n    <div class=\"col-md-12\">\n      <div class=\"card\">\n        <div  class=\"card-header rounded mdc-elevation--z6 card-header\">\n            <h4 class=\"card-title \">User Trips</h4>\n            <p class=\"card-category \">user's trip info</p>\n        </div>\n        <div class=\"card-body rounded mdc-elevation--z6\">\n            <div  class=\"table-responsive\">\n                <table class=\"table\">\n                    <thead class=\" text-black\">\n                        <th>Start Time</th>\n                        <th>End Time</th>\n                        <th>Starting Bal.</th>\n                        <th>Current Bal.</th>\n                        <th>Reimbursement Bal.</th>\n                        <th>Generate Sheet</th>\n                        <th>Status</th>\n                        <th>Action</th>\n                    </thead>\n                    <tbody>\n                        <tr  *ngFor=\"let data of items\">\n                            <td>{{data.started_at | date:'dd/MM/yyyy'}}</td>\n                            <td>{{data.ended_at | date:'dd/MM/yyyy'}}</td> \n                            <td>\n                                <li style=\"list-style: none;\" *ngFor=\"let s_bal of data.starting_balance\">{{s_bal.holding.amount}} {{s_bal.holding.currency}}</li>\n                            </td>\n                            <td>\n                                  <li style=\"list-style: none;\" *ngFor=\"let c_bal of data.current_balance\">{{c_bal.amount}} {{c_bal.currency}}</li>\n                            </td> \n                            <td>\n                                  <li style=\"list-style: none;\" *ngFor=\"let r_bal of data.reimbursement_balance\">{{r_bal.amount}} {{r_bal.currency}}</li>\n                            </td> \n                            <td *ngIf=\"data.expense_sheet_url == ''\"></td>\n                            <td *ngIf=\"data.expense_sheet_url\">\n                                <a mat-raised-button color=\"warn\" href=\"{{data.expense_sheet_url}}\">Generate</a>\n                            </td>\n                            <td style=\"color:green;font-weight: 600;\" *ngIf=\"data.ongoing == true\">Active</td>\n                            <td style=\"color:blue;font-weight: 600;\" *ngIf=\"data.ongoing == false\">Completed</td>\n                            <td>   \n                                <div class=\"example-button-row\">\n                                   <a mat-button  [routerLink]=\"['/transactions/', this.user_id , data._id, data.ongoing]\">View</a>\n                                </div>\n                            </td>\n                        </tr>\n                    </tbody>\n                </table>\n    </div>\n  </div>\n</div>\n</div>");
 
 /***/ }),
 
@@ -425,7 +425,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n<div class=\"main-content\">\n    <div class=\"container-fluid\">\n        <app-back></app-back>\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <div class=\"card  \">\n                    <div class=\"card-header rounded mdc-elevation--z6 card-header\">\n                        <h4 class=\"card-title\">Start User Trip</h4>\n                        <p class=\"card-category\">Fill user's trip info</p>\n                    </div>\n                    <div class=\"card-body rounded mdc-elevation--z8\">\n                        \n                <form [formGroup]=\"tripform\" novalidate (ngSubmit)=\"onSubmit()\">\n  \n                    <div formArrayName=\"itemRows\" *ngFor=\"let item of formArr.controls; let i = index\">                       \n                        <div class=\"row\"  [formGroupName]=\"i\">\n \n                            <div  class=\"col-sm-3 form-group\">\n                                <mat-form-field class=\"example-full-width\">\n                                  <input matInput placeholder=\"Amount\" type=\"text\" formControlName=\"amount\">\n                                </mat-form-field>\n                            </div>\n\n                            <div  class=\"col-sm-3 form-group\" >\n                                <mat-form-field appearance=\"fill\">\n                                  <mat-label>Currencies</mat-label>\n                                  <mat-select formControlName=\"currency\">\n                                    <mat-option  *ngFor=\"let curr of currency\" [value]=\"curr.identifier\">\n                                      {{curr.identifier}}\n                                    </mat-option>\n                                  </mat-select>\n                                </mat-form-field>\n                            </div>\n                            \n                            <div class=\"col-sm-3 form-group\" >\n                                <mat-form-field class=\"example-full-width\">\n                                  <input matInput placeholder=\"Conversion Rate\" type=\"text\" formControlName=\"rate\" >\n                                </mat-form-field>\n                            </div>\n\n                            <div class=\"col-sm-3\">\n                                <button  (click)=\"deleteRow(i)\" class=\"btn btn-danger\"><i class=\"fa fa-minus-circle\" aria-hidden=\"true\"></i></button>\n                            </div>\n\n                        </div>     \n                    </div>\n\n                        <div class=\"row col-md-4 \">\n                            <button type=\"button\" (click)=\"addNewRow()\" class=\"btn btn-primary\"><i class=\"fa fa-plus-circle\" aria-hidden=\"true\"></i></button>\n                        </div>\n\n                            <div class=\"col-md-4 mt-5\">\n                                <button  mat-raised-button color=\"primary\" type=\"submit\" class=\" ml-0\">SUBMIT</button>\n                            </div>\n  \n                            <div class=\"clearfix\"></div>\n                        \n                        </form>\n                    </div>\n                </div>\n            </div>\n        </div>\n    \n        \n  \n    \n    </div>\n</div>\n  ");
+/* harmony default export */ __webpack_exports__["default"] = ("\n<div class=\"main-content\">\n    <div class=\"container-fluid\">\n        <app-back></app-back>\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <div class=\"card  \">\n                    <div class=\"card-header rounded mdc-elevation--z6 card-header\">\n                        <h4 class=\"card-title\">Start User Trip</h4>\n                        <p class=\"card-category\">Fill user's trip info</p>\n                    </div>\n                    <div class=\"card-body rounded mdc-elevation--z8\">\n                        \n                <form [formGroup]=\"tripform\" novalidate (ngSubmit)=\"onSubmit()\">\n  \n                    <div formArrayName=\"itemRows\" *ngFor=\"let item of formArr.controls; let i = index\">                       \n                        <div class=\"row\"  [formGroupName]=\"i\">\n \n                            <div  class=\"col-sm-3 form-group\">\n                                <mat-form-field class=\"example-full-width\">\n                                  <input matInput placeholder=\"Amount\" type=\"text\" formControlName=\"amount\">\n                                </mat-form-field>\n                            </div>\n\n                            <div  class=\"col-sm-3 form-group\" >\n                                <mat-form-field appearance=\"fill\">\n                                  <mat-label>Currencies</mat-label>\n                                  <mat-select (selectionChange)=\"onEnter($event.value)\" formControlName=\"currency\">\n                                    <mat-option  *ngFor=\"let curr of currency\" [value]=\"curr.identifier\">\n                                      {{curr.identifier}}\n                                    </mat-option>\n                                  </mat-select>\n                                </mat-form-field>\n                            </div>\n                            \n                            <div  *ngIf=\"this.tripform.value.itemRows[i].currency == 'USD' \" class=\"col-sm-3 form-group\" >\n                                <mat-form-field class=\"example-full-width\">\n                                  <input matInput placeholder=\"INR to USD Conversion Rate\" type=\"text\" formControlName=\"rate\" >\n                                </mat-form-field>\n                            </div>\n\n                            <div  *ngIf=\"this.tripform.value.itemRows[i].currency !== 'USD' \" class=\"col-sm-3 form-group\" >\n                                <mat-form-field class=\"example-full-width\">\n                                  <input matInput placeholder=\"{{this.place}}\" type=\"text\" formControlName=\"rate\" >\n                                </mat-form-field>\n                            </div>\n\n                            <div class=\"col-sm-3\">\n                                <button  (click)=\"deleteRow(i)\" class=\"btn btn-danger\"><i class=\"fa fa-minus-circle\" aria-hidden=\"true\"></i></button>\n                            </div>\n\n                        </div>     \n                    </div>\n\n                        <div class=\"row col-md-4 \">\n                            <button type=\"button\" (click)=\"addNewRow()\" class=\"btn btn-primary\"><i class=\"fa fa-plus-circle\" aria-hidden=\"true\"></i></button>\n                        </div>\n\n                            <div class=\"col-md-4 mt-5\">\n                                <button  mat-raised-button color=\"primary\" type=\"submit\" class=\" ml-0\">SUBMIT</button>\n                            </div>\n  \n                            <div class=\"clearfix\"></div>\n                        \n                        </form>\n                    </div>\n                </div>\n            </div>\n        </div>\n    \n        \n  \n    \n    </div>\n</div>\n  ");
 
 /***/ }),
 
@@ -1328,7 +1328,7 @@ var EditProfileComponent = /** @class */ (function () {
     }
     EditProfileComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.http.get('http://15.207.181.67:3000/admin/users?nonAdminUsers=false').subscribe(function (res) {
+        this.http.get('https://api.plint.in/admin/users?nonAdminUsers=false').subscribe(function (res) {
             _this.items = res.data;
             for (var index in res.data) {
                 if (_this.user_id == res.data[index]._id) {
@@ -1936,7 +1936,7 @@ var UsercrudService = /** @class */ (function () {
         this.http = http;
         this.toastr = toastr;
         this.router = router;
-        this.Url = 'http://15.207.181.67:3000';
+        this.Url = 'https://api.plint.in';
         this.headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpHeaders"]().set('Content-Type', 'application/json')
             .append('Authorization', 'Bearer ' + window.sessionStorage.getItem('access_token'));
         this.isLogged = false;
@@ -2076,7 +2076,7 @@ var SingleTransComponent = /** @class */ (function () {
         this.actRoute = actRoute;
         this.modalService = modalService;
         this.sanitizer = sanitizer;
-        this.Url = 'http://15.207.181.67:3000';
+        this.Url = 'https://api.plint.in';
         this.headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]().set('Content-Type', 'application/json')
             .append('Authorization', 'Bearer ' + window.sessionStorage.getItem('access_token'));
         this.Page = 1;
@@ -2370,7 +2370,7 @@ var SingleusertripComponent = /** @class */ (function () {
         this.router = router;
         this.actRoute = actRoute;
         this.fb = fb;
-        this.Url = 'http://15.207.181.67:3000';
+        this.Url = 'https://api.plint.in';
         this.headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpHeaders"]().set('Content-Type', 'application/json')
             .append('Authorization', 'Bearer ' + window.sessionStorage.getItem('access_token'));
         this.count = true;
@@ -2499,13 +2499,24 @@ var StartTripComponent = /** @class */ (function () {
         this.user_id = this.actRoute.snapshot.params.user_id;
         this.getCurrency();
     };
+    StartTripComponent.prototype.onEnter = function (val) {
+        // console.log(val)
+        this.value = val;
+        if (this.value == 'USD') {
+            this.place = 'INR to USD Conversion Rate';
+        }
+        else {
+            this.place = 'USD to Local Currency Conversion Rate';
+        }
+    };
     StartTripComponent.prototype.showsubmit = function () {
         this.toastr.success('submitted successfully!');
     };
     StartTripComponent.prototype.getCurrency = function () {
         var _this = this;
-        this.http.get('http://15.207.181.67:3000/em/currencies').subscribe(function (res) {
+        this.http.get('https://api.plint.in/em/currencies').subscribe(function (res) {
             _this.currency = res.data;
+            console.log(res);
         });
     };
     Object.defineProperty(StartTripComponent.prototype, "formArr", {
@@ -2648,7 +2659,7 @@ var TransLogComponent = /** @class */ (function () {
     function TransLogComponent(actRoute, http) {
         this.actRoute = actRoute;
         this.http = http;
-        this.Url = 'http://15.207.181.67:3000';
+        this.Url = 'https://api.plint.in';
         this.headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]().set('Content-Type', 'application/json')
             .append('Authorization', 'Bearer ' + window.sessionStorage.getItem('access_token'));
     }
@@ -2657,7 +2668,7 @@ var TransLogComponent = /** @class */ (function () {
     };
     TransLogComponent.prototype.getData = function () {
         var _this = this;
-        this.http.get('http://15.207.181.67:3000/admin/logs?numDays=3').subscribe(function (res) {
+        this.http.get('https://api.plint.in/admin/logs?numDays=3').subscribe(function (res) {
             _this.items = res.data;
         });
     };
@@ -2895,7 +2906,7 @@ var UserslistComponent = /** @class */ (function () {
     };
     UserslistComponent.prototype.getData = function () {
         var _this = this;
-        this.http.get('http://15.207.181.67:3000/admin/users?nonAdminUsers=false').subscribe(function (res) {
+        this.http.get('https://api.plint.in/admin/users?nonAdminUsers=false').subscribe(function (res) {
             _this.items = res.data;
             // console.log(this.items)
         });
@@ -2977,7 +2988,7 @@ var UsertripComponent = /** @class */ (function () {
     function UsertripComponent(actRoute, http) {
         this.actRoute = actRoute;
         this.http = http;
-        this.Url = 'http://15.207.181.67:3000';
+        this.Url = 'https://api.plint.in/';
         this.headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]().set('Content-Type', 'application/json')
             .append('Authorization', 'Bearer ' + window.sessionStorage.getItem('access_token'));
         this.user_id = this.actRoute.snapshot.params.id;
@@ -2987,7 +2998,7 @@ var UsertripComponent = /** @class */ (function () {
     };
     UsertripComponent.prototype.getData = function () {
         var _this = this;
-        this.http.get('http://15.207.181.67:3000/admin/users?emUsersOnly=true&nonAdminUsers=false').subscribe(function (res) {
+        this.http.get('https://api.plint.in/admin/users?emUsersOnly=true&nonAdminUsers=false').subscribe(function (res) {
             _this.items = res.data;
             // console.log(this.items);
         });
