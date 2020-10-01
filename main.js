@@ -286,6 +286,19 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/addcompany/addcompany.component.html":
+/*!********************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/addcompany/addcompany.component.html ***!
+  \********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n<div class=\"main-content\">\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <div class=\"card  \">\n                    <div class=\"card-header rounded mdc-elevation--z6 card-header\">\n                        <h4 class=\"card-title\">Add Company</h4>\n                        <p class=\"card-category\">Add new company</p>\n                    </div>\n                    <div class=\"card-body rounded mdc-elevation--z6\">\n                        <form [formGroup]=\"compform\" novalidate (ngSubmit)=\"onSubmit()\">\n  \n                             <div class=\"col-md-4 form-group\">\n                                <mat-form-field class=\"example-full-width\">\n                                  <input matInput placeholder=\"Company Name\" type=\"text\" formControlName=\"comp_name\">\n                                </mat-form-field>\n                              </div>\n  \n                            <div class=\"row ml-0\">\n                              \n                              <div class=\"col-md-4 form-group\">\n                                  <mat-form-field class=\"example-full-width\">\n                                    <input matInput placeholder=\"Name\" type=\"text\" formControlName=\"person_name\">\n                                  </mat-form-field>\n                              </div>\n\n                              <div class=\"col-md-4 form-group\">\n                                <mat-form-field class=\"example-full-width\">\n                                  <input matInput placeholder=\"Designation\" type=\"text\" formControlName=\"person_des\">\n                                </mat-form-field>\n                              </div>\n\n                          </div>\n\n                          <div formArrayName=\"item_email\" *ngFor=\"let item of compform.controls.item_email['controls']; let i = index\">\n                          <div class=\"row ml-0\" [formGroupName]=\"i\">\n                          \n                             <div class=\"col-md-3 form-group\">\n                                  <mat-form-field class=\"example-full-width\">\n                                    <input matInput placeholder=\"Email\" type=\"text\" formControlName=\"person_email\">\n                                  </mat-form-field>\n                              </div>\n\n                              <div class=\"col-sm-3 \">\n                                <button type=\"button\" (click)=\"add_email()\" class=\"btn btn-primary\"><i class=\"fa fa-plus-circle\" aria-hidden=\"true\"></i></button>\n                              </div>\n\n                              <div *ngIf=\"i\" class=\"col-sm-3\">\n                                <button  (click)=\"delete_email(i)\" class=\"btn btn-danger\"><i class=\"fa fa-minus-circle\" aria-hidden=\"true\"></i></button>\n                              </div>\n\n                          </div>\n                        </div>\n\n                        <div formArrayName=\"item_mob\" *ngFor=\"let item of compform.controls.item_mob['controls']; let i = index\">\n                          <div class=\"row ml-0\" [formGroupName]=\"i\">\n                          \n                             <div class=\"col-md-3 form-group\">\n                               <mat-form-field class=\"example-full-width\">\n                                 <input matInput placeholder=\"Phone\" type=\"text\" formControlName=\"person_mob\">\n                               </mat-form-field>\n                             </div>\n\n                             <div class=\"col-sm-3 \">\n                               <button type=\"button\" (click)=\"add_mob()\" class=\"btn btn-primary\"><i class=\"fa fa-plus-circle\" aria-hidden=\"true\"></i></button>\n                             </div>\n\n                             <div *ngIf=\"i\" class=\"col-sm-3\">\n                              <button  (click)=\"delete_mob(i)\" class=\"btn btn-danger\"><i class=\"fa fa-minus-circle\" aria-hidden=\"true\"></i></button>\n                             </div>\n\n                         </div>\n                        </div>\n\n                              <div class=\"col-md-4 form-group\">\n                                <mat-form-field class=\"example-full-width\">\n                                  <input matInput placeholder=\"Location Type\" type=\"text\" formControlName=\"loc_type\">\n                                </mat-form-field>\n                              </div>\n\n                              <div class=\"col-md-4 form-group\">\n                                <mat-form-field class=\"example-full-width\">\n                                  <input matInput placeholder=\"Location Area\" type=\"text\" formControlName=\"loc_area\">\n                                </mat-form-field>\n                              </div>\n\n                              <div class=\"col-md-4 form-group\">\n                                <mat-form-field class=\"example-full-width\">\n                                  <input matInput placeholder=\"Company Address\" type=\"text\" formControlName=\"addr\">\n                                </mat-form-field>\n                              </div>\n\n                              <div class=\"col-md-4 form-group\">\n                                <mat-form-field class=\"example-full-width\">\n                                  <input matInput placeholder=\"Reference\" type=\"text\" formControlName=\"refer\">\n                                </mat-form-field>\n                              </div>\n                            \n                              <div class=\"col-md-4 mt-3 mb-3\">\n                                <button mat-raised-button color=\"warn\" type=\"submit\" >SUBMIT</button>\n                              </div>\n  \n                            <div class=\"clearfix\"></div>\n                        \n                        </form>\n                    </div>\n                </div>\n            </div>\n          </div>\n    \n        \n    </div>\n  </div>\n  ");
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/app.component.html":
 /*!**************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/app.component.html ***!
@@ -351,6 +364,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/confirm/confirm.component.html":
+/*!**************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/confirm/confirm.component.html ***!
+  \**************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"confirm-dialog-container\">\n    <div class=\"content-container\">\n      <!-- <mat-icon id=\"close-icon\" (click)=\"closeDialog()\">close</mat-icon> -->\n      <span class=\"content-span full-width\">{{data.message}}</span>\n    </div>\n    <button mat-flat-button id=\"no-button\" [mat-dialog-close]=\"false\">NO</button>\n    <button mat-flat-button id=\"yes-button\" [mat-dialog-close]=\"true\">YES</button>\n  </div>");
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/edit-profile/edit-profile.component.html":
 /*!************************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/edit-profile/edit-profile.component.html ***!
@@ -412,7 +438,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"main-content\">\n    <div class=\"container-fluid\">\n        <i class=\"row mb-5 ml-2 fa fa-arrow-left\" (click)=\"goBack()\" aria-hidden=\"true\"></i>\n      <div *ngIf=\"this.count == false; else elseBlock\"></div>\n            <ng-template #elseBlock>\n                <button [routerLink]=\"['/usertrip/start-trip/', this.user_id]\" mat-raised-button color=\"primary\">START TRIP</button>\n            </ng-template>\n\n        <!-- <button *ngIf=\"this.items == null\" (click)=\"StartTrip()\"  mat-raised-button color=\"primary\">START TRIP</button> -->\n\n<div class=\"row \">\n    <div class=\"col-md-12\">\n      <div class=\"card\">\n        <div  class=\"card-header rounded mdc-elevation--z6 card-header\">\n            <h4 class=\"card-title \">User Trips</h4>\n            <p class=\"card-category \">user's trip info</p>\n        </div>\n        <div class=\"card-body rounded mdc-elevation--z6\">\n            <div  class=\"table-responsive\">\n                <table class=\"table\">\n                    <thead class=\" text-black\">\n                        <th>Start Time</th>\n                        <th>End Time</th>\n                        <th>Starting Bal.</th>\n                        <th>Current Bal.</th>\n                        <th>Reimbursement Bal.</th>\n                        <th>Generate Sheet</th>\n                        <th>Status</th>\n                        <th>Action</th>\n                    </thead>\n                    <tbody>\n                        <tr  *ngFor=\"let data of items\">\n                            <td>{{data.started_at | date:'dd/MM/yyyy'}}</td>\n                            <td>{{data.ended_at | date:'dd/MM/yyyy'}}</td> \n                            <td>\n                                <li style=\"list-style: none;\" *ngFor=\"let s_bal of data.starting_balance\">{{s_bal.holding.amount}} {{s_bal.holding.currency}}</li>\n                            </td>\n                            <td>\n                                  <li style=\"list-style: none;\" *ngFor=\"let c_bal of data.current_balance\">{{c_bal.amount}} {{c_bal.currency}}</li>\n                            </td> \n                            <td>\n                                  <li style=\"list-style: none;\" *ngFor=\"let r_bal of data.reimbursement_balance\">{{r_bal.amount}} {{r_bal.currency}}</li>\n                            </td> \n                            <td *ngIf=\"data.expense_sheet_url == ''\"></td>\n                            <td *ngIf=\"data.expense_sheet_url\">\n                                <a mat-raised-button color=\"warn\" href=\"{{data.expense_sheet_url}}\">Generate</a>\n                            </td>\n                            <td style=\"color:green;font-weight: 600;\" *ngIf=\"data.ongoing == true\">Active</td>\n                            <td style=\"color:blue;font-weight: 600;\" *ngIf=\"data.ongoing == false\">Completed</td>\n                            <td>   \n                                <div class=\"example-button-row\">\n                                   <a mat-button  [routerLink]=\"['/transactions/', this.user_id , data._id, data.ongoing]\">View</a>\n                                </div>\n                            </td>\n                        </tr>\n                    </tbody>\n                </table>\n    </div>\n  </div>\n</div>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"main-content\">\n    <div class=\"container-fluid\">\n        <i class=\"row mb-5 ml-2 fa fa-arrow-left\" (click)=\"goBack()\" aria-hidden=\"true\"></i>\n      <div *ngIf=\"this.count == false; else elseBlock\"></div>\n            <ng-template #elseBlock>\n                <button [routerLink]=\"['/usertrip/start-trip/', this.user_id]\" mat-raised-button color=\"primary\">START TRIP</button>\n            </ng-template>\n\n        <!-- <button *ngIf=\"this.items == null\" (click)=\"StartTrip()\"  mat-raised-button color=\"primary\">START TRIP</button> -->\n\n<div class=\"row \">\n    <div class=\"col-md-12\">\n      <div class=\"card\">\n        <div  class=\"card-header rounded mdc-elevation--z6 card-header\">\n            <h4 class=\"card-title \">User Trips</h4>\n            <p class=\"card-category \">user's trip info</p>\n        </div>\n        <div class=\"card-body rounded mdc-elevation--z6\">\n            <div  class=\"table-responsive\">\n                <table class=\"table\">\n                    <thead class=\" text-black\">\n                        <th>Start Time</th>\n                        <th>End Time</th>\n                        <th>Starting Bal.</th>\n                        <th>Current Bal.</th>\n                        <th>Reimbursement Bal.</th>\n                        <th>Sheet</th>\n                        <th>Status</th>\n                        <th>Action</th>\n                    </thead>\n                    <tbody>\n                        <tr  *ngFor=\"let data of items\">\n                            <td>{{data.started_at | date:'dd/MM/yyyy'}}</td>\n                            <td>{{data.ended_at | date:'dd/MM/yyyy'}}</td> \n                            <td>\n                                <li style=\"list-style: none;\" *ngFor=\"let s_bal of data.starting_balance\">{{s_bal.holding.amount}} {{s_bal.holding.currency}}</li>\n                            </td>\n                            <td>\n                                  <li style=\"list-style: none;\" *ngFor=\"let c_bal of data.current_balance\">{{c_bal.amount}} {{c_bal.currency}}</li>\n                            </td> \n                            <td>\n                                  <li style=\"list-style: none;\" *ngFor=\"let r_bal of data.reimbursement_balance\">{{r_bal.amount}} {{r_bal.currency}}</li>\n                            </td> \n                            <td *ngIf=\"data.expense_sheet_url == ''\">\n                                <a mat-raised-button  color=\"accent\"  href=\"{{data.expense_sheet_url}}\">Generate</a>\n                            </td>\n                            <td *ngIf=\"data.expense_sheet_url\">\n                                <a mat-raised-button color=\"warn\"  href=\"{{data.expense_sheet_url}}\">Download</a>\n                            </td>\n                            <td style=\"color:green;font-weight: 600;\" *ngIf=\"data.ongoing == true\">Active</td>\n                            <td style=\"color:blue;font-weight: 600;\" *ngIf=\"data.ongoing == false\">Completed</td>\n                            <td>   \n                                <div class=\"example-button-row\">\n                                   <a mat-button  [routerLink]=\"['/transactions/', this.user_id , data._id, data.ongoing]\">View</a>\n                                </div>\n                            </td>\n                        </tr>\n                    </tbody>\n                </table>\n    </div>\n  </div>\n</div>\n</div>");
 
 /***/ }),
 
@@ -425,7 +451,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n<div class=\"main-content\">\n    <div class=\"container-fluid\">\n        <app-back></app-back>\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <div class=\"card  \">\n                    <div class=\"card-header rounded mdc-elevation--z6 card-header\">\n                        <h4 class=\"card-title\">Start User Trip</h4>\n                        <p class=\"card-category\">Fill user's trip info</p>\n                    </div>\n                    <div class=\"card-body rounded mdc-elevation--z8\">\n                        \n                <form [formGroup]=\"tripform\" novalidate (ngSubmit)=\"onSubmit()\">\n  \n                    <div formArrayName=\"itemRows\" *ngFor=\"let item of formArr.controls; let i = index\">                       \n                        <div class=\"row\"  [formGroupName]=\"i\">\n \n                            <div  class=\"col-sm-3 form-group\">\n                                <mat-form-field class=\"example-full-width\">\n                                  <input matInput placeholder=\"Amount\" type=\"text\" formControlName=\"amount\">\n                                </mat-form-field>\n                            </div>\n\n                            <div  class=\"col-sm-3 form-group\" >\n                                <mat-form-field appearance=\"fill\">\n                                  <mat-label>Currencies</mat-label>\n                                  <mat-select (selectionChange)=\"onEnter($event.value)\" formControlName=\"currency\">\n                                    <mat-option  *ngFor=\"let curr of currency\" [value]=\"curr.identifier\">\n                                        {{curr.name}} ({{curr.identifier}})\n                                    </mat-option>\n                                  </mat-select>\n                                </mat-form-field>\n                            </div>\n                            \n                            <div  *ngIf=\"this.tripform.value.itemRows[i].currency == 'USD' \" class=\"col-sm-3 form-group\" >\n                                <mat-form-field class=\"example-full-width\">\n                                  <input matInput placeholder=\"INR to USD Conversion Rate\" type=\"text\" formControlName=\"rate\" >\n                                </mat-form-field>\n                            </div>\n\n                            <div  *ngIf=\"this.tripform.value.itemRows[i].currency !== 'USD' \" class=\"col-sm-3 form-group\" >\n                                <mat-form-field class=\"example-full-width\">\n                                  <input matInput placeholder=\"{{this.place}}\" type=\"text\" formControlName=\"rate\" >\n                                </mat-form-field>\n                            </div>\n\n                            <div class=\"col-sm-3\">\n                                <button  (click)=\"deleteRow(i)\" class=\"btn btn-danger\"><i class=\"fa fa-minus-circle\" aria-hidden=\"true\"></i></button>\n                            </div>\n\n                        </div>     \n                    </div>\n\n                        <div class=\"row col-md-4 \">\n                            <button type=\"button\" (click)=\"addNewRow()\" class=\"btn btn-primary\"><i class=\"fa fa-plus-circle\" aria-hidden=\"true\"></i></button>\n                        </div>\n\n                            <div class=\"col-md-4 mt-5\">\n                                <button  mat-raised-button color=\"primary\" type=\"submit\" class=\" ml-0\">SUBMIT</button>\n                            </div>\n  \n                            <div class=\"clearfix\"></div>\n                        \n                        </form>\n                    </div>\n                </div>\n            </div>\n        </div>\n    \n        \n  \n    \n    </div>\n</div>\n  ");
+/* harmony default export */ __webpack_exports__["default"] = ("\n<div class=\"main-content\">\n    <div class=\"container-fluid\">\n        <app-back></app-back>\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <div class=\"card  \">\n                    <div class=\"card-header rounded mdc-elevation--z6 card-header\">\n                        <h4 class=\"card-title\">Start User Trip</h4>\n                        <p class=\"card-category\">Fill user's trip info</p>\n                    </div>\n                    <div class=\"card-body rounded mdc-elevation--z8\">\n                        \n                <form [formGroup]=\"tripform\" novalidate (ngSubmit)=\"onSubmit()\">\n  \n                    <div formArrayName=\"itemRows\" *ngFor=\"let item of formArr.controls; let i = index\">                       \n                        <div class=\"row\"  [formGroupName]=\"i\">\n \n                            <div  class=\"col-sm-3 form-group\">\n                                <mat-form-field class=\"example-full-width\">\n                                  <input matInput placeholder=\"Amount\" type=\"text\" formControlName=\"amount\">\n                                </mat-form-field>\n                            </div>\n\n                            <div  class=\"col-sm-3 form-group\" >\n                                <mat-form-field appearance=\"fill\">\n                                  <mat-label>Currencies</mat-label>\n                                  <mat-select  (selectionChange)=\"onEnter($event.value)\" formControlName=\"currency\">\n                                    <mat-option  *ngFor=\"let curr of currency | sortBy: 'asc':'name' \" [value]=\"curr.identifier\">\n                                        {{curr.name}} ({{curr.identifier}})\n                                    </mat-option>\n                                  </mat-select>\n                                </mat-form-field>\n                            </div>\n                            \n                            <div  *ngIf=\"this.tripform.value.itemRows[i].currency !== 'USD' \" class=\"col-sm-3 form-group\" >\n                                <mat-form-field class=\"example-full-width\">\n                                  <input matInput placeholder=\"USD to {{this.value}} Conversion Rate\" type=\"text\" formControlName=\"rate\" >\n                                </mat-form-field>\n                            </div>\n\n                            <div  *ngIf=\"this.tripform.value.itemRows[i].currency == 'USD' \" class=\"col-sm-3 form-group\" >\n                                <mat-form-field class=\"example-full-width\">\n                                  <input matInput placeholder=\"\" type=\"text\" formControlName=\"rate\" >\n                                </mat-form-field>\n                            </div>\n\n                            <div class=\"col-sm-3\">\n                                <button  (click)=\"deleteRow(i)\" class=\"btn btn-danger\"><i class=\"fa fa-minus-circle\" aria-hidden=\"true\"></i></button>\n                            </div>\n\n                        </div>     \n                    </div>\n\n                        <div class=\"row col-md-4 \">\n                            <button type=\"button\" (click)=\"addNewRow()\" class=\"btn btn-primary\"><i class=\"fa fa-plus-circle\" aria-hidden=\"true\"></i></button>\n                        </div>\n\n                            <div class=\"col-md-4 mt-5\">\n                                <button  mat-raised-button color=\"primary\" type=\"submit\" class=\" ml-0\">SUBMIT</button>\n                            </div>\n  \n                            <div class=\"clearfix\"></div>\n                        \n                        </form>\n                    </div>\n                </div>\n            </div>\n        </div>\n    \n        \n  \n    \n    </div>\n</div>\n  ");
 
 /***/ }),
 
@@ -451,7 +477,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n<div class=\"main-content\">\n  <div class=\"container-fluid\">\n      <div class=\"row\">\n          <div class=\"col-md-12\">\n              <div class=\"card  \">\n                  <div class=\"card-header rounded mdc-elevation--z6 card-header\">\n                      <h4 class=\"card-title\">Add User</h4>\n                      <p class=\"card-category\">Add new User</p>\n                  </div>\n                  <div class=\"card-body rounded mdc-elevation--z6\">\n                      <form [formGroup]=\"userform\" novalidate (ngSubmit)=\"onSubmit()\">\n\n                           <div class=\"col-md-4 form-group\">\n                              <mat-form-field class=\"example-full-width\">\n                                <input matInput placeholder=\"Employee Code\" type=\"text\" formControlName=\"employee_code\">\n                              </mat-form-field>\n                            </div>\n\n                            <div class=\"col-md-4 form-group\">\n                                <mat-form-field class=\"example-full-width\">\n                                  <input matInput placeholder=\"Full Name\" type=\"text\" formControlName=\"name\">\n                                </mat-form-field>\n                            </div>\n                            \n                            <div class=\"col-md-4 form-group\">\n                                <mat-form-field appearance=\"fill\">\n                                  <mat-label>Role</mat-label>\n                                  <mat-select formControlName=\"role\" >\n                                    <mat-option *ngFor=\"let rol of role\" [value]=\"rol\">\n                                      {{rol}}\n                                    </mat-option>\n                                  </mat-select>\n                                </mat-form-field>\n                            </div>\n                          \n                            <div class=\"col-md-4 form-group\">\n                                <mat-form-field class=\"example-full-width\">\n                                  <input matInput placeholder=\"Email\" formControlName=\"email\" type=\"text\">\n                                </mat-form-field>\n                            </div>\n                          \n                            <div class=\"col-md-4 form-group\">\n                                <!-- <mat-form-field appearance=\"fill\"> -->\n                                  <mat-label class=\"row  mb-3 ml-0\">Expense Manager</mat-label>\n                                  <mat-radio-group class=\"row mb-3 ml-0\" formControlName=\"is_expense_manager_user\" aria-label=\"Expense Manager\">\n                                    <mat-radio-button [value]=true>True</mat-radio-button>\n                                    <mat-radio-button [value]=false>False</mat-radio-button>\n                                  </mat-radio-group>\n                                  <!-- <mat-select formControlName=\"is_expense_manager_user\" >\n                                    <mat-option [value]=true>True</mat-option>\n                                    <mat-option [value]=false>False</mat-option>\n                                  </mat-select> -->\n                                <!-- </mat-form-field> -->\n                            </div>\n                          \n                            <div class=\"col-md-4 mt-3 mb-3\">\n                              <button mat-raised-button color=\"warn\" type=\"submit\" >SUBMIT</button>\n                            </div>\n\n                          <div class=\"clearfix\"></div>\n                      \n                      </form>\n                  </div>\n              </div>\n          </div>\n        </div>\n  \n      \n  </div>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("\n<div class=\"main-content\">\n  <div class=\"container-fluid\">\n      <div class=\"row\">\n          <div class=\"col-md-12\">\n              <div class=\"card  \">\n                  <div class=\"card-header rounded mdc-elevation--z6 card-header\">\n                      <h4 class=\"card-title\">Add User</h4>\n                      <p class=\"card-category\">Add new User</p>\n                  </div>\n                  <div class=\"card-body rounded mdc-elevation--z6\">\n                      <form [formGroup]=\"userform\" novalidate (ngSubmit)=\"onSubmit()\">\n\n                           <div class=\"col-md-4 form-group\">\n                              <mat-form-field class=\"example-full-width\">\n                                <input matInput placeholder=\"Employee Code\" type=\"text\" formControlName=\"employee_code\">\n                              </mat-form-field>\n                            </div>\n\n                            <div class=\"col-md-4 form-group\">\n                                <mat-form-field class=\"example-full-width\">\n                                  <input matInput placeholder=\"Full Name\" type=\"text\" formControlName=\"name\">\n                                </mat-form-field>\n                            </div>\n                            \n                            <div class=\"col-md-4 form-group\">\n                                <mat-form-field appearance=\"fill\">\n                                  <mat-label>Role</mat-label>\n                                  <mat-select formControlName=\"role\" >\n                                    <mat-option *ngFor=\"let rol of role\" [value]=\"rol\">\n                                      {{rol}}\n                                    </mat-option>\n                                  </mat-select>\n                                </mat-form-field>\n                            </div>\n                          \n                            <div class=\"col-md-4 form-group\">\n                                <mat-form-field class=\"example-full-width\">\n                                  <input matInput placeholder=\"Email\" formControlName=\"email\" type=\"text\">\n                                </mat-form-field>\n                            </div>\n                          \n                            <div class=\"col-md-4 form-group\">\n                                <!-- <mat-form-field appearance=\"fill\"> -->\n                                  <mat-label class=\"row  mb-3 ml-0\">Will this user use the Expense Manager?</mat-label>\n                                  <mat-radio-group class=\"row mb-3 ml-0\" formControlName=\"is_expense_manager_user\" aria-label=\"Expense Manager\">\n                                    <mat-radio-button [value]=true>Yes</mat-radio-button>\n                                    <mat-radio-button [value]=false>No</mat-radio-button>\n                                  </mat-radio-group>\n                                  <!-- <mat-select formControlName=\"is_expense_manager_user\" >\n                                    <mat-option [value]=true>True</mat-option>\n                                    <mat-option [value]=false>False</mat-option>\n                                  </mat-select> -->\n                                <!-- </mat-form-field> -->\n                            </div>\n                          \n                            <div class=\"col-md-4 mt-3 mb-3\">\n                              <button mat-raised-button color=\"warn\" type=\"submit\" >SUBMIT</button>\n                            </div>\n\n                          <div class=\"clearfix\"></div>\n                      \n                      </form>\n                  </div>\n              </div>\n          </div>\n        </div>\n  \n      \n  </div>\n</div>\n");
 
 /***/ }),
 
@@ -478,6 +504,19 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("<div class=\"main-content\">\n    <div class=\"container-fluid\">\n        <app-back></app-back>\n<div class=\"row \">\n    <div class=\"col-md-12\">\n      <div class=\"card\">\n        <div  class=\"card-header rounded mdc-elevation--z6 card-header\">\n            <h4 class=\"card-title \">User Trips</h4>\n            <p class=\"card-category \">manage user's trip info</p>\n        </div>\n        <div class=\"card-body rounded mdc-elevation--z6\">\n            <div  class=\"table-responsive\">\n                <table class=\"table\">\n                    <thead class=\" text-black\">\n                        <th>Empcode</th>\n                        <th>Name</th>\n                        <th>Email</th>\n                        <th>Role</th>\n                    </thead>\n                    <tbody>\n                        <tr [routerLink]=\"['/usertrip/', data._id]\" *ngFor=\"let data of items\">\n                            <td>{{data.employee_code}}</td>\n                            <td>{{data.name}}</td>\n                            <td>{{data.email}}</td>\n                            <td>{{data.role}}</td>\n                        </tr>\n                    </tbody>\n                </table>\n    </div>\n  </div>\n</div>\n</div>");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/viewcompany/viewcompany.component.html":
+/*!**********************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/viewcompany/viewcompany.component.html ***!
+  \**********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n<div class=\"main-content\">\n    <div class=\"container-fluid\">\n      <app-back></app-back>\n          <div class=\"row\">\n            <div class=\"col-md-12\">\n              <div class=\"card\">\n                <div  class=\"card-header rounded mdc-elevation--z6 card-header\">\n                    <h4 class=\"card-title \">View Company</h4>\n                    <p class=\"card-category \">About company info</p>\n                </div>\n                <div class=\"card-body rounded mdc-elevation--z6\">\n                    <div  class=\"table-responsive\">\n                        <table class=\"table\">\n                            <thead class=\" text-black\">\n                                <th>Company Name</th>\n                                <th colspan=\"4\" class=\" text-center\">Person met</th>\n                                <th colspan=\"2\" class=\" text-center\">Location</th>\n                                <th class=\"\">Address</th>\n                            </thead>\n                            <tbody>\n                                <tr>\n                                    <td></td>\n                                    <th>Name</th>\n                                    <th>Designation</th>\n                                    <th>Email</th>\n                                    <th>Phone</th>\n                                    <th>Type</th>\n                                    <th>Area</th>\n                                    <td></td>\n                                </tr>\n                                <tr   *ngFor=\"let data of items; let i = index;\">\n                                    <td>{{data.company_name}}</td>\n                                    <td>{{data.default_person_met.name}}</td>\n                                    <td>{{data.default_person_met.designation}}</td>    \n                                    <td>{{data.default_person_met.email}}</td>\n                                    <td>{{data.default_person_met.mobile}}</td>\n                                    <td>{{data.location.type}}</td>\n                                    <td>{{data.location.area}}</td>\n                                    <td>{{data.company_address}}</td>\n                                </tr>\n                            </tbody>\n                        </table>\n            </div>\n          </div>\n  \n    \n    </div>\n  </div>\n  ");
 
 /***/ }),
 
@@ -509,6 +548,199 @@ webpackAsyncContext.keys = function webpackAsyncContextKeys() {
 };
 webpackAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 module.exports = webpackAsyncContext;
+
+/***/ }),
+
+/***/ "./src/app/addcompany/addcompany.component.css":
+/*!*****************************************************!*\
+  !*** ./src/app/addcompany/addcompany.component.css ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("/* @import \"@material/elevation/mdc-elevation\"; */\r\n\r\n.card-header{\r\n    background-color:#008080  ;\r\n}\r\n\r\n.card-title{\r\n    color: white;\r\n}\r\n\r\n.card-header .card-category {\r\n    color: white;\r\n}\r\n\r\n.mat-radio-button ~ .mat-radio-button {\r\n    margin-left: 16px;\r\n  }\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYWRkY29tcGFueS9hZGRjb21wYW55LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsaURBQWlEOztBQUVqRDtJQUNJLDBCQUEwQjtBQUM5Qjs7QUFDQTtJQUNJLFlBQVk7QUFDaEI7O0FBQ0E7SUFDSSxZQUFZO0FBQ2hCOztBQUVBO0lBQ0ksaUJBQWlCO0VBQ25CIiwiZmlsZSI6InNyYy9hcHAvYWRkY29tcGFueS9hZGRjb21wYW55LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvKiBAaW1wb3J0IFwiQG1hdGVyaWFsL2VsZXZhdGlvbi9tZGMtZWxldmF0aW9uXCI7ICovXHJcblxyXG4uY2FyZC1oZWFkZXJ7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiMwMDgwODAgIDtcclxufVxyXG4uY2FyZC10aXRsZXtcclxuICAgIGNvbG9yOiB3aGl0ZTtcclxufVxyXG4uY2FyZC1oZWFkZXIgLmNhcmQtY2F0ZWdvcnkge1xyXG4gICAgY29sb3I6IHdoaXRlO1xyXG59XHJcblxyXG4ubWF0LXJhZGlvLWJ1dHRvbiB+IC5tYXQtcmFkaW8tYnV0dG9uIHtcclxuICAgIG1hcmdpbi1sZWZ0OiAxNnB4O1xyXG4gIH0iXX0= */");
+
+/***/ }),
+
+/***/ "./src/app/addcompany/addcompany.component.ts":
+/*!****************************************************!*\
+  !*** ./src/app/addcompany/addcompany.component.ts ***!
+  \****************************************************/
+/*! exports provided: AddcompanyComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddcompanyComponent", function() { return AddcompanyComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm5/forms.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm5/router.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm5/http.js");
+/* harmony import */ var _services_usercrud_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../services/usercrud.service */ "./src/app/services/usercrud.service.ts");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/__ivy_ngcc__/fesm2015/ngx-toastr.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+
+
+
+var AddcompanyComponent = /** @class */ (function () {
+    function AddcompanyComponent(userservice, toastr, http, router, fb) {
+        this.userservice = userservice;
+        this.toastr = toastr;
+        this.http = http;
+        this.router = router;
+        this.fb = fb;
+        this.headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpHeaders"]().set('Content-Type', 'application/json')
+            .append('Authorization', 'Bearer ' + window.sessionStorage.getItem('access_token'));
+    }
+    AddcompanyComponent.prototype.ngOnInit = function () {
+        this.compform = this.fb.group({
+            comp_name: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+            person_name: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+            person_des: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+            item_email: this.fb.array([this.initemail()]),
+            item_mob: this.fb.array([this.initmob()]),
+            loc_type: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+            loc_area: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+            addr: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+            refer: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+        });
+    };
+    AddcompanyComponent.prototype.showSubmit = function () {
+        this.toastr.success('submitted successfully!');
+    };
+    AddcompanyComponent.prototype.initemail = function () {
+        return this.fb.group({
+            person_email: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].compose([
+                    _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required,
+                    _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')
+                ])],
+        });
+    };
+    AddcompanyComponent.prototype.initmob = function () {
+        return this.fb.group({
+            person_mob: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].compose([
+                    _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required,
+                    _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].pattern("^[0-9]*$"), _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].minLength(10), _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].maxLength(10)
+                ])],
+        });
+    };
+    Object.defineProperty(AddcompanyComponent.prototype, "email_formArr", {
+        get: function () {
+            return this.compform.get('item_email');
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(AddcompanyComponent.prototype, "mob_formArr", {
+        get: function () {
+            return this.compform.get('item_mob');
+        },
+        enumerable: true,
+        configurable: true
+    });
+    AddcompanyComponent.prototype.add_email = function () {
+        this.email_formArr.push(this.initemail());
+    };
+    AddcompanyComponent.prototype.delete_email = function (index) {
+        this.email_formArr.removeAt(index);
+    };
+    AddcompanyComponent.prototype.add_mob = function () {
+        this.mob_formArr.push(this.initmob());
+    };
+    AddcompanyComponent.prototype.delete_mob = function (index) {
+        this.mob_formArr.removeAt(index);
+    };
+    AddcompanyComponent.prototype.onSubmit = function () {
+        var _this = this;
+        if (this.compform.valid) {
+            var email_num = (this.compform.value.item_email.length);
+            var mob_num = (this.compform.value.item_mob.length);
+            var email = [];
+            var phone = [];
+            for (var i = 0; i < email_num; i++) {
+                email.push(this.compform.value.item_email[i].person_email);
+            }
+            for (var i = 0; i < mob_num; i++) {
+                phone.push(this.compform.value.item_mob[i].person_mob);
+            }
+            var httpOptions = {
+                "company_name": this.compform.value.comp_name,
+                "default_person_met": {
+                    "name": this.compform.value.person_name,
+                    "email": email,
+                    "mobile": phone,
+                    "designation": this.compform.value.person_des
+                },
+                "company_address": this.compform.value.addr,
+                "location": {
+                    "type": this.compform.value.loc_type,
+                    "area": this.compform.value.loc_area
+                },
+                "reference": this.compform.value.refer,
+            };
+            // console.log(httpOptions);    
+            this.http.post('https://api.plint.in/dsr/companies', httpOptions, { headers: this.headers })
+                .subscribe(function (res) {
+                console.log(res);
+                _this.showSubmit();
+                _this.reset();
+                _this.router.navigateByUrl('/view_company');
+            });
+        }
+        else {
+            this.toastr.error('Error', 'Try again', {
+                timeOut: 3000,
+            });
+        }
+    };
+    AddcompanyComponent.prototype.reset = function () {
+        this.compform = this.fb.group({
+            comp_name: "",
+            person_name: "",
+            person_des: "",
+            person_email: "",
+            person_mob: "",
+            loc_area: "",
+            loc_type: "",
+            addr: "",
+            refer: ""
+        });
+    };
+    AddcompanyComponent.ctorParameters = function () { return [
+        { type: _services_usercrud_service__WEBPACK_IMPORTED_MODULE_4__["UsercrudService"] },
+        { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_5__["ToastrService"] },
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
+        { type: _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"] }
+    ]; };
+    AddcompanyComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-addcompany',
+            template: __importDefault(__webpack_require__(/*! raw-loader!./addcompany.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/addcompany/addcompany.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./addcompany.component.css */ "./src/app/addcompany/addcompany.component.css")).default]
+        }),
+        __metadata("design:paramtypes", [_services_usercrud_service__WEBPACK_IMPORTED_MODULE_4__["UsercrudService"], ngx_toastr__WEBPACK_IMPORTED_MODULE_5__["ToastrService"], _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"]])
+    ], AddcompanyComponent);
+    return AddcompanyComponent;
+}());
+
+
 
 /***/ }),
 
@@ -603,6 +835,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material_form_field__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! @angular/material/form-field */ "./node_modules/@angular/material/__ivy_ngcc__/fesm5/form-field.js");
 /* harmony import */ var _angular_cdk_table__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! @angular/cdk/table */ "./node_modules/@angular/cdk/__ivy_ngcc__/fesm5/table.js");
 /* harmony import */ var ng2_charts__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ng2-charts */ "./node_modules/ng2-charts/fesm2015/valor-software-ng2-charts.js");
+/* harmony import */ var _confirm_confirm_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./confirm/confirm.component */ "./src/app/confirm/confirm.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -612,6 +845,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
   return (mod && mod.__esModule) ? mod : { "default": mod };
 };
+
 
 
 
@@ -677,6 +911,7 @@ var AppModule = /** @class */ (function () {
                 _layouts_admin_layout_admin_layout_component__WEBPACK_IMPORTED_MODULE_13__["AdminLayoutComponent"],
                 _singleusertrip_singleusertrip_component__WEBPACK_IMPORTED_MODULE_17__["SingleusertripComponent"],
                 _single_trans_single_trans_component__WEBPACK_IMPORTED_MODULE_18__["SingleTransComponent"],
+                _confirm_confirm_component__WEBPACK_IMPORTED_MODULE_30__["ConfirmComponent"],
             ],
             providers: [
                 _services_usercrud_service__WEBPACK_IMPORTED_MODULE_15__["UsercrudService"],
@@ -688,7 +923,8 @@ var AppModule = /** @class */ (function () {
                 }
             ],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_12__["AppComponent"]],
-            schemas: [_angular_core__WEBPACK_IMPORTED_MODULE_1__["CUSTOM_ELEMENTS_SCHEMA"]]
+            schemas: [_angular_core__WEBPACK_IMPORTED_MODULE_1__["CUSTOM_ELEMENTS_SCHEMA"]],
+            entryComponents: [_confirm_confirm_component__WEBPACK_IMPORTED_MODULE_30__["ConfirmComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -1221,6 +1457,8 @@ var ROUTES = [
     { path: '/userslist', title: 'Users List', icon: 'list', class: '' },
     { path: '/usertrips', title: 'Manage Trips', icon: 'loyalty', class: '' },
     { path: '/log', title: 'Transaction Log', icon: 'receipt_long', class: '' },
+    { path: '/add_company', title: 'Add Company', icon: 'note_add', class: '' },
+    { path: '/view_company', title: 'View Company', icon: 'dashboard', class: '' },
 ];
 var SidebarComponent = /** @class */ (function () {
     function SidebarComponent() {
@@ -1244,6 +1482,78 @@ var SidebarComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], SidebarComponent);
     return SidebarComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/confirm/confirm.component.css":
+/*!***********************************************!*\
+  !*** ./src/app/confirm/confirm.component.css ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (" /* for dialog pop-up */\r\n  .btn-dialog-close{\r\n    width: 45px;\r\n    min-width: 0px !important;\r\n    height: 40px;\r\n    padding: 0px !important;\r\n  }\r\n  /* mat-confirm-dialog (customised dialog) */\r\n  .confirm-dialog-container .mat-dialog-container {\r\n    border-radius: .25em .25em .4em .4em;\r\n    padding: 0px;\r\n}\r\n  .confirm-dialog-container .content-container{\r\n    margin: 5px 5px 15px 5px;\r\n    color: #8f9cb5;\r\n    display: -webkit-box;\r\n    display: flex;\r\n}\r\n  .confirm-dialog-container #close-icon{\r\n    margin-left: auto;\r\n    -webkit-box-ordinal-group: 3;\r\n            order: 2;\r\n    font-weight: bolder;\r\n}\r\n  .confirm-dialog-container #close-icon:hover{\r\ncursor: pointer;\r\n}\r\n  .confirm-dialog-container #no-button{\r\nheight: 50px;\r\nwidth: 50%;\r\nbackground-color: #fc7169;\r\ncolor:white;\r\nborder-radius: 0px;\r\n}\r\n  .confirm-dialog-container #yes-button{\r\n    height: 50px;\r\n    width: 50%;\r\n    background-color: #b6bece;\r\n    color:white;\r\n    border-radius: 0px;\r\n}\r\n  .confirm-dialog-container span.content-span{\r\n    padding:  35px 16px;\r\n    text-align: center;\r\n    font-size: 20px;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29uZmlybS9jb25maXJtLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkNBQUMsc0JBQXNCO0VBQ3JCO0lBQ0UsV0FBVztJQUNYLHlCQUF5QjtJQUN6QixZQUFZO0lBQ1osdUJBQXVCO0VBQ3pCO0VBRUMsMkNBQTJDO0VBQzNDO0lBQ0Msb0NBQW9DO0lBQ3BDLFlBQVk7QUFDaEI7RUFDQTtJQUNJLHdCQUF3QjtJQUN4QixjQUFjO0lBQ2Qsb0JBQWE7SUFBYixhQUFhO0FBQ2pCO0VBQ0E7SUFDSSxpQkFBaUI7SUFDakIsNEJBQVE7WUFBUixRQUFRO0lBQ1IsbUJBQW1CO0FBQ3ZCO0VBQ0E7QUFDQSxlQUFlO0FBQ2Y7RUFFQTtBQUNBLFlBQVk7QUFDWixVQUFVO0FBQ1YseUJBQXlCO0FBQ3pCLFdBQVc7QUFDWCxrQkFBa0I7QUFDbEI7RUFFQTtJQUNJLFlBQVk7SUFDWixVQUFVO0lBQ1YseUJBQXlCO0lBQ3pCLFdBQVc7SUFDWCxrQkFBa0I7QUFDdEI7RUFFQTtJQUNJLG1CQUFtQjtJQUNuQixrQkFBa0I7SUFDbEIsZUFBZTtBQUNuQiIsImZpbGUiOiJzcmMvYXBwL2NvbmZpcm0vY29uZmlybS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiIC8qIGZvciBkaWFsb2cgcG9wLXVwICovXHJcbiAgLmJ0bi1kaWFsb2ctY2xvc2V7XHJcbiAgICB3aWR0aDogNDVweDtcclxuICAgIG1pbi13aWR0aDogMHB4ICFpbXBvcnRhbnQ7XHJcbiAgICBoZWlnaHQ6IDQwcHg7XHJcbiAgICBwYWRkaW5nOiAwcHggIWltcG9ydGFudDtcclxuICB9XHJcblxyXG4gICAvKiBtYXQtY29uZmlybS1kaWFsb2cgKGN1c3RvbWlzZWQgZGlhbG9nKSAqL1xyXG4gICAuY29uZmlybS1kaWFsb2ctY29udGFpbmVyIC5tYXQtZGlhbG9nLWNvbnRhaW5lciB7XHJcbiAgICBib3JkZXItcmFkaXVzOiAuMjVlbSAuMjVlbSAuNGVtIC40ZW07XHJcbiAgICBwYWRkaW5nOiAwcHg7XHJcbn1cclxuLmNvbmZpcm0tZGlhbG9nLWNvbnRhaW5lciAuY29udGVudC1jb250YWluZXJ7XHJcbiAgICBtYXJnaW46IDVweCA1cHggMTVweCA1cHg7XHJcbiAgICBjb2xvcjogIzhmOWNiNTtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbn1cclxuLmNvbmZpcm0tZGlhbG9nLWNvbnRhaW5lciAjY2xvc2UtaWNvbntcclxuICAgIG1hcmdpbi1sZWZ0OiBhdXRvO1xyXG4gICAgb3JkZXI6IDI7XHJcbiAgICBmb250LXdlaWdodDogYm9sZGVyO1xyXG59XHJcbi5jb25maXJtLWRpYWxvZy1jb250YWluZXIgI2Nsb3NlLWljb246aG92ZXJ7XHJcbmN1cnNvcjogcG9pbnRlcjtcclxufVxyXG5cclxuLmNvbmZpcm0tZGlhbG9nLWNvbnRhaW5lciAjbm8tYnV0dG9ue1xyXG5oZWlnaHQ6IDUwcHg7XHJcbndpZHRoOiA1MCU7XHJcbmJhY2tncm91bmQtY29sb3I6ICNmYzcxNjk7XHJcbmNvbG9yOndoaXRlO1xyXG5ib3JkZXItcmFkaXVzOiAwcHg7XHJcbn1cclxuXHJcbi5jb25maXJtLWRpYWxvZy1jb250YWluZXIgI3llcy1idXR0b257XHJcbiAgICBoZWlnaHQ6IDUwcHg7XHJcbiAgICB3aWR0aDogNTAlO1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2I2YmVjZTtcclxuICAgIGNvbG9yOndoaXRlO1xyXG4gICAgYm9yZGVyLXJhZGl1czogMHB4O1xyXG59XHJcblxyXG4uY29uZmlybS1kaWFsb2ctY29udGFpbmVyIHNwYW4uY29udGVudC1zcGFue1xyXG4gICAgcGFkZGluZzogIDM1cHggMTZweDtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgIGZvbnQtc2l6ZTogMjBweDtcclxufSJdfQ== */");
+
+/***/ }),
+
+/***/ "./src/app/confirm/confirm.component.ts":
+/*!**********************************************!*\
+  !*** ./src/app/confirm/confirm.component.ts ***!
+  \**********************************************/
+/*! exports provided: ConfirmComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ConfirmComponent", function() { return ConfirmComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
+/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/__ivy_ngcc__/fesm5/dialog.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (undefined && undefined.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+var ConfirmComponent = /** @class */ (function () {
+    function ConfirmComponent(data, ref) {
+        this.data = data;
+        this.ref = ref;
+    }
+    ConfirmComponent.prototype.ngOnInit = function () {
+    };
+    ConfirmComponent.prototype.closeDialog = function () {
+        this.ref.close();
+    };
+    ConfirmComponent.ctorParameters = function () { return [
+        { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"], args: [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MAT_DIALOG_DATA"],] }] },
+        { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialogRef"] }
+    ]; };
+    ConfirmComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-confirm',
+            template: __importDefault(__webpack_require__(/*! raw-loader!./confirm.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/confirm/confirm.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./confirm.component.css */ "./src/app/confirm/confirm.component.css")).default]
+        }),
+        __param(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])(_angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MAT_DIALOG_DATA"])),
+        __metadata("design:paramtypes", [Object, _angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialogRef"]])
+    ], ConfirmComponent);
+    return ConfirmComponent;
 }());
 
 
@@ -1665,14 +1975,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material_select__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/material/select */ "./node_modules/@angular/material/__ivy_ngcc__/fesm5/select.js");
 /* harmony import */ var _angular_material_radio__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/material/radio */ "./node_modules/@angular/material/__ivy_ngcc__/fesm5/radio.js");
 /* harmony import */ var _angular_material_icon__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/material/icon */ "./node_modules/@angular/material/fesm5/icon.js");
-/* harmony import */ var _usertrip_usertrip_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../usertrip/usertrip.component */ "./src/app/usertrip/usertrip.component.ts");
-/* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../login/login.component */ "./src/app/login/login.component.ts");
-/* harmony import */ var _user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../../user-profile/user-profile.component */ "./src/app/user-profile/user-profile.component.ts");
-/* harmony import */ var _edit_profile_edit_profile_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../../edit-profile/edit-profile.component */ "./src/app/edit-profile/edit-profile.component.ts");
-/* harmony import */ var _start_trip_start_trip_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../../start-trip/start-trip.component */ "./src/app/start-trip/start-trip.component.ts");
-/* harmony import */ var _userslist_userslist_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../../userslist/userslist.component */ "./src/app/userslist/userslist.component.ts");
-/* harmony import */ var _back_back_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../../back/back.component */ "./src/app/back/back.component.ts");
-/* harmony import */ var _trans_log_trans_log_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../../trans-log/trans-log.component */ "./src/app/trans-log/trans-log.component.ts");
+/* harmony import */ var ngp_sort_pipe__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ngp-sort-pipe */ "./node_modules/ngp-sort-pipe/__ivy_ngcc__/fesm5/ngp-sort-pipe.js");
+/* harmony import */ var _usertrip_usertrip_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../usertrip/usertrip.component */ "./src/app/usertrip/usertrip.component.ts");
+/* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../../login/login.component */ "./src/app/login/login.component.ts");
+/* harmony import */ var _user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../../user-profile/user-profile.component */ "./src/app/user-profile/user-profile.component.ts");
+/* harmony import */ var _edit_profile_edit_profile_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../../edit-profile/edit-profile.component */ "./src/app/edit-profile/edit-profile.component.ts");
+/* harmony import */ var _start_trip_start_trip_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../../start-trip/start-trip.component */ "./src/app/start-trip/start-trip.component.ts");
+/* harmony import */ var _userslist_userslist_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../../userslist/userslist.component */ "./src/app/userslist/userslist.component.ts");
+/* harmony import */ var _back_back_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../../back/back.component */ "./src/app/back/back.component.ts");
+/* harmony import */ var _trans_log_trans_log_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ../../trans-log/trans-log.component */ "./src/app/trans-log/trans-log.component.ts");
+/* harmony import */ var _addcompany_addcompany_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ../../addcompany/addcompany.component */ "./src/app/addcompany/addcompany.component.ts");
+/* harmony import */ var _viewcompany_viewcompany_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ../../viewcompany/viewcompany.component */ "./src/app/viewcompany/viewcompany.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1698,8 +2011,11 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 
 
+
 // import {MatPaginatorModule} from '@angular/material/paginator';
 // import {MatTableDataSource} from '@angular/material/table';
+
+
 
 
 
@@ -1728,18 +2044,21 @@ var AdminLayoutModule = /** @class */ (function () {
                 _angular_material_icon__WEBPACK_IMPORTED_MODULE_15__["MatIconModule"],
                 _angular_material_table__WEBPACK_IMPORTED_MODULE_5__["MatTableModule"],
                 _angular_cdk_table__WEBPACK_IMPORTED_MODULE_6__["CdkTableModule"],
-                ngx_pagination__WEBPACK_IMPORTED_MODULE_7__["NgxPaginationModule"]
+                ngx_pagination__WEBPACK_IMPORTED_MODULE_7__["NgxPaginationModule"],
+                ngp_sort_pipe__WEBPACK_IMPORTED_MODULE_16__["NgpSortModule"]
                 // MatPaginatorModule
             ],
             declarations: [
-                _login_login_component__WEBPACK_IMPORTED_MODULE_17__["LoginComponent"],
-                _user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_18__["UserProfileComponent"],
-                _edit_profile_edit_profile_component__WEBPACK_IMPORTED_MODULE_19__["EditProfileComponent"],
-                _usertrip_usertrip_component__WEBPACK_IMPORTED_MODULE_16__["UsertripComponent"],
-                _start_trip_start_trip_component__WEBPACK_IMPORTED_MODULE_20__["StartTripComponent"],
-                _userslist_userslist_component__WEBPACK_IMPORTED_MODULE_21__["UserslistComponent"],
-                _trans_log_trans_log_component__WEBPACK_IMPORTED_MODULE_23__["TransLogComponent"],
-                _back_back_component__WEBPACK_IMPORTED_MODULE_22__["BackComponent"]
+                _login_login_component__WEBPACK_IMPORTED_MODULE_18__["LoginComponent"],
+                _user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_19__["UserProfileComponent"],
+                _edit_profile_edit_profile_component__WEBPACK_IMPORTED_MODULE_20__["EditProfileComponent"],
+                _usertrip_usertrip_component__WEBPACK_IMPORTED_MODULE_17__["UsertripComponent"],
+                _start_trip_start_trip_component__WEBPACK_IMPORTED_MODULE_21__["StartTripComponent"],
+                _userslist_userslist_component__WEBPACK_IMPORTED_MODULE_22__["UserslistComponent"],
+                _trans_log_trans_log_component__WEBPACK_IMPORTED_MODULE_24__["TransLogComponent"],
+                _back_back_component__WEBPACK_IMPORTED_MODULE_23__["BackComponent"],
+                _addcompany_addcompany_component__WEBPACK_IMPORTED_MODULE_25__["AddcompanyComponent"],
+                _viewcompany_viewcompany_component__WEBPACK_IMPORTED_MODULE_26__["ViewcompanyComponent"],
             ]
         })
     ], AdminLayoutModule);
@@ -1768,7 +2087,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _single_trans_single_trans_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../single-trans/single-trans.component */ "./src/app/single-trans/single-trans.component.ts");
 /* harmony import */ var _start_trip_start_trip_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../start-trip/start-trip.component */ "./src/app/start-trip/start-trip.component.ts");
 /* harmony import */ var _trans_log_trans_log_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../trans-log/trans-log.component */ "./src/app/trans-log/trans-log.component.ts");
-/* harmony import */ var app_auth_home_guard__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! app/auth/home.guard */ "./src/app/auth/home.guard.ts");
+/* harmony import */ var _addcompany_addcompany_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../addcompany/addcompany.component */ "./src/app/addcompany/addcompany.component.ts");
+/* harmony import */ var _viewcompany_viewcompany_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../viewcompany/viewcompany.component */ "./src/app/viewcompany/viewcompany.component.ts");
+/* harmony import */ var app_auth_home_guard__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! app/auth/home.guard */ "./src/app/auth/home.guard.ts");
 var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
   return (mod && mod.__esModule) ? mod : { "default": mod };
 };
@@ -1781,15 +2102,19 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 
 
+
+
 var AdminLayoutRoutes = [
-    { path: 'user-profile', component: _user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_0__["UserProfileComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_8__["HomeGuard"]] },
-    { path: 'userslist', component: _userslist_userslist_component__WEBPACK_IMPORTED_MODULE_1__["UserslistComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_8__["HomeGuard"]] },
-    { path: 'edit-profile/:user_id/:i', component: _edit_profile_edit_profile_component__WEBPACK_IMPORTED_MODULE_2__["EditProfileComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_8__["HomeGuard"]] },
-    { path: 'usertrips', component: _usertrip_usertrip_component__WEBPACK_IMPORTED_MODULE_3__["UsertripComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_8__["HomeGuard"]] },
-    { path: 'log', component: _trans_log_trans_log_component__WEBPACK_IMPORTED_MODULE_7__["TransLogComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_8__["HomeGuard"]] },
-    { path: 'usertrip/start-trip/:_id', component: _start_trip_start_trip_component__WEBPACK_IMPORTED_MODULE_6__["StartTripComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_8__["HomeGuard"]] },
-    { path: 'usertrip/:user_id', component: _singleusertrip_singleusertrip_component__WEBPACK_IMPORTED_MODULE_4__["SingleusertripComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_8__["HomeGuard"]] },
-    { path: 'transactions/:user_id/:trip_id/:state', component: _single_trans_single_trans_component__WEBPACK_IMPORTED_MODULE_5__["SingleTransComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_8__["HomeGuard"]] }
+    { path: 'user-profile', component: _user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_0__["UserProfileComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_10__["HomeGuard"]] },
+    { path: 'userslist', component: _userslist_userslist_component__WEBPACK_IMPORTED_MODULE_1__["UserslistComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_10__["HomeGuard"]] },
+    { path: 'edit-profile/:user_id/:i', component: _edit_profile_edit_profile_component__WEBPACK_IMPORTED_MODULE_2__["EditProfileComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_10__["HomeGuard"]] },
+    { path: 'usertrips', component: _usertrip_usertrip_component__WEBPACK_IMPORTED_MODULE_3__["UsertripComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_10__["HomeGuard"]] },
+    { path: 'log', component: _trans_log_trans_log_component__WEBPACK_IMPORTED_MODULE_7__["TransLogComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_10__["HomeGuard"]] },
+    { path: 'add_company', component: _addcompany_addcompany_component__WEBPACK_IMPORTED_MODULE_8__["AddcompanyComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_10__["HomeGuard"]] },
+    { path: 'view_company', component: _viewcompany_viewcompany_component__WEBPACK_IMPORTED_MODULE_9__["ViewcompanyComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_10__["HomeGuard"]] },
+    { path: 'usertrip/start-trip/:_id', component: _start_trip_start_trip_component__WEBPACK_IMPORTED_MODULE_6__["StartTripComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_10__["HomeGuard"]] },
+    { path: 'usertrip/:user_id', component: _singleusertrip_singleusertrip_component__WEBPACK_IMPORTED_MODULE_4__["SingleusertripComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_10__["HomeGuard"]] },
+    { path: 'transactions/:user_id/:trip_id/:state', component: _single_trans_single_trans_component__WEBPACK_IMPORTED_MODULE_5__["SingleTransComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_10__["HomeGuard"]] }
 ];
 
 
@@ -1896,6 +2221,67 @@ var LoginComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"], _services_usercrud_service__WEBPACK_IMPORTED_MODULE_2__["UsercrudService"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"]])
     ], LoginComponent);
     return LoginComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/confirm.service.ts":
+/*!*********************************************!*\
+  !*** ./src/app/services/confirm.service.ts ***!
+  \*********************************************/
+/*! exports provided: ConfirmService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ConfirmService", function() { return ConfirmService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
+/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/__ivy_ngcc__/fesm5/dialog.js");
+/* harmony import */ var app_confirm_confirm_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! app/confirm/confirm.component */ "./src/app/confirm/confirm.component.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+var ConfirmService = /** @class */ (function () {
+    function ConfirmService(dialog) {
+        this.dialog = dialog;
+    }
+    ConfirmService.prototype.OpenDialog = function (msg) {
+        return this.dialog.open(app_confirm_confirm_component__WEBPACK_IMPORTED_MODULE_2__["ConfirmComponent"], {
+            width: '390px',
+            position: {
+                top: '10px'
+            },
+            data: {
+                message: msg
+            },
+            //  panelClass: 'confirm-dialog-container',
+            disableClose: true
+        });
+    };
+    ConfirmService.ctorParameters = function () { return [
+        { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialog"] }
+    ]; };
+    ConfirmService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+            providedIn: 'root'
+        }),
+        __metadata("design:paramtypes", [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialog"]])
+    ], ConfirmService);
+    return ConfirmService;
 }());
 
 
@@ -2090,6 +2476,7 @@ var SingleTransComponent = /** @class */ (function () {
             responsive: true,
             maintainAspectRatio: false,
             legend: {
+                display: false,
                 position: 'right'
             },
         };
@@ -2106,8 +2493,7 @@ var SingleTransComponent = /** @class */ (function () {
                 enabled: false
             },
             legend: {
-            // display: true,
-            // position: 'right'
+                display: true,
             },
         };
         this.currentLabels = [];
@@ -2483,6 +2869,7 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 
 
+
 var StartTripComponent = /** @class */ (function () {
     function StartTripComponent(userservice, toastr, loc, http, router, actRoute, fb) {
         this.userservice = userservice;
@@ -2516,7 +2903,7 @@ var StartTripComponent = /** @class */ (function () {
             this.place = 'USD to Local Currency Conversion Rate';
         }
     };
-    StartTripComponent.prototype.showsubmit = function () {
+    StartTripComponent.prototype.showSubmit = function () {
         this.toastr.success('submitted successfully!');
     };
     StartTripComponent.prototype.getCurrency = function () {
@@ -2578,7 +2965,7 @@ var StartTripComponent = /** @class */ (function () {
             this.userservice.userStartTrip(this.emp_id, starting_balance)
                 .subscribe(function (res) {
                 console.log(res);
-                _this.showsubmit();
+                _this.showSubmit();
                 _this.reset();
                 _this.router.navigateByUrl('/usertrips');
             });
@@ -2612,6 +2999,7 @@ var StartTripComponent = /** @class */ (function () {
             template: __importDefault(__webpack_require__(/*! raw-loader!./start-trip.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/start-trip/start-trip.component.html")).default,
             styles: [__importDefault(__webpack_require__(/*! ./start-trip.component.css */ "./src/app/start-trip/start-trip.component.css")).default]
         }),
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"])({ name: 'sortBy' }),
         __metadata("design:paramtypes", [_services_usercrud_service__WEBPACK_IMPORTED_MODULE_4__["UsercrudService"], ngx_toastr__WEBPACK_IMPORTED_MODULE_5__["ToastrService"], _angular_common__WEBPACK_IMPORTED_MODULE_6__["Location"], _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"]])
     ], StartTripComponent);
     return StartTripComponent;
@@ -2859,8 +3247,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm5/router.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm5/http.js");
 /* harmony import */ var _services_usercrud_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../services/usercrud.service */ "./src/app/services/usercrud.service.ts");
-/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/__ivy_ngcc__/fesm2015/ngx-toastr.js");
-/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/__ivy_ngcc__/fesm5/dialog.js");
+/* harmony import */ var _services_confirm_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../services/confirm.service */ "./src/app/services/confirm.service.ts");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/__ivy_ngcc__/fesm2015/ngx-toastr.js");
+/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/__ivy_ngcc__/fesm5/dialog.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2880,9 +3269,11 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 
 
+
 var UserslistComponent = /** @class */ (function () {
-    function UserslistComponent(userservice, dialog, toastr, http, router, fb) {
+    function UserslistComponent(userservice, conf, dialog, toastr, http, router, fb) {
         this.userservice = userservice;
+        this.conf = conf;
         this.dialog = dialog;
         this.toastr = toastr;
         this.http = http;
@@ -2906,11 +3297,17 @@ var UserslistComponent = /** @class */ (function () {
     };
     UserslistComponent.prototype.deluser = function (_id) {
         var _this = this;
-        this.userservice.deleteUser(_id)
-            .subscribe(function (val) {
-            console.log(val);
-            _this.showDelete();
-            _this.getData();
+        this.conf.OpenDialog('Are you sure you want to delete this record?')
+            .afterClosed().subscribe(function (res) {
+            // console.log(res)
+            if (res) {
+                _this.userservice.deleteUser(_id)
+                    .subscribe(function (val) {
+                    console.log(val);
+                    _this.showDelete();
+                    _this.getData();
+                });
+            }
         });
     };
     UserslistComponent.prototype.getData = function () {
@@ -2931,8 +3328,9 @@ var UserslistComponent = /** @class */ (function () {
     };
     UserslistComponent.ctorParameters = function () { return [
         { type: _services_usercrud_service__WEBPACK_IMPORTED_MODULE_4__["UsercrudService"] },
-        { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_6__["MatDialog"] },
-        { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_5__["ToastrService"] },
+        { type: _services_confirm_service__WEBPACK_IMPORTED_MODULE_5__["ConfirmService"] },
+        { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_7__["MatDialog"] },
+        { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_6__["ToastrService"] },
         { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"] },
         { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
         { type: _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"] }
@@ -2943,7 +3341,7 @@ var UserslistComponent = /** @class */ (function () {
             template: __importDefault(__webpack_require__(/*! raw-loader!./userslist.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/userslist/userslist.component.html")).default,
             styles: [__importDefault(__webpack_require__(/*! ./userslist.component.css */ "./src/app/userslist/userslist.component.css")).default]
         }),
-        __metadata("design:paramtypes", [_services_usercrud_service__WEBPACK_IMPORTED_MODULE_4__["UsercrudService"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_6__["MatDialog"], ngx_toastr__WEBPACK_IMPORTED_MODULE_5__["ToastrService"], _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"]])
+        __metadata("design:paramtypes", [_services_usercrud_service__WEBPACK_IMPORTED_MODULE_4__["UsercrudService"], _services_confirm_service__WEBPACK_IMPORTED_MODULE_5__["ConfirmService"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_7__["MatDialog"], ngx_toastr__WEBPACK_IMPORTED_MODULE_6__["ToastrService"], _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"]])
     ], UserslistComponent);
     return UserslistComponent;
 }());
@@ -3025,6 +3423,129 @@ var UsertripComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"], _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
     ], UsertripComponent);
     return UsertripComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/viewcompany/viewcompany.component.css":
+/*!*******************************************************!*\
+  !*** ./src/app/viewcompany/viewcompany.component.css ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("/* @import \"@material/elevation/mdc-elevation\"; */\r\n\r\n.card-header{\r\n    background-color:#008080  ;\r\n}\r\n\r\n.card-title{\r\n    color: white;\r\n}\r\n\r\n.card-header .card-category {\r\n    color: white;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdmlld2NvbXBhbnkvdmlld2NvbXBhbnkuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxpREFBaUQ7O0FBRWpEO0lBQ0ksMEJBQTBCO0FBQzlCOztBQUNBO0lBQ0ksWUFBWTtBQUNoQjs7QUFDQTtJQUNJLFlBQVk7QUFDaEIiLCJmaWxlIjoic3JjL2FwcC92aWV3Y29tcGFueS92aWV3Y29tcGFueS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLyogQGltcG9ydCBcIkBtYXRlcmlhbC9lbGV2YXRpb24vbWRjLWVsZXZhdGlvblwiOyAqL1xyXG5cclxuLmNhcmQtaGVhZGVye1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjojMDA4MDgwICA7XHJcbn1cclxuLmNhcmQtdGl0bGV7XHJcbiAgICBjb2xvcjogd2hpdGU7XHJcbn1cclxuLmNhcmQtaGVhZGVyIC5jYXJkLWNhdGVnb3J5IHtcclxuICAgIGNvbG9yOiB3aGl0ZTtcclxufSJdfQ== */");
+
+/***/ }),
+
+/***/ "./src/app/viewcompany/viewcompany.component.ts":
+/*!******************************************************!*\
+  !*** ./src/app/viewcompany/viewcompany.component.ts ***!
+  \******************************************************/
+/*! exports provided: ViewcompanyComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ViewcompanyComponent", function() { return ViewcompanyComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm5/forms.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm5/router.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm5/http.js");
+/* harmony import */ var _services_usercrud_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../services/usercrud.service */ "./src/app/services/usercrud.service.ts");
+/* harmony import */ var _services_confirm_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../services/confirm.service */ "./src/app/services/confirm.service.ts");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/__ivy_ngcc__/fesm2015/ngx-toastr.js");
+/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/__ivy_ngcc__/fesm5/dialog.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+
+
+
+
+
+var ViewcompanyComponent = /** @class */ (function () {
+    function ViewcompanyComponent(userservice, conf, dialog, toastr, http, router, fb) {
+        this.userservice = userservice;
+        this.conf = conf;
+        this.dialog = dialog;
+        this.toastr = toastr;
+        this.http = http;
+        this.router = router;
+        this.fb = fb;
+        this.headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpHeaders"]().set('Content-Type', 'application/json');
+        this.role = ['admin', 'senior_sales_manager', 'regional_manager'];
+        this.user = {};
+    }
+    ViewcompanyComponent.prototype.ngOnInit = function () {
+        this.getData();
+    };
+    ViewcompanyComponent.prototype.showSubmit = function () {
+        this.toastr.success('submitted successfully!');
+    };
+    ViewcompanyComponent.prototype.showupdate = function () {
+        this.toastr.success('updated successfully!');
+    };
+    ViewcompanyComponent.prototype.showDelete = function () {
+        this.toastr.success('Deleted successfully!');
+    };
+    // deluser(_id: String)
+    // {
+    //   this.conf.OpenDialog('Are you sure you want to delete this record?')
+    //   .afterClosed().subscribe(res => {
+    //     // console.log(res)
+    //     if(res)
+    //     {
+    //       this.userservice.deleteUser(_id)
+    //       .subscribe((val) => {
+    //         console.log(val)
+    //         this.showDelete();
+    //         this.getData();
+    //       });
+    //     }
+    //   });
+    // }
+    ViewcompanyComponent.prototype.getData = function () {
+        var _this = this;
+        this.http.get('https://api.plint.in/dsr/companies/list').subscribe(function (res) {
+            _this.items = res.data;
+            console.log(_this.items);
+        });
+    };
+    ViewcompanyComponent.ctorParameters = function () { return [
+        { type: _services_usercrud_service__WEBPACK_IMPORTED_MODULE_4__["UsercrudService"] },
+        { type: _services_confirm_service__WEBPACK_IMPORTED_MODULE_5__["ConfirmService"] },
+        { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_7__["MatDialog"] },
+        { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_6__["ToastrService"] },
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
+        { type: _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"] }
+    ]; };
+    ViewcompanyComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-viewcompany',
+            template: __importDefault(__webpack_require__(/*! raw-loader!./viewcompany.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/viewcompany/viewcompany.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./viewcompany.component.css */ "./src/app/viewcompany/viewcompany.component.css")).default]
+        }),
+        __metadata("design:paramtypes", [_services_usercrud_service__WEBPACK_IMPORTED_MODULE_4__["UsercrudService"], _services_confirm_service__WEBPACK_IMPORTED_MODULE_5__["ConfirmService"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_7__["MatDialog"], ngx_toastr__WEBPACK_IMPORTED_MODULE_6__["ToastrService"], _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"]])
+    ], ViewcompanyComponent);
+    return ViewcompanyComponent;
 }());
 
 
