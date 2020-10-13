@@ -1608,7 +1608,7 @@ var ROUTES = [
     { path: '/comp_meet', title: 'Company & Meeting', icon: 'meeting_room', class: '',
         children: [
             { path: '/view_meet', title: 'View Meeting', icon: 'meeting_room', class: '' },
-            { path: '/view_comp', title: 'View Company', icon: 'meeting_room', class: '' },
+            { path: '/view_comp', title: 'View All Companies', icon: 'meeting_room', class: '' },
         ]
     },
 ];
