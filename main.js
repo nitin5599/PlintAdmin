@@ -403,6 +403,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/dsr/dsr.component.html":
+/*!******************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/dsr/dsr.component.html ***!
+  \******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n<div class=\"main-content\">\n<div class=\"container-fluid\">\n \n    \n    <i class=\"fa fa-arrow-left\" (click)=\"goBack()\" aria-hidden=\"true\"></i>\n\n    <!-- <div *ngIf=\"chart\">\n        <canvas id=\"canvas\">{{chart}}</canvas>\n    </div> -->\n\n    <mat-tab-group  mat-align-tabs=\"center\" animationDuration=\"0ms\">\n\n        <mat-tab label=\"stats\">\n          \n            <div class=\"row\">\n                <div class=\"col-md-12\">\n                    <div class=\"card  \">\n                        <div class=\"card-header rounded mdc-elevation--z6 card-header\">\n                            <h4 class=\"card-title text-black\">Most Meetings with Unique Clients</h4>\n                        </div>\n                        <div class=\"card-body rounded mdc-elevation--z8\">\n                            <div class=\"chart-wrapper\">\n                                <canvas baseChart \n                                [datasets]=\"mostuniqueClientsData\"\n                                [labels]=\"mostuniqueClients\"\n                                [options]=\"barChartOptions\"\n                                [plugins]=\"barChartPlugins\"\n                                [legend]=\"barChartLegend\"\n                                [chartType]=\"barChartType\">\n                              </canvas>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n\n            <!-- <div class=\"row\">\n                <div class=\"col-md-12\">\n                    <div class=\"card  \">\n                        <div class=\"card-header rounded mdc-elevation--z6 card-header\">\n                            <h4 class=\"card-title text-black\">Most Meetings this Month</h4>\n                        </div>\n                        <div class=\"card-body rounded mdc-elevation--z8\">\n                            <div class=\"chart-wrapper\">\n                                <canvas baseChart \n                                [datasets]=\"chartData\"\n                                [labels]=\"labels\"\n                                [colors]=\"colors\"\n                                [options]=\"barChartOptions\"\n                                [plugins]=\"barChartPlugins\"\n                                [legend]=\"barChartLegend\"\n                                [chartType]=\"barChartType\">\n                              </canvas>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div> -->\n\n          <!-- <div class=\"row\">\n                <div class=\"col-md-12\">\n                    <div class=\"card  \">\n                        <div class=\"card-header rounded mdc-elevation--z6 card-header\">\n                            <h4 class=\"card-title text-black\">Most Quotation this Month</h4>\n                        </div>\n                        <div class=\"card-body rounded mdc-elevation--z8\">\n                            <div class=\"chart-wrapper\">\n                                <canvas baseChart \n                                [datasets]=\"barChartData\"\n                                [labels]=\"barChartLabels\"\n                                [options]=\"barChartOptions\"\n                                [plugins]=\"barChartPlugins\"\n                                [legend]=\"barChartLegend\"\n                                [chartType]=\"barChartType\">\n                              </canvas>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div> -->\n\n            <!-- <div class=\"row\">\n                <div class=\"col-md-12\">\n                    <div class=\"card  \">\n                        <div class=\"card-header rounded mdc-elevation--z6 card-header\">\n                            <h4 class=\"card-title text-black\">Average Meeting Per Week</h4>\n                        </div>\n                        <div class=\"card-body rounded mdc-elevation--z8\">\n                            <div class=\"chart-wrapper\">\n                                <canvas baseChart \n                                [datasets]=\"barChartData\"\n                                [labels]=\"barChartLabels\"\n                                [options]=\"barChartOptions\"\n                                [plugins]=\"barChartPlugins\"\n                                [legend]=\"barChartLegend\"\n                                [chartType]=\"barChartType\">\n                              </canvas>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>  -->\n          \n        </mat-tab>\n      \n        <mat-tab label=\"customers\">Customers</mat-tab>\n      \n        <mat-tab label=\"meetings\">Meetings</mat-tab>\n      \n        <mat-tab label=\"alerts\">Alerts</mat-tab>\n    \n    </mat-tab-group>\n    \n    \n\n    \n\n\n</div>\n</div>\n\n\n");
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/edit-profile/edit-profile.component.html":
 /*!************************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/edit-profile/edit-profile.component.html ***!
@@ -412,7 +425,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n<div class=\"main-content\">\n    <div class=\"container-fluid\">\n      <i class=\"fa fa-arrow-left\" (click)=\"goBack()\" aria-hidden=\"true\"></i>\n\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <div class=\"card  \">\n                    <div class=\"card-header rounded mdc-elevation--z6 card-header\">\n                        <h4 class=\"card-title\">Edit User</h4>\n                        <p class=\"card-category\">update user profile</p>\n                    </div>\n                    <div class=\"card-body rounded mdc-elevation--z8\">\n                        <form [formGroup]=\"editform\" novalidate (ngSubmit)=\"onUpdate()\">\n  \n                             <div class=\"col-md-4 form-group\">\n                                <mat-form-field class=\"example-full-width\">\n                                  <input matInput placeholder=\"Employee Code\" type=\"text\" formControlName=\"employee_code\">\n                                </mat-form-field>\n                              </div>\n  \n                              <div class=\"col-md-4 form-group\">\n                                  <mat-form-field class=\"example-full-width\">\n                                    <input matInput placeholder=\"Full Name\" type=\"text\" formControlName=\"name\">\n                                  </mat-form-field>\n                              </div>\n                              \n                              <div class=\"col-md-4 form-group\">\n                                  <mat-form-field appearance=\"fill\">\n                                    <mat-label>Role</mat-label>\n                                    <mat-select formControlName=\"role\" >\n                                      <mat-option *ngFor=\"let rol of role\" [value]=\"rol\">\n                                        {{rol}}\n                                      </mat-option>\n                                    </mat-select>\n                                  </mat-form-field>\n                             </div>\n  \n                            \n                             <div class=\"col-md-4 form-group\">\n                                  <mat-form-field class=\"example-full-width\">\n                                    <input matInput placeholder=\"Email\" formControlName=\"email\" type=\"text\">\n                                  </mat-form-field>\n                              </div>\n                            \n                              <div class=\"col-md-4 form-group\">\n                                <mat-label class=\"row  mb-3 ml-0\">Will this user use the Expense Manager?</mat-label>\n                                <mat-radio-group class=\"row mb-3 ml-0\" formControlName=\"is_expense_manager_user\" aria-label=\"Expense Manager\">\n                                  <mat-radio-button [value]=true>Yes</mat-radio-button>\n                                  <mat-radio-button [value]=false>No</mat-radio-button>\n                                </mat-radio-group>\n                              </div>\n                            \n                              <div class=\"col-md-4 mt-3\">\n                                <button mat-raised-button type=\"submit\"  class=\"btn btn-Success pull-left\">Update Profile</button>\n                              </div>\n  \n                            <div class=\"clearfix\"></div>\n                        \n                        </form>\n                    </div>\n                </div>\n            </div>\n        </div>\n    \n        \n  \n    \n    </div>\n</div>\n  ");
+/* harmony default export */ __webpack_exports__["default"] = ("\n<div class=\"main-content\">\n    <div class=\"container-fluid\">\n      <i class=\"fa fa-arrow-left\" (click)=\"goBack()\" aria-hidden=\"true\"></i>\n\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <div class=\"card  \">\n                    <div class=\"card-header rounded mdc-elevation--z6 card-header\">\n                        <h4 class=\"card-title\">Edit User</h4>\n                        <p class=\"card-category\">update user profile</p>\n                    </div>\n                    <div class=\"card-body rounded mdc-elevation--z8\">\n                        <form [formGroup]=\"editform\" novalidate (ngSubmit)=\"onUpdate()\">\n  \n                             <div class=\"col-md-4 form-group\">\n                                <mat-form-field class=\"example-full-width\">\n                                  <input matInput placeholder=\"Employee Code\" type=\"text\" formControlName=\"employee_code\">\n                                </mat-form-field>\n                              </div>\n  \n                              <div class=\"col-md-4 form-group\">\n                                  <mat-form-field class=\"example-full-width\">\n                                    <input matInput placeholder=\"Full Name\" type=\"text\" formControlName=\"name\">\n                                  </mat-form-field>\n                              </div>\n                              \n                              <div class=\"col-md-4 form-group\">\n                                  <mat-form-field appearance=\"fill\">\n                                    <mat-label>Role</mat-label>\n                                    <mat-select formControlName=\"role\" >\n                                      <mat-option *ngFor=\"let rol of role\" [value]=\"rol\">\n                                        {{rol}}\n                                      </mat-option> \n                                    </mat-select>\n                                  </mat-form-field>\n                              </div>\n\n                              <div class=\"col-md-4 form-group\"> \n                                <mat-form-field appearance=\"fill\">\n                                  <mat-label>Manager Name</mat-label>\n                                  <mat-select formControlName=\"parent_user_id\">\n                                    <mat-option *ngFor=\"let mn of parent_user_id\" [value]=\"mn._id\">\n                                      {{mn.name}}\n                                    </mat-option>\n                                  </mat-select>\n                                </mat-form-field>\n                              </div>\n\n                              <div class=\"col-md-4 form-group\">\n                                  <mat-form-field class=\"example-full-width\">\n                                    <input matInput placeholder=\"Email\" formControlName=\"email\" type=\"text\">\n                                  </mat-form-field>\n                              </div>\n                            \n                              <div class=\"col-md-4 form-group\">\n                                <mat-label class=\"row  mb-3 ml-0\">Will this user use the Expense Manager?</mat-label>\n                                <mat-radio-group class=\"row mb-3 ml-0\" formControlName=\"is_expense_manager_user\" aria-label=\"Expense Manager\">\n                                  <mat-radio-button [value]=true>Yes</mat-radio-button>\n                                  <mat-radio-button [value]=false>No</mat-radio-button>\n                                </mat-radio-group>\n                              </div>\n                            \n                              <div class=\"col-md-4 mt-3\">\n                                <button mat-raised-button type=\"submit\"  class=\"btn btn-Success pull-left\">Update Profile</button>\n                              </div>\n  \n                            <div class=\"clearfix\"></div>\n                        \n                        </form>\n                    </div>\n                </div>\n            </div>\n        </div>\n    \n        \n  \n    \n    </div>\n</div>\n  ");
 
 /***/ }),
 
@@ -442,6 +455,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/managerlist/managerlist.component.html":
+/*!**********************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/managerlist/managerlist.component.html ***!
+  \**********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n<div class=\"main-content\">\n    <div class=\"container-fluid\">\n      <app-back></app-back>\n          <div class=\"row\">\n            <div class=\"col-md-12\">\n              <div class=\"card\">\n                <div  class=\"card-header rounded mdc-elevation--z6 card-header\">\n                    <h4 class=\"card-title \">Managers List</h4>\n                    <p class=\"card-category \">About managers info</p>\n                </div>\n                <div class=\"card-body rounded mdc-elevation--z6\">\n                    <div  class=\"table-responsive\">\n                        <table class=\"table\">\n                            <thead class=\"text-center text-black\">\n                                <th>Empcode</th>\n                                <th>Name</th>\n                                <th>Email</th>\n                                <th>Role</th>\n                                <!-- <th>Team members</th>\n                                <th>ExpenseManager</th> -->\n                            </thead>\n                            <tbody class=\"text-center\">\n                                <tr   *ngFor=\"let data of items; let i = index;\">\n                                    <td>{{data.employee_code}}</td>\n                                    <td>{{data.name}}</td>\n                                    <td>{{data.email}}</td>\n                                    <td>{{data.role}}</td>\n                                    <!-- <td *ngIf=\"data.role != 'senior_sales_manager' \">          \n                                      <button  mat-raised-button type=\"submit\" style=\"background-color: #1b96f3;\" [routerLink]=\"['/team-members/', data._id]\" class=\"btn btn-Success \">view</button>\n                                    </td>\n                                    <td *ngIf=\"data.role == 'senior_sales_manager' \"></td>\n                                    <td>{{data.is_expense_manager_user}}</td> -->\n                                                                       \n                                  </tr>\n                            </tbody>\n                        </table>\n            </div>\n          </div>\n  \n    \n    </div>\n  </div>\n  ");
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/single-trans/single-trans.component.html":
 /*!************************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/single-trans/single-trans.component.html ***!
@@ -451,7 +477,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n<div class=\"main-content\">\n    <div class=\"container-fluid\">\n        <i class=\"row mb-5 ml-2 fa fa-arrow-left\" (click)=\"goBack()\" aria-hidden=\"true\"></i>\n\n            <button mat-raised-button *ngIf=\"this.ongoing == 'true'\" (click)=\"EndTrip()\" color=\"warn\">END TRIP</button>\n\n    <div class=\"row mt-5\">\n\n        <!-- current trip expenses -->\n            <div  class=\"col-md-4 mb-5 chart-container\" style=\"position: relative; height:35vh; width:80vw\">\n                <h3 class=\"text-center  mb-3\"  *ngIf=\"this.ongoing == 'true' \">Current Expenses</h3>\n                <h3 class=\"text-center  mb-3\"  *ngIf=\"this.ongoing !== 'true' \">Total Expenses</h3>\n                <p id=\"d1\" class=\"text-white\" *ngIf=\"this.currLength == 0\">NO TRANSACTIONS YET</p>\n                <canvas *ngIf=\"this.currLength == 0\" baseChart\n                [data]=\"emptydata\"\n                [chartType]=\"pieChartType\"\n                [colors]=\"emptyColors\"\n                [options]=\"emptyOptions\"></canvas>\n                <canvas baseChart\n                [data]=\"currentData\" \n                [labels]=\"currentLabels\" \n                [chartType]=\"pieChartType\"\n                [options]=\"pieChartOptions\"\n                [plugins]=\"pieChartPlugins\"\n                [colors]=\"pieChartColors\" \n                [legend]=\"pieChartLegend\">\n              </canvas>\n            </div>\n\n            <!-- Today's trip expenses -->\n            <div *ngIf=\"this.ongoing == true \">\n            <div class=\" col-md-4 mb-5 chart-container\" style=\"position: relative; height:35vh; width:80vw\">\n              \n                <h3 class=\"text-center mb-3\">Today's Expenses</h3>\n                <p id=\"d2\" class=\"text-white\" *ngIf=\"this.todayLength == 0\">NO TRANSACTIONS YET</p>\n                <canvas *ngIf=\"this.todayLength == 0\" baseChart\n                [data]=\"emptydata\" \n                [chartType]=\"pieChartType\"\n                [colors]=\"emptyColors\"\n                [options]=\"emptyOptions\"></canvas>\n                <canvas *ngIf=\"this.todayLength > 0\" baseChart\n                [data]=\"todayData\" \n                [labels]=\"todayLabels\" \n                [chartType]=\"pieChartType\"\n                [options]=\"pieChartOptions\"\n                [plugins]=\"pieChartPlugins\"\n                [colors]=\"pieChartColors\" \n                [legend]=\"pieChartLegend\">\n              </canvas>\n             </div>\n            </div>\n\n            <!-- average trip expenses -->\n            <div  class=\"col-md-4 mb-5 chart-container\" style=\"position: relative; height:35vh; width:80vw\">\n                <h3 class=\"text-center mb-3\">Average Expenses</h3>\n                <p id=\"d3\" class=\"text-white\" *ngIf=\"this.avgLength == 0\">NO TRANSACTIONS YET</p>\n                <canvas *ngIf=\"this.avgLength == 0\" baseChart\n                [data]=\"emptydata\"\n                [chartType]=\"pieChartType\"\n                [colors]=\"emptyColors\"\n                [options]=\"emptyOptions\"></canvas>\n                <canvas baseChart\n                [data]=\"avgData\" \n                [labels]=\"avgLabels\" \n                [chartType]=\"pieChartType\"\n                [options]=\"pieChartOptions\"\n                [plugins]=\"pieChartPlugins\"\n                [colors]=\"pieChartColors\" \n                [legend]=\"pieChartLegend\">\n              </canvas>\n            </div>\n\n    </div>\n\n    <div class=\"row mt-5 mb-0\">\n      <div class=\"col-md-3 form-group\">\n        <mat-form-field appearance=\"fill\">\n          <mat-label>List</mat-label>\n          <select matNativeControl (change)=\"changeSuit($event.target.value); \" >\n            <option value=\"\">View All</option>\n            <option value=\"verified\">View Verified only</option>\n            <option value=\"unverified\">View non-verfiy only</option>\n          </select>\n        </mat-form-field>\n        <!-- <button (click)=\"changeSuit($event)\" mat-raised-button>CALL</button> -->\n      </div>\n    </div>\n\n  <!-- currency conversion transaction -->\n\n  <div class=\"row mt-3\">\n    <div class=\"col-md-12\">\n      <div class=\"card\">\n        <div  class=\"card-header rounded mdc-elevation--z6 card-header\">\n            <h4 class=\"card-title \">Currency Conversion Transactions</h4>\n            <p class=\"card-category \">user's transaction info</p>\n        </div>        \n        <div class=\"card-body rounded mdc-elevation--z6\">\n            <div  class=\"table-responsive\">\n                <table class=\"table\">\n                    <thead class=\" text-black\">\n                        <th>Receipt ID</th>\n                        <th>Source Holding</th>\n                        <th>Converted Holding</th>\n                        <th>Conversion Rate</th>\n                        <th>Receipt Url</th>\n                        <th>Remarks</th>\n                        <th>Created At</th>\n                        <th>Status</th>\n                    </thead>\n                    <tbody *ngIf=\"this.items\" >\n                        <tr *ngFor=\"let data of items | paginate: { id: 'curr_con',\n                        itemsPerPage: 10,\n                        currentPage: curr_Page,\n                        totalItems: TotalRecords }; let i = index;\">\n                            <td>{{data.receipt_id}}</td> \n                            <td>{{data.source_holding.amount}} {{data.source_holding.currency}}</td>\n                            <td>{{data.converted_holding.amount}} {{data.converted_holding.currency}}</td> \n                            <td>{{data.rate_of_conversion}}</td> \n                            <td *ngIf=\"!(data.receipt_image_url)\">No Receipt</td>\n                            <td *ngIf=\"data.receipt_image_url\">\n                                <div class=\"example-button-row\">\n                                <button mat-raised-button color=\"primary\" data-toggle=\"modal\" data-target=\"#basicExample\">View</button>\n                                </div>\n\n<div id=\"basicExample\" class=\"modal fade left\"  tabindex=\"-1\" role=\"dialog\"\n     aria-labelledby=\"myModalLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog\" role=\"document\">\n    <div class=\"modal-content\">\n\n        <div class=\"modal-content\">\n            <div class=\"modal-header\">\n              <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\n            </div>\n            <div class=\"modal-body \">\n                <img  class=\"h-100 w-100 img-responsive\" src=\"{{data.receipt_image_url}}\" alt=\"{{data.receipt_image_file_id}}\">\n            </div>\n        </div>\n\n    </div>\n  </div>\n</div>\n\n                            </td>\n                            <td>{{data.remarks}}</td>\n                            <td>{{data.created_on | date:'d/M/yy, h:mm a'}}</td>\n                            <td style=\"color: green;\" *ngIf=\"data.is_verified == true\">Verified</td>\n                            <td *ngIf=\"data.is_verified == false\"><button mat-raised-button color=\"primary\" (click)=\"isVerify(data._id)\">Verify</button></td>\n                        </tr>\n                    </tbody>\n\n                </table>\n                <pagination-controls id=\"curr_con\" (pageChange)=\"curr_Page = $event\" maxSize=\"9\" directionLinks=\"true\"></pagination-controls>\n               \n            </div>\n        </div>\n\n      </div>\n    </div>\n</div>\n\n\n  <!-- expense transaction -->\n\n  <div class=\"row \">\n    <div class=\"col-md-12\">\n      <div class=\"card\">\n        <div  class=\"card-header rounded mdc-elevation--z6 card-header\">\n            <h4 class=\"card-title \">Expenses Transactions</h4>\n            <p class=\"card-category \">user's transaction info</p>\n        </div>\n        <div class=\"card-body rounded mdc-elevation--z6\">\n            <div  class=\"table-responsive\">\n                <table class=\"table\">\n                    <thead class=\" text-black\">\n                        <th>Receipt ID</th>\n                        <th>Expense Type</th>\n                        <th>Total Expense</th>\n                        <th>Work Expense</th>\n                        <th>Personal Expense</th>\n                        <th>Receipt Url</th>\n                        <th>Remarks</th>\n                        <th>Created At</th>\n                        <th>Status</th>\n                    </thead>\n                    <tbody *ngIf=\"this.expitems\">\n                        <tr *ngFor=\"let data of expitems | paginate: { id: 'expense',\n                        itemsPerPage: 10,\n                        currentPage: expPage,\n                        totalItems: TotalRecords }\">\n                            <td>{{data.receipt_id}}</td> \n                            <td>{{data.expense_type}}</td>\n                            <td>{{data.total_expense.amount}} {{data.total_expense.currency}}</td>\n                            <td>{{data.work_expense.amount}} {{data.work_expense.currency}}</td> \n                            <td>{{data.personal_expense.amount}} {{data.personal_expense.currency}}</td> \n                            <td *ngIf=\"!(data.receipt_image_url)\">No Receipt</td>\n                            <td *ngIf=\"data.receipt_image_url\">\n                                <div class=\"example-button-row\">\n                                <button mat-raised-button color=\"primary\" data-toggle=\"modal\" data-target=\"#basicExample\">View</button>\n                                </div>\n\n<div id=\"basicExample\" class=\"modal fade left\"  tabindex=\"-1\" role=\"dialog\"\n     aria-labelledby=\"myModalLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog\" role=\"document\">\n    <div class=\"modal-content\">\n\n        <div class=\"modal-content\">\n            <div class=\"modal-header\">\n              <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\n            </div>\n            <div class=\"modal-body \">\n                <img  class=\"h-100 w-100 img-responsive\" src=\"{{data.receipt_image_url}}\" alt=\"{{data.receipt_image_file_id}}\">\n            </div>\n        </div>\n\n    </div>\n  </div>\n</div>\n\n                            </td>\n                            <td>{{data.remarks}}</td>\n                            <td>{{data.created_on | date:'d/M/yy, h:mm a'}}</td>\n                            <td style=\"color: green;\" *ngIf=\"data.is_verified == true\">Verified</td>\n                            <td *ngIf=\"data.is_verified == false\"><button (click)=\"isVerify(data._id)\" mat-raised-button color=\"primary\">Verify</button></td>\n                        </tr>\n                    </tbody>\n                </table>\n                <pagination-controls id=\"expense\" (pageChange)=\"expPage = $event\" maxSize=\"9\" directionLinks=\"true\"></pagination-controls>\n            </div>\n        </div>\n\n      </div>\n    </div>\n</div>\n\n  <!-- reimbursement transaction -->\n\n  <div class=\"row \">\n    <div class=\"col-md-12\">\n      <div class=\"card\">\n        <div  class=\"card-header rounded mdc-elevation--z6 card-header\">\n            <h4 class=\"card-title \">Reimbursement Transactions</h4>\n            <p class=\"card-category \">user's transaction info</p>\n        </div>\n        <div class=\"card-body rounded mdc-elevation--z6\">\n            <div  class=\"table-responsive\">\n                <table class=\"table\">\n                    <thead class=\" text-black\">\n                        <th>Receipt ID</th>\n                        <th>Total Expense</th>\n                        <th>Work Expense</th>\n                        <th>Personal Expense</th>\n                        <th>Receipt Url</th>\n                        <th>Remarks</th>\n                        <th>Created At</th>\n                        <th>Status</th>\n                    </thead>\n                    <tbody *ngIf=\"this.cli_items\">\n                        <tr *ngFor=\"let data of cli_items | paginate: { id: 'reimburse',\n                        itemsPerPage: 10,\n                        currentPage: reimbursePage,\n                        totalItems: TotalRecords }\">\n                            <td>{{data.receipt_id}}</td>\n                            <td>{{data.total_expense.amount}} {{data.total_expense.currency}}</td>\n                            <td>{{data.work_expense.amount}} {{data.work_expense.currency}}</td> \n                            <td>{{data.personal_expense.amount}} {{data.personal_expense.currency}}</td> \n                            <td *ngIf=\"!(data.receipt_image_url)\">No Receipt</td>\n                            <td *ngIf=\"data.receipt_image_url\">\n                                <div class=\"example-button-row\">\n                                <button mat-raised-button color=\"primary\" data-toggle=\"modal\" data-target=\"#basicExample\">View</button>\n                                </div>\n\n<div id=\"basicExample\" class=\"modal fade left\"  tabindex=\"-1\" role=\"dialog\"\n     aria-labelledby=\"myModalLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog\" role=\"document\">\n    <div class=\"modal-content\">\n\n        <div class=\"modal-content\">\n            <div class=\"modal-header\">\n              <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\n            </div>\n            <div class=\"modal-body \">\n                <img  class=\"h-100 w-100 img-responsive\" src=\"{{data.receipt_image_url}}\" alt=\"{{data.receipt_image_file_id}}\">\n            </div>\n        </div>\n\n    </div>\n  </div>\n</div>\n\n                            </td>\n                            <td>{{data.remarks}}</td>\n                            <td>{{data.created_on | date:'d/M/yy, h:mm a'}}</td>\n                            <td style=\"color: green;\" *ngIf=\"data.is_verified == true\">Verified</td>\n                            <td *ngIf=\"data.is_verified == false\"><button mat-raised-button color=\"primary\">Verify</button></td>\n                        </tr>\n                    </tbody>\n                </table>\n                <pagination-controls id=\"reimburse\" (pageChange)=\"reimbursePage = $event\" maxSize=\"9\" directionLinks=\"true\"></pagination-controls>\n            </div>\n        </div> \n      </div>\n    </div>\n</div>\n\n  <!-- client reimbursement transaction -->\n\n  <div class=\"row \">\n    <div class=\"col-md-12\">\n      <div class=\"card\">\n        <div  class=\"card-header rounded mdc-elevation--z6 card-header\">\n            <h4 class=\"card-title \">Client Reimbursement Transactions</h4>\n            <p class=\"card-category \">user's expenses info</p>\n        </div>\n        <div class=\"card-body rounded mdc-elevation--z6\">\n            <div  class=\"table-responsive\">\n                <table class=\"table\">\n                    <thead class=\" text-black\">\n                        <th>Receipt ID</th>\n                        <th>Amount</th>\n                        <th>Conversion Rate</th>\n                        <th>Receipt Url</th>\n                        <th>Remarks</th>\n                        <th>Created At</th>\n                        <th>Status</th>\n                    </thead>\n                    <tbody *ngIf=\"this.re_items\">\n                        <tr *ngFor=\"let data of re_items | paginate: { id: 'client',\n                        itemsPerPage: 10,\n                        currentPage: clientPage,\n                        totalItems: TotalRecords }; let i = index\">\n                            <td>{{data.receipt_id}}</td> \n                            <td>{{data.client_reimbursement_amount.amount}} {{data.client_reimbursement_amount.currency}}</td>\n                            <td>{{data.rate_of_conversion}}</td>\n                            <td *ngIf=\"!(data.receipt_image_url)\">No Receipt</td>\n                            <td *ngIf=\"data.receipt_image_url\">\n                                <div class=\"example-button-row\">\n                                <button mat-raised-button color=\"primary\" data-toggle=\"modal\" data-target=\"#basicExample\">View</button>\n                                </div>\n\n<div id=\"basicExample\" class=\"modal fade left\"  tabindex=\"-1\" role=\"dialog\"\n     aria-labelledby=\"myModalLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog\" role=\"document\">\n    <div class=\"modal-content\">\n\n        <div class=\"modal-content\">\n            <div class=\"modal-header\">\n              <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\n            </div>\n            <div class=\"modal-body \">\n                <img  class=\"h-100 w-100 img-responsive\" src=\"{{data.receipt_image_url}}\" alt=\"{{data.receipt_image_file_id}}\">\n            </div>\n        </div>\n\n    </div>\n  </div>\n</div>\n\n                            </td>\n                            <td>{{data.remarks}}</td>\n                            <td>{{data.created_on | date:'d/M/yy, h:mm a'}}</td> \n                            <td style=\"color: green;\" *ngIf=\"data.is_verified == true\">Transaction Verified</td>\n                            <td *ngIf=\"data.is_verified == false\"><button mat-raised-button color=\"primary\">Verify</button></td>\n                        </tr>\n                    </tbody>\n                </table>\n                <pagination-controls id=\"client\" (pageChange)=\"clientPage = $event\" maxSize=\"9\" directionLinks=\"true\"></pagination-controls>\n            </div>\n        </div> \n      </div>\n    </div>\n</div>\n \n</div>\n</div>\n\n\n\n\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("\n<div class=\"main-content\">\n    <div class=\"container-fluid\">\n        <i class=\"row mb-5 ml-2 fa fa-arrow-left\" (click)=\"goBack()\" aria-hidden=\"true\"></i>\n\n            <button mat-raised-button *ngIf=\"this.ongoing == 'true'\" (click)=\"EndTrip()\" color=\"warn\">END TRIP</button>\n\n    <div class=\"row mt-5\">\n\n        <!-- current trip expenses -->\n            <div  class=\"col-md-4 mb-5 chart-container\" style=\"position: relative; height:35vh; width:80vw\">\n                <h3 class=\"text-center  mb-3\"  *ngIf=\"this.ongoing == 'true' \">Current Expenses</h3>\n                <h3 class=\"text-center  mb-3\"  *ngIf=\"this.ongoing !== 'true' \">Total Expenses</h3>\n                <p id=\"d1\" class=\"text-white\" *ngIf=\"this.currLength == 0\">NO TRANSACTIONS YET</p>\n                <canvas *ngIf=\"this.currLength == 0\" baseChart\n                [data]=\"emptydata\"\n                [chartType]=\"pieChartType\"\n                [colors]=\"emptyColors\"\n                [options]=\"emptyOptions\"></canvas>\n                <canvas baseChart\n                [data]=\"currentData\" \n                [labels]=\"currentLabels\" \n                [chartType]=\"pieChartType\"\n                [options]=\"pieChartOptions\"\n                [plugins]=\"pieChartPlugins\"\n                [colors]=\"pieChartColors\" \n                [legend]=\"pieChartLegend\">\n              </canvas>\n            </div>\n\n            <!-- Today's trip expenses -->\n            <div *ngIf=\"this.ongoing == true \">\n            <div class=\" col-md-4 mb-5 chart-container\" style=\"position: relative; height:35vh; width:80vw\">\n              \n                <h3 class=\"text-center mb-3\">Today's Expenses</h3>\n                <p id=\"d2\" class=\"text-white\" *ngIf=\"this.todayLength == 0\">NO TRANSACTIONS YET</p>\n                <canvas *ngIf=\"this.todayLength == 0\" baseChart\n                [data]=\"emptydata\" \n                [chartType]=\"pieChartType\"\n                [colors]=\"emptyColors\"\n                [options]=\"emptyOptions\"></canvas>\n                <canvas *ngIf=\"this.todayLength > 0\" baseChart\n                [data]=\"todayData\" \n                [labels]=\"todayLabels\" \n                [chartType]=\"pieChartType\"\n                [options]=\"pieChartOptions\"\n                [plugins]=\"pieChartPlugins\"\n                [colors]=\"pieChartColors\" \n                [legend]=\"pieChartLegend\">\n              </canvas>\n             </div>\n            </div>\n\n            <!-- average trip expenses -->\n            <div  class=\"col-md-4 mb-5 chart-container\" style=\"position: relative; height:35vh; width:80vw\">\n                <h3 class=\"text-center mb-3\">Average Expenses</h3>\n                <p id=\"d3\" class=\"text-white\" *ngIf=\"this.avgLength == 0\">NO TRANSACTIONS YET</p>\n                <canvas *ngIf=\"this.avgLength == 0\" baseChart\n                [data]=\"emptydata\"\n                [chartType]=\"pieChartType\"\n                [colors]=\"emptyColors\"\n                [options]=\"emptyOptions\"></canvas>\n                <canvas baseChart\n                [data]=\"avgData\" \n                [labels]=\"avgLabels\" \n                [chartType]=\"pieChartType\"\n                [options]=\"pieChartOptions\"\n                [plugins]=\"pieChartPlugins\"\n                [colors]=\"pieChartColors\" \n                [legend]=\"pieChartLegend\">\n              </canvas>\n            </div>\n\n    </div>\n\n    <div class=\"row mt-5 mb-0\">\n      <div class=\"col-md-3 form-group\">\n        <mat-form-field appearance=\"fill\">\n          <mat-label>List</mat-label>\n          <select matNativeControl (change)=\"changeSuit($event.target.value); \" >\n            <option value=\"\">View All</option>\n            <option value=\"verified\">View Verified only</option>\n            <option value=\"unverified\">View non-verfiy only</option>\n          </select>\n        </mat-form-field>\n        <!-- <button (click)=\"changeSuit($event)\" mat-raised-button>CALL</button> -->\n      </div>\n    </div>\n\n  <!-- currency conversion transaction -->\n\n  <div class=\"row mt-3\">\n    <div class=\"col-md-12\">\n      <div class=\"card\">\n        <div  class=\"card-header rounded mdc-elevation--z6 card-header\">\n            <h4 class=\"card-title \">Currency Conversion Transactions</h4>\n            <p class=\"card-category \">user's transaction info</p>\n        </div>        \n        <div class=\"card-body rounded mdc-elevation--z6\">\n            <div  class=\"table-responsive\">\n                <table class=\"table\">\n                    <thead class=\" text-black\">\n                        <th>Receipt ID</th>\n                        <th>Source Holding</th>\n                        <th>Converted Holding</th>\n                        <th>Conversion Rate</th>\n                        <th>Receipt Url</th>\n                        <th>Remarks</th>\n                        <th>Created At</th>\n                        <th>Status</th>\n                    </thead>\n                    <tbody *ngIf=\"this.items\" >\n                        <tr *ngFor=\"let data of items | paginate: { id: 'curr_con',\n                        itemsPerPage: 10,\n                        currentPage: curr_Page,\n                        totalItems: TotalRecords }; let i = index;\">\n                            <td>{{data.receipt_id}}</td> \n                            <td>{{data.source_holding.amount}} {{data.source_holding.currency}}</td>\n                            <td>{{data.converted_holding.amount}} {{data.converted_holding.currency}}</td> \n                            <td>{{data.rate_of_conversion}}</td> \n                            <td *ngIf=\"!(data.receipt_image_url)\">No Receipt</td>\n                            <td *ngIf=\"data.receipt_image_url\">\n                              <button mat-raised-button color=\"primary\"  (click)=\"showimage(data.receipt_image_url,true)\">View</button>\n                             \n                              <div [style.display]=\"showModal ? 'block' : 'none'\" class=\"modal\" id=\"imagemodal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\" aria-hidden=\"true\">\n                              <div class=\"modal-dialog\">\n                                <div class=\"modal-content\">\n                                  <div class=\"modal-header\">\n                                    <h4 class=\"modal-title\" id=\"myModalLabel\">Image preview</h4>\n                                  </div>\n                                  <div class=\"modal-body\">\n                                    <img src=\"{{image}}\" id=\"imagepreview\" style=\"width: 450px; height: 500px;\" >\n                                  </div>\n                                  <div class=\"modal-footer\">\n                                    <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\" (click) = \"hide()\">Close</button>\n                                  </div>\n                                </div>\n                              </div>\n                              </div>\n\n                            </td>\n                            <td>{{data.remarks}}</td>\n                            <td>{{data.created_on | date:'d/M/yy, h:mm a'}}</td>\n                            <td style=\"color: green;\" *ngIf=\"data.is_verified == true\">Verified</td>\n                            <td *ngIf=\"data.is_verified == false\"><button mat-raised-button color=\"primary\" (click)=\"isVerify(data._id)\">Verify</button></td>\n                        </tr>\n                    </tbody>\n\n                </table>\n                <pagination-controls id=\"curr_con\" (pageChange)=\"curr_Page = $event\" maxSize=\"9\" directionLinks=\"true\"></pagination-controls>\n               \n            </div>\n        </div>\n\n      </div>\n    </div>\n</div>\n\n\n  <!-- expense transaction -->\n\n  <div class=\"row \">\n    <div class=\"col-md-12\">\n      <div class=\"card\">\n        <div  class=\"card-header rounded mdc-elevation--z6 card-header\">\n            <h4 class=\"card-title \">Expenses Transactions</h4>\n            <p class=\"card-category \">user's transaction info</p>\n        </div>\n        <div class=\"card-body rounded mdc-elevation--z6\">\n            <div  class=\"table-responsive\">\n                <table class=\"table\">\n                    <thead class=\" text-black\">\n                        <th>Receipt ID</th>\n                        <th>Expense Type</th>\n                        <th>Total Expense</th>\n                        <th>Work Expense</th>\n                        <th>Personal Expense</th>\n                        <th>Receipt Url</th>\n                        <th>Remarks</th>\n                        <th>Created At</th>\n                        <th>Status</th>\n                    </thead>\n                    <tbody *ngIf=\"this.expitems\">\n                        <tr *ngFor=\"let data of expitems | paginate: { id: 'expense',\n                        itemsPerPage: 10,\n                        currentPage: expPage,\n                        totalItems: TotalRecords }; let i = index;\">\n                            <td>{{data.receipt_id}}</td> \n                            <td>{{data.expense_type}}</td>\n                            <td>{{data.total_expense.amount}} {{data.total_expense.currency}}</td>\n                            <td>{{data.work_expense.amount}} {{data.work_expense.currency}}</td> \n                            <td>{{data.personal_expense.amount}} {{data.personal_expense.currency}}</td> \n                            <td *ngIf=\"!(data.receipt_image_url)\">No Receipt</td>\n                            <td *ngIf=\"data.receipt_image_url\">\n                             <button mat-raised-button color=\"primary\"  (click)=\"showimage(data.receipt_image_url,true)\">View</button>\n                             \n                              <div [style.display]=\"showModal ? 'block' : 'none'\" class=\"modal\" id=\"imagemodal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\" aria-hidden=\"true\">\n                              <div class=\"modal-dialog\">\n                                <div class=\"modal-content\">\n                                  <div class=\"modal-header\">\n                                    <h4 class=\"modal-title\" id=\"myModalLabel\">Image preview</h4>\n                                  </div>\n                                  <div class=\"modal-body\">\n                                    <img src=\"{{image}}\" id=\"imagepreview\" style=\"width: 450px; height: 500px;\" >\n                                  </div>\n                                  <div class=\"modal-footer\">\n                                    <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\" (click) = \"hide()\">Close</button>\n                                  </div>\n                                </div>\n                              </div>\n                              </div>\n                            \n                              <!-- <img style=\"width:100px;height: 125px;\" class=\"img-responsive\" src=\"{{data.receipt_image_url}}\" alt=\"{{data.receipt_image_file_id}}\"> -->\n                               \n                            </td>\n                            <td>{{data.remarks}}</td>\n                            <td>{{data.created_on | date:'d/M/yy, h:mm a'}}</td>\n                            <td style=\"color: green;\" *ngIf=\"data.is_verified == true\">Verified</td>\n                            <td *ngIf=\"data.is_verified == false\"><button (click)=\"isVerify(data._id)\" mat-raised-button color=\"primary\">Verify</button></td>\n                            \n                        </tr>\n                    </tbody>\n                </table>\n                <pagination-controls id=\"expense\" (pageChange)=\"expPage = $event\" maxSize=\"9\" directionLinks=\"true\"></pagination-controls>\n            </div>\n        </div>\n\n      </div>\n    </div>\n</div>\n\n  <!-- reimbursement transaction -->\n\n  <div class=\"row \">\n    <div class=\"col-md-12\">\n      <div class=\"card\">\n        <div  class=\"card-header rounded mdc-elevation--z6 card-header\">\n            <h4 class=\"card-title \">Reimbursement Transactions</h4>\n            <p class=\"card-category \">user's transaction info</p>\n        </div>\n        <div class=\"card-body rounded mdc-elevation--z6\">\n            <div  class=\"table-responsive\">\n                <table class=\"table\">\n                    <thead class=\" text-black\">\n                        <th>Receipt ID</th>\n                        <th>Total Expense</th>\n                        <th>Work Expense</th>\n                        <th>Personal Expense</th>\n                        <th>Receipt Url</th>\n                        <th>Remarks</th>\n                        <th>Created At</th>\n                        <th>Status</th>\n                    </thead>\n                    <tbody *ngIf=\"this.cli_items\">\n                        <tr *ngFor=\"let data of cli_items | paginate: { id: 'reimburse',\n                        itemsPerPage: 10,\n                        currentPage: reimbursePage,\n                        totalItems: TotalRecords }\">\n                            <td>{{data.receipt_id}}</td>\n                            <td>{{data.total_expense.amount}} {{data.total_expense.currency}}</td>\n                            <td>{{data.work_expense.amount}} {{data.work_expense.currency}}</td> \n                            <td>{{data.personal_expense.amount}} {{data.personal_expense.currency}}</td> \n                            <td *ngIf=\"!(data.receipt_image_url)\">No Receipt</td>\n                            <td *ngIf=\"data.receipt_image_url\">\n                              <button mat-raised-button color=\"primary\"  (click)=\"showimage(data.receipt_image_url,true)\">View</button>\n                             \n                              <div [style.display]=\"showModal ? 'block' : 'none'\" class=\"modal\" id=\"imagemodal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\" aria-hidden=\"true\">\n                              <div class=\"modal-dialog\">\n                                <div class=\"modal-content\">\n                                  <div class=\"modal-header\">\n                                    <h4 class=\"modal-title\" id=\"myModalLabel\">Image preview</h4>\n                                  </div>\n                                  <div class=\"modal-body\">\n                                    <img src=\"{{image}}\" id=\"imagepreview\" style=\"width: 450px; height: 500px;\" >\n                                  </div>\n                                  <div class=\"modal-footer\">\n                                    <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\" (click) = \"hide()\">Close</button>\n                                  </div>\n                                </div>\n                              </div>\n                              </div>\n\n                            </td>\n                            <td>{{data.remarks}}</td>\n                            <td>{{data.created_on | date:'d/M/yy, h:mm a'}}</td>\n                            <td style=\"color: green;\" *ngIf=\"data.is_verified == true\">Verified</td>\n                            <td *ngIf=\"data.is_verified == false\"><button mat-raised-button color=\"primary\">Verify</button></td>\n                        </tr>\n                    </tbody>\n                </table>\n                <pagination-controls id=\"reimburse\" (pageChange)=\"reimbursePage = $event\" maxSize=\"9\" directionLinks=\"true\"></pagination-controls>\n            </div>\n        </div> \n      </div>\n    </div>\n</div>\n\n  <!-- client reimbursement transaction -->\n\n  <div class=\"row \">\n    <div class=\"col-md-12\">\n      <div class=\"card\">\n        <div  class=\"card-header rounded mdc-elevation--z6 card-header\">\n            <h4 class=\"card-title \">Client Reimbursement Transactions</h4>\n            <p class=\"card-category \">user's expenses info</p>\n        </div>\n        <div class=\"card-body rounded mdc-elevation--z6\">\n            <div  class=\"table-responsive\">\n                <table class=\"table\">\n                    <thead class=\" text-black\">\n                        <th>Receipt ID</th>\n                        <th>Amount</th>\n                        <th>Conversion Rate</th>\n                        <th>Receipt Url</th>\n                        <th>Remarks</th>\n                        <th>Created At</th>\n                        <th>Status</th>\n                    </thead>\n                    <tbody *ngIf=\"this.re_items\">\n                        <tr *ngFor=\"let data of re_items | paginate: { id: 'client',\n                        itemsPerPage: 10,\n                        currentPage: clientPage,\n                        totalItems: TotalRecords }; let i = index\">\n                            <td>{{data.receipt_id}}</td> \n                            <td>{{data.client_reimbursement_amount.amount}} {{data.client_reimbursement_amount.currency}}</td>\n                            <td>{{data.rate_of_conversion}}</td>\n                            <td *ngIf=\"!(data.receipt_image_url)\">No Receipt</td>\n                            <td *ngIf=\"data.receipt_image_url\">\n                              <button mat-raised-button color=\"primary\"  (click)=\"showimage(data.receipt_image_url,true)\">View</button>\n                             \n                              <div [style.display]=\"showModal ? 'block' : 'none'\" class=\"modal\" id=\"imagemodal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\" aria-hidden=\"true\">\n                              <div class=\"modal-dialog\">\n                                <div class=\"modal-content\">\n                                  <div class=\"modal-header\">\n                                    <h4 class=\"modal-title\" id=\"myModalLabel\">Image preview</h4>\n                                  </div>\n                                  <div class=\"modal-body\">\n                                    <img src=\"{{image}}\" id=\"imagepreview\" style=\"width: 450px; height: 500px;\" >\n                                  </div>\n                                  <div class=\"modal-footer\">\n                                    <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\" (click) = \"hide()\">Close</button>\n                                  </div>\n                                </div>\n                              </div>\n                              </div>\n\n                            </td>\n                            <td>{{data.remarks}}</td>\n                            <td>{{data.created_on | date:'d/M/yy, h:mm a'}}</td> \n                            <td style=\"color: green;\" *ngIf=\"data.is_verified == true\">Transaction Verified</td>\n                            <td *ngIf=\"data.is_verified == false\"><button mat-raised-button color=\"primary\">Verify</button></td>\n                        </tr>\n                    </tbody>\n                </table>\n                <pagination-controls id=\"client\" (pageChange)=\"clientPage = $event\" maxSize=\"9\" directionLinks=\"true\"></pagination-controls>\n            </div>\n        </div> \n      </div>\n    </div>\n</div>\n \n</div>\n</div>\n\n\n\n\n\n");
 
 /***/ }),
 
@@ -516,7 +542,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n<div class=\"main-content\">\n  <div class=\"container-fluid\">\n      <div class=\"row\">\n          <div class=\"col-md-12\">\n              <div class=\"card  \">\n                  <div class=\"card-header rounded mdc-elevation--z6 card-header\">\n                      <h4 class=\"card-title\">Add User</h4>\n                      <p class=\"card-category\">Add new User</p>\n                  </div>\n                  <div class=\"card-body rounded mdc-elevation--z6\">\n                      <form [formGroup]=\"userform\" novalidate (ngSubmit)=\"onSubmit()\">\n\n                           <div class=\"col-md-4 form-group\">\n                              <mat-form-field class=\"example-full-width\">\n                                <input matInput placeholder=\"Employee Code\" type=\"text\" formControlName=\"employee_code\">\n                              </mat-form-field>\n                            </div>\n\n                            <div class=\"col-md-4 form-group\">\n                                <mat-form-field class=\"example-full-width\">\n                                  <input matInput placeholder=\"Full Name\" type=\"text\" formControlName=\"name\">\n                                </mat-form-field>\n                            </div>\n                            \n                            <div class=\"col-md-4 form-group\">\n                                <mat-form-field appearance=\"fill\">\n                                  <mat-label>Role</mat-label>\n                                  <mat-select formControlName=\"role\" >\n                                    <mat-option *ngFor=\"let rol of role\" [value]=\"rol\">\n                                      {{rol}}\n                                    </mat-option>\n                                  </mat-select>\n                                </mat-form-field>\n                            </div>\n                          \n                            <div class=\"col-md-4 form-group\">\n                                <mat-form-field class=\"example-full-width\">\n                                  <input matInput placeholder=\"Email\" formControlName=\"email\" type=\"text\">\n                                </mat-form-field>\n                            </div>\n                          \n                            <div class=\"col-md-4 form-group\">\n                                  <mat-label class=\"row  mb-3 ml-0\">Will this user use the Expense Manager?</mat-label>\n                                  <mat-radio-group class=\"row mb-3 ml-0\" formControlName=\"is_expense_manager_user\" aria-label=\"Expense Manager\">\n                                    <mat-radio-button [value]=true>Yes</mat-radio-button>\n                                    <mat-radio-button [value]=false>No</mat-radio-button>\n                                  </mat-radio-group>\n                            </div>\n                          \n                            <div class=\"col-md-4 mt-3 mb-3\">\n                              <button mat-raised-button color=\"warn\" type=\"submit\" >SUBMIT</button>\n                            </div>\n\n                          <div class=\"clearfix\"></div>\n                      \n                      </form>\n                  </div>\n              </div>\n          </div>\n        </div>\n  \n      \n  </div>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("\n<div class=\"main-content\">\n  <div class=\"container-fluid\">\n      <div class=\"row\">\n          <div class=\"col-md-12\">\n              <div class=\"card  \">\n                  <div class=\"card-header rounded mdc-elevation--z6 card-header\">\n                      <h4 class=\"card-title\">Add User</h4>\n                      <p class=\"card-category\">Add new User</p>\n                  </div>\n                  <div class=\"card-body rounded mdc-elevation--z6\">\n                      <form [formGroup]=\"userform\" novalidate (ngSubmit)=\"onSubmit()\">\n\n                           <div class=\"col-md-4 form-group\">\n                              <mat-form-field class=\"example-full-width\">\n                                <input matInput placeholder=\"Employee Code\" type=\"text\" formControlName=\"employee_code\">\n                              </mat-form-field>\n                            </div>\n\n                            <div class=\"col-md-4 form-group\">\n                                <mat-form-field class=\"example-full-width\">\n                                  <input matInput placeholder=\"Full Name\" type=\"text\" formControlName=\"name\">\n                                </mat-form-field>\n                            </div>\n                            \n                            <div  class=\"col-md-4 form-group\">\n                                <mat-form-field appearance=\"fill\">\n                                  <mat-label>Role</mat-label>\n                                  <mat-select (selectionChange)=\"onEnter($event.value)\" formControlName=\"role\" >\n                                    <mat-option *ngFor=\"let rol of role\" [value]=\"rol\">\n                                      {{rol}}\n                                    </mat-option>\n                                  </mat-select>\n                                </mat-form-field>\n                            </div>\n\n                            <div *ngIf=\"display == 'true'\" class=\"col-md-4 form-group\" >\n                              <mat-form-field appearance=\"fill\">\n                                <mat-label>Manager Name</mat-label>\n                                <mat-select formControlName=\"parent_user_id\">\n                                  <mat-option *ngFor=\"let mn of parent_user_id\" [value]=\"mn._id\">\n                                    {{mn.name}}\n                                  </mat-option>\n                                </mat-select>\n                              </mat-form-field>\n                            </div>\n                            \n                            <div class=\"col-md-4 form-group\">\n                                <mat-form-field class=\"example-full-width\">\n                                  <input matInput placeholder=\"Email\" formControlName=\"email\" type=\"text\">\n                                </mat-form-field>\n                            </div>\n                          \n                            <div class=\"col-md-4 form-group\">\n                                  <mat-label class=\"row  mb-3 ml-0\">Will this user use the Expense Manager?</mat-label>\n                                  <mat-radio-group class=\"row mb-3 ml-0\" formControlName=\"is_expense_manager_user\" aria-label=\"Expense Manager\">\n                                    <mat-radio-button [value]=true>Yes</mat-radio-button>\n                                    <mat-radio-button [value]=false>No</mat-radio-button>\n                                  </mat-radio-group>\n                            </div>\n                          \n                            <div class=\"col-md-4 mt-3 mb-3\">\n                              <button mat-raised-button color=\"warn\" type=\"submit\" >SUBMIT</button>\n                            </div>\n\n                          <div class=\"clearfix\"></div>\n                      \n                      </form>\n                  </div>\n              </div>\n          </div>\n        </div>\n  \n      \n  </div>\n</div>\n");
 
 /***/ }),
 
@@ -529,7 +555,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n<div class=\"main-content\">\n    <div class=\"container-fluid\">\n      <app-back></app-back>\n          <div class=\"row\">\n            <div class=\"col-md-12\">\n              <div class=\"card\">\n                <div  class=\"card-header rounded mdc-elevation--z6 card-header\">\n                    <h4 class=\"card-title \">Users List</h4>\n                    <p class=\"card-category \">About users info</p>\n                </div>\n                <div class=\"card-body rounded mdc-elevation--z6\">\n                    <div  class=\"table-responsive\">\n                        <table class=\"table\">\n                            <thead class=\" text-black\">\n                                <th>Empcode</th>\n                                <th>Name</th>\n                                <th>Email</th>\n                                <th>Role</th>\n                                <th>Team members</th>\n                                <th>ExpenseManager</th>\n                                <th colspan=\"2\" class=\"text-center mr-5\">Action</th>\n                            </thead>\n                            <tbody>\n                                <tr   *ngFor=\"let data of items; let i = index;\">\n                                    <td>{{data.employee_code}}</td>\n                                    <td>{{data.name}}</td>\n                                    <td>{{data.email}}</td>\n                                    <td>{{data.role}}</td>\n                                    <td *ngIf=\"data.role != 'senior_sales_manager' \">          \n                                      <button  mat-raised-button type=\"submit\" style=\"background-color: #1b96f3;\" [routerLink]=\"['/team-members/', data._id]\" class=\"btn btn-Success \">view</button>\n                                    </td>\n                                    <td *ngIf=\"data.role == 'senior_sales_manager' \"></td>\n                                    <td>{{data.is_expense_manager_user}}</td>\n                                    <td class=\" \">\n                                      <button  mat-raised-button type=\"submit\" style=\"background-color: #1b96f3;\" [routerLink]=\"['/edit-profile/', data._id, i]\" class=\"btn btn-Success \">Edit</button>\n                                      <button mat-raised-button type=\"submit\"  class=\"btn btn-danger pull-right\" (click)=\"deluser(data._id)\">Delete</button>\n                                    </td>\n                                    <!-- <td><button mat-raised-button type=\"submit\"  class=\"btn btn-danger pull-right\" (click)=\"deluser(data._id)\">Delete</button></td> -->\n                                   \n                                  </tr>\n                            </tbody>\n                        </table>\n            </div>\n          </div>\n  \n    \n    </div>\n  </div>\n  ");
+/* harmony default export */ __webpack_exports__["default"] = ("\n<div class=\"main-content\">\n    <div class=\"container-fluid\">\n      <app-back></app-back>\n          <div class=\"row\">\n            <div class=\"col-md-12\">\n              <div class=\"card\">\n                <div  class=\"card-header rounded mdc-elevation--z6 card-header\">\n                    <h4 class=\"card-title \">Users List</h4>\n                    <p class=\"card-category \">About users info</p>\n                </div>\n                <div class=\"card-body rounded mdc-elevation--z6\">\n                    <div  class=\"table-responsive\">\n                        <table class=\"table\">\n                            <thead class=\"text-center text-black\">\n                                <th>Empcode</th>\n                                <th>Name</th>\n                                <th>Email</th>\n                                <th>Role</th>\n                                <th>Team members</th>\n                                <th>ExpenseManager</th>\n                                <th class=\"text-center\">DSR</th>\n                                <th colspan=\"2\" class=\"text-center mr-5\">Action</th>\n                            </thead>\n                            <tbody class=\"text-center\">\n                                <tr   *ngFor=\"let data of items; let i = index;\">\n                                    <td>{{data.employee_code}}</td>\n                                    <td>{{data.name}}</td>\n                                    <td>{{data.email}}</td>\n                                    <td>{{data.role}}</td>\n                                    <td *ngIf=\"data.role != 'senior_sales_manager' \">          \n                                      <button  mat-raised-button type=\"submit\" style=\"background-color: #1b96f3;\" [routerLink]=\"['/team-members/', data._id]\" class=\"btn btn-Success \">view</button>\n                                    </td>\n                                    <td *ngIf=\"data.role == 'senior_sales_manager' \"></td>\n                                    <td>{{data.is_expense_manager_user}}</td>\n                                    <td>\n                                      <button mat-raised-button color=\"primary\" type=\"submit\"  class=\"btn \" [routerLink]=\"['/dsr/', data._id]\">View</button></td>\n                                    <td class=\" \">\n                                      <button  mat-raised-button type=\"submit\" style=\"background-color: #1b96f3;\" [routerLink]=\"['/edit-profile/', data._id, i]\" class=\"btn btn-Success \">Edit</button>\n                                      <button mat-raised-button type=\"submit\"  class=\"btn btn-danger pull-right\" (click)=\"deluser(data._id)\">Delete</button>\n                                    </td>\n                                    \n                                   \n                                  </tr>\n                            </tbody>\n                        </table>\n            </div>\n          </div>\n  \n    \n    </div>\n  </div>\n  ");
 
 /***/ }),
 
@@ -967,23 +993,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
 /* harmony import */ var _layouts_admin_layout_admin_layout_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./layouts/admin-layout/admin-layout.component */ "./src/app/layouts/admin-layout/admin-layout.component.ts");
 /* harmony import */ var _auth_home_guard__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./auth/home.guard */ "./src/app/auth/home.guard.ts");
-/* harmony import */ var _services_usercrud_service__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./services/usercrud.service */ "./src/app/services/usercrud.service.ts");
-/* harmony import */ var _helpers_auth_interceptor__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./helpers/auth.interceptor */ "./src/app/helpers/auth.interceptor.ts");
-/* harmony import */ var _singleusertrip_singleusertrip_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./singleusertrip/singleusertrip.component */ "./src/app/singleusertrip/singleusertrip.component.ts");
-/* harmony import */ var _single_trans_single_trans_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./single-trans/single-trans.component */ "./src/app/single-trans/single-trans.component.ts");
-/* harmony import */ var _angular_material_paginator__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @angular/material/paginator */ "./node_modules/@angular/material/__ivy_ngcc__/fesm5/paginator.js");
-/* harmony import */ var _angular_material_tabs__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @angular/material/tabs */ "./node_modules/@angular/material/__ivy_ngcc__/fesm5/tabs.js");
-/* harmony import */ var _angular_material_sort__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @angular/material/sort */ "./node_modules/@angular/material/__ivy_ngcc__/fesm5/sort.js");
-/* harmony import */ var _angular_material_button__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @angular/material/button */ "./node_modules/@angular/material/__ivy_ngcc__/fesm5/button.js");
-/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/__ivy_ngcc__/fesm5/dialog.js");
-/* harmony import */ var _angular_material_table__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! @angular/material/table */ "./node_modules/@angular/material/__ivy_ngcc__/fesm5/table.js");
-/* harmony import */ var _angular_material_radio__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! @angular/material/radio */ "./node_modules/@angular/material/__ivy_ngcc__/fesm5/radio.js");
-/* harmony import */ var _angular_material_icon__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! @angular/material/icon */ "./node_modules/@angular/material/fesm5/icon.js");
-/* harmony import */ var _angular_material_form_field__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! @angular/material/form-field */ "./node_modules/@angular/material/__ivy_ngcc__/fesm5/form-field.js");
-/* harmony import */ var _angular_material_input__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! @angular/material/input */ "./node_modules/@angular/material/__ivy_ngcc__/fesm5/input.js");
-/* harmony import */ var _angular_cdk_table__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! @angular/cdk/table */ "./node_modules/@angular/cdk/__ivy_ngcc__/fesm5/table.js");
-/* harmony import */ var ng2_charts__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ng2-charts */ "./node_modules/ng2-charts/fesm2015/valor-software-ng2-charts.js");
-/* harmony import */ var _confirm_confirm_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./confirm/confirm.component */ "./src/app/confirm/confirm.component.ts");
+/* harmony import */ var ngx_img_zoom__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ngx-img-zoom */ "./node_modules/ngx-img-zoom/__ivy_ngcc__/fesm5/ngx-img-zoom.js");
+/* harmony import */ var _services_usercrud_service__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./services/usercrud.service */ "./src/app/services/usercrud.service.ts");
+/* harmony import */ var _helpers_auth_interceptor__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./helpers/auth.interceptor */ "./src/app/helpers/auth.interceptor.ts");
+/* harmony import */ var _singleusertrip_singleusertrip_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./singleusertrip/singleusertrip.component */ "./src/app/singleusertrip/singleusertrip.component.ts");
+/* harmony import */ var _single_trans_single_trans_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./single-trans/single-trans.component */ "./src/app/single-trans/single-trans.component.ts");
+/* harmony import */ var _angular_material_paginator__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @angular/material/paginator */ "./node_modules/@angular/material/__ivy_ngcc__/fesm5/paginator.js");
+/* harmony import */ var _angular_material_tabs__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @angular/material/tabs */ "./node_modules/@angular/material/__ivy_ngcc__/fesm5/tabs.js");
+/* harmony import */ var _angular_material_sort__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @angular/material/sort */ "./node_modules/@angular/material/__ivy_ngcc__/fesm5/sort.js");
+/* harmony import */ var _angular_material_button__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @angular/material/button */ "./node_modules/@angular/material/__ivy_ngcc__/fesm5/button.js");
+/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/__ivy_ngcc__/fesm5/dialog.js");
+/* harmony import */ var _angular_material_table__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! @angular/material/table */ "./node_modules/@angular/material/__ivy_ngcc__/fesm5/table.js");
+/* harmony import */ var _angular_material_radio__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! @angular/material/radio */ "./node_modules/@angular/material/__ivy_ngcc__/fesm5/radio.js");
+/* harmony import */ var _angular_material_icon__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! @angular/material/icon */ "./node_modules/@angular/material/fesm5/icon.js");
+/* harmony import */ var _angular_material_form_field__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! @angular/material/form-field */ "./node_modules/@angular/material/__ivy_ngcc__/fesm5/form-field.js");
+/* harmony import */ var _angular_material_input__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! @angular/material/input */ "./node_modules/@angular/material/__ivy_ngcc__/fesm5/input.js");
+/* harmony import */ var _angular_cdk_table__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! @angular/cdk/table */ "./node_modules/@angular/cdk/__ivy_ngcc__/fesm5/table.js");
+/* harmony import */ var ng2_charts__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ng2-charts */ "./node_modules/ng2-charts/fesm2015/valor-software-ng2-charts.js");
+/* harmony import */ var _confirm_confirm_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./confirm/confirm.component */ "./src/app/confirm/confirm.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -993,6 +1020,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
   return (mod && mod.__esModule) ? mod : { "default": mod };
 };
+
 
 
 
@@ -1046,42 +1074,43 @@ var AppModule = /** @class */ (function () {
                 _angular_router__WEBPACK_IMPORTED_MODULE_5__["RouterModule"],
                 _app_routing__WEBPACK_IMPORTED_MODULE_9__["AppRoutingModule"],
                 _app_layouts_admin_layout_admin_layout_module__WEBPACK_IMPORTED_MODULE_11__["AdminLayoutModule"],
-                _angular_material_paginator__WEBPACK_IMPORTED_MODULE_19__["MatPaginatorModule"],
-                _angular_material_sort__WEBPACK_IMPORTED_MODULE_21__["MatSortModule"],
-                _angular_material_button__WEBPACK_IMPORTED_MODULE_22__["MatButtonModule"],
-                _angular_cdk_table__WEBPACK_IMPORTED_MODULE_29__["CdkTableModule"],
-                _angular_material_table__WEBPACK_IMPORTED_MODULE_24__["MatTableModule"],
-                _angular_material_tabs__WEBPACK_IMPORTED_MODULE_20__["MatTabsModule"],
-                _angular_material_radio__WEBPACK_IMPORTED_MODULE_25__["MatRadioModule"],
-                _angular_material_dialog__WEBPACK_IMPORTED_MODULE_23__["MatDialogModule"],
-                _angular_material_form_field__WEBPACK_IMPORTED_MODULE_27__["MatFormFieldModule"],
-                _angular_material_input__WEBPACK_IMPORTED_MODULE_28__["MatInputModule"],
+                _angular_material_paginator__WEBPACK_IMPORTED_MODULE_20__["MatPaginatorModule"],
+                _angular_material_sort__WEBPACK_IMPORTED_MODULE_22__["MatSortModule"],
+                _angular_material_button__WEBPACK_IMPORTED_MODULE_23__["MatButtonModule"],
+                _angular_cdk_table__WEBPACK_IMPORTED_MODULE_30__["CdkTableModule"],
+                _angular_material_table__WEBPACK_IMPORTED_MODULE_25__["MatTableModule"],
+                _angular_material_tabs__WEBPACK_IMPORTED_MODULE_21__["MatTabsModule"],
+                _angular_material_radio__WEBPACK_IMPORTED_MODULE_26__["MatRadioModule"],
+                _angular_material_dialog__WEBPACK_IMPORTED_MODULE_24__["MatDialogModule"],
+                _angular_material_form_field__WEBPACK_IMPORTED_MODULE_28__["MatFormFieldModule"],
+                _angular_material_input__WEBPACK_IMPORTED_MODULE_29__["MatInputModule"],
                 ngx_pagination__WEBPACK_IMPORTED_MODULE_8__["NgxPaginationModule"],
-                _angular_material_icon__WEBPACK_IMPORTED_MODULE_26__["MatIconModule"],
-                ng2_charts__WEBPACK_IMPORTED_MODULE_30__["ChartsModule"]
+                _angular_material_icon__WEBPACK_IMPORTED_MODULE_27__["MatIconModule"],
+                ng2_charts__WEBPACK_IMPORTED_MODULE_31__["ChartsModule"],
+                ngx_img_zoom__WEBPACK_IMPORTED_MODULE_15__["NgxImgZoomModule"]
             ],
             exports: [
-                _angular_material_input__WEBPACK_IMPORTED_MODULE_28__["MatInputModule"],
+                _angular_material_input__WEBPACK_IMPORTED_MODULE_29__["MatInputModule"],
             ],
             declarations: [
                 _app_component__WEBPACK_IMPORTED_MODULE_12__["AppComponent"],
                 _layouts_admin_layout_admin_layout_component__WEBPACK_IMPORTED_MODULE_13__["AdminLayoutComponent"],
-                _singleusertrip_singleusertrip_component__WEBPACK_IMPORTED_MODULE_17__["SingleusertripComponent"],
-                _single_trans_single_trans_component__WEBPACK_IMPORTED_MODULE_18__["SingleTransComponent"],
-                _confirm_confirm_component__WEBPACK_IMPORTED_MODULE_31__["ConfirmComponent"],
+                _singleusertrip_singleusertrip_component__WEBPACK_IMPORTED_MODULE_18__["SingleusertripComponent"],
+                _single_trans_single_trans_component__WEBPACK_IMPORTED_MODULE_19__["SingleTransComponent"],
+                _confirm_confirm_component__WEBPACK_IMPORTED_MODULE_32__["ConfirmComponent"],
             ],
             providers: [
-                _services_usercrud_service__WEBPACK_IMPORTED_MODULE_15__["UsercrudService"],
+                _services_usercrud_service__WEBPACK_IMPORTED_MODULE_16__["UsercrudService"],
                 _auth_home_guard__WEBPACK_IMPORTED_MODULE_14__["HomeGuard"],
                 {
                     provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HTTP_INTERCEPTORS"],
-                    useClass: _helpers_auth_interceptor__WEBPACK_IMPORTED_MODULE_16__["AuthInterceptor"],
+                    useClass: _helpers_auth_interceptor__WEBPACK_IMPORTED_MODULE_17__["AuthInterceptor"],
                     multi: true
                 }
             ],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_12__["AppComponent"]],
             schemas: [_angular_core__WEBPACK_IMPORTED_MODULE_1__["CUSTOM_ELEMENTS_SCHEMA"]],
-            entryComponents: [_confirm_confirm_component__WEBPACK_IMPORTED_MODULE_31__["ConfirmComponent"]]
+            entryComponents: [_confirm_confirm_component__WEBPACK_IMPORTED_MODULE_32__["ConfirmComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -1713,6 +1742,7 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 var ROUTES = [
     { path: '/user-profile', title: 'Add User', icon: 'person', class: '' },
     { path: '/userslist', title: 'Users List', icon: 'list', class: '' },
+    { path: '/managerslist', title: 'Managers List', icon: 'list', class: '' },
     { path: '/usertrips', title: 'Manage Trips', icon: 'loyalty', class: '' },
     { path: '/log', title: 'Transaction Log', icon: 'receipt_long', class: '' },
     // { path: '/add_company', title: 'Add Company',  icon:'note_add', class: '' },
@@ -1845,6 +1875,159 @@ var ConfirmComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/dsr/dsr.component.css":
+/*!***************************************!*\
+  !*** ./src/app/dsr/dsr.component.css ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (".card-header{\r\n    background-color:#FFF  ;\r\n}\r\n.card-title{\r\n    color: black;\r\n    font-size: 25px;\r\n    font-weight: 500;\r\n}\r\n.card-header .card-category {\r\n    color: white;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZHNyL2Rzci5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksdUJBQXVCO0FBQzNCO0FBQ0E7SUFDSSxZQUFZO0lBQ1osZUFBZTtJQUNmLGdCQUFnQjtBQUNwQjtBQUNBO0lBQ0ksWUFBWTtBQUNoQiIsImZpbGUiOiJzcmMvYXBwL2Rzci9kc3IuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jYXJkLWhlYWRlcntcclxuICAgIGJhY2tncm91bmQtY29sb3I6I0ZGRiAgO1xyXG59XHJcbi5jYXJkLXRpdGxle1xyXG4gICAgY29sb3I6IGJsYWNrO1xyXG4gICAgZm9udC1zaXplOiAyNXB4O1xyXG4gICAgZm9udC13ZWlnaHQ6IDUwMDtcclxufVxyXG4uY2FyZC1oZWFkZXIgLmNhcmQtY2F0ZWdvcnkge1xyXG4gICAgY29sb3I6IHdoaXRlO1xyXG59XHJcbiJdfQ== */");
+
+/***/ }),
+
+/***/ "./src/app/dsr/dsr.component.ts":
+/*!**************************************!*\
+  !*** ./src/app/dsr/dsr.component.ts ***!
+  \**************************************/
+/*! exports provided: DsrComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DsrComponent", function() { return DsrComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm5/router.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm5/http.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm5/common.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+
+var DsrComponent = /** @class */ (function () {
+    // barChartData: ChartDataSets[] = [
+    //   { 
+    //     data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A' 
+    //   }
+    // ];
+    function DsrComponent(http, actRoute, location) {
+        this.http = http;
+        this.actRoute = actRoute;
+        this.location = location;
+        this.Url = 'https://api.plint.in';
+        this.headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]().set('Content-Type', 'application/json')
+            .append('Authorization', 'Bearer ' + window.sessionStorage.getItem('access_token'));
+        this.Data1 = [];
+        this.Data2 = [];
+        this.Data3 = [];
+        this.Data4 = [];
+        this.barChartOptions = {
+            responsive: true,
+            scales: {
+                yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+            }
+        };
+        this.mostuniqueClients = [];
+        this.mostuniqueClientsData = [
+        // {data: []},
+        ];
+        // public topquotation: Label[] = [];
+        // public topquotationData: ChartDataSets[] = [
+        //   {data: []},
+        // ];
+        // public avgmeeting: Label[] = [];
+        // public avgmeetingData: ChartDataSets[] = [
+        //   {data: []},
+        // ];
+        // public currentmonth: Label[] = [];
+        // public currentmonthData: ChartDataSets[] = [
+        //   {data: []},
+        // ];
+        this.barChartType = 'bar';
+        this.barChartLegend = false;
+        this.barChartPlugins = [];
+        this.user_id = this.actRoute.snapshot.params.user_id;
+    }
+    DsrComponent.prototype.ngOnInit = function () {
+        this.most_meetings_unique_companies();
+        // this.top_quotations_by_emp();
+        // this.most_meetings_current_month();
+        // this.avg_meetings_per_week();  
+    };
+    DsrComponent.prototype.goBack = function () {
+        this.location.back();
+    };
+    DsrComponent.prototype.goForward = function () {
+        this.location.forward();
+    };
+    DsrComponent.prototype.most_meetings_unique_companies = function () {
+        var _this = this;
+        var API_URL = this.Url + '/dsr/meetings/analytics';
+        this.http.get("" + API_URL, { headers: this.headers })
+            .subscribe(function (res) {
+            // console.log(res.data);
+            _this.Data1 = res.data.top_meetings_by_employees_with_unique_companies;
+            // this.Data2 = res.data.top_quotations_by_employees;
+            console.log(res.data);
+            // console.log(this.Data1);
+            // this.Data1 = [
+            //   {name: "a", num_meetings: 30}, {name: "b", num_meetings: 9}, {name : "c", num_meetings: 19}
+            // ]
+            for (var i = 0; i < _this.Data1.length; i++) // Isme 1 ki jagah kitni entries rkhni h wo likhna
+             {
+                var ele = { data: [] };
+                _this.mostuniqueClientsData.push(ele);
+            }
+            for (var i = 0; i < _this.Data1.length; i++) {
+                _this.mostuniqueClients.push(_this.Data1[i].name);
+                // for(let j = i; j < i+1; j++)
+                // {       
+                // if(i == 0)
+                _this.mostuniqueClientsData[i].data.push(_this.Data1[i].num_meetings);
+                // if(i == 1)  this.mostuniqueClientsData[i].data.push(this.Data2[j].total_quotations);
+                // }
+            }
+            console.log(_this.mostuniqueClients, _this.mostuniqueClientsData);
+        });
+    };
+    DsrComponent.ctorParameters = function () { return [
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"] },
+        { type: _angular_common__WEBPACK_IMPORTED_MODULE_3__["Location"] }
+    ]; };
+    DsrComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-dsr',
+            template: __importDefault(__webpack_require__(/*! raw-loader!./dsr.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/dsr/dsr.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./dsr.component.css */ "./src/app/dsr/dsr.component.css")).default]
+        }),
+        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["Location"]])
+    ], DsrComponent);
+    return DsrComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/edit-profile/edit-profile.component.css":
 /*!*********************************************************!*\
   !*** ./src/app/edit-profile/edit-profile.component.css ***!
@@ -1915,6 +2098,7 @@ var EditProfileComponent = /** @class */ (function () {
                 ])],
             name: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
             role: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+            parent_user_id: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
             is_expense_manager_user: [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
             employee_code: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
         });
@@ -1925,12 +2109,14 @@ var EditProfileComponent = /** @class */ (function () {
         var _this = this;
         this.http.get('https://api.plint.in/admin/users?nonAdminUsers=false').subscribe(function (res) {
             _this.items = res.data;
+            console.log(_this.items);
             for (var index in res.data) {
                 if (_this.user_id == res.data[index]._id) {
                     _this.editform = new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormGroup"]({
                         employee_code: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"](res.data[index].employee_code),
                         name: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"](res.data[index].name),
                         role: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"](res.data[index].role),
+                        parent_user_id: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"](res.data[index].parent_user_id),
                         email: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"](res.data[index].email),
                         is_expense_manager_user: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"](res.data[index].is_expense_manager_user)
                     });
@@ -2261,22 +2447,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material_select__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/material/select */ "./node_modules/@angular/material/__ivy_ngcc__/fesm5/select.js");
 /* harmony import */ var _angular_material_radio__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/material/radio */ "./node_modules/@angular/material/__ivy_ngcc__/fesm5/radio.js");
 /* harmony import */ var _angular_material_icon__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/material/icon */ "./node_modules/@angular/material/fesm5/icon.js");
-/* harmony import */ var ngp_sort_pipe__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ngp-sort-pipe */ "./node_modules/ngp-sort-pipe/__ivy_ngcc__/fesm5/ngp-sort-pipe.js");
-/* harmony import */ var _usertrip_usertrip_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../../usertrip/usertrip.component */ "./src/app/usertrip/usertrip.component.ts");
-/* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../../login/login.component */ "./src/app/login/login.component.ts");
-/* harmony import */ var _user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../../user-profile/user-profile.component */ "./src/app/user-profile/user-profile.component.ts");
-/* harmony import */ var _team_members_team_members_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../../team-members/team-members.component */ "./src/app/team-members/team-members.component.ts");
-/* harmony import */ var _edit_profile_edit_profile_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../../edit-profile/edit-profile.component */ "./src/app/edit-profile/edit-profile.component.ts");
-/* harmony import */ var _start_trip_start_trip_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../../start-trip/start-trip.component */ "./src/app/start-trip/start-trip.component.ts");
-/* harmony import */ var _userslist_userslist_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ../../userslist/userslist.component */ "./src/app/userslist/userslist.component.ts");
-/* harmony import */ var _back_back_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ../../back/back.component */ "./src/app/back/back.component.ts");
-/* harmony import */ var _trans_log_trans_log_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ../../trans-log/trans-log.component */ "./src/app/trans-log/trans-log.component.ts");
-/* harmony import */ var _addcompany_addcompany_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ../../addcompany/addcompany.component */ "./src/app/addcompany/addcompany.component.ts");
-/* harmony import */ var _viewcompany_viewcompany_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ../../viewcompany/viewcompany.component */ "./src/app/viewcompany/viewcompany.component.ts");
-/* harmony import */ var _compmeet_compmeet_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ../../compmeet/compmeet.component */ "./src/app/compmeet/compmeet.component.ts");
-/* harmony import */ var _viewmeeting_viewmeeting_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ../../viewmeeting/viewmeeting.component */ "./src/app/viewmeeting/viewmeeting.component.ts");
-/* harmony import */ var _viewcomp_viewcomp_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ../../viewcomp/viewcomp.component */ "./src/app/viewcomp/viewcomp.component.ts");
-/* harmony import */ var _allcompanies_allcompanies_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ../../allcompanies/allcompanies.component */ "./src/app/allcompanies/allcompanies.component.ts");
+/* harmony import */ var _angular_material_tabs__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/material/tabs */ "./node_modules/@angular/material/__ivy_ngcc__/fesm5/tabs.js");
+/* harmony import */ var ngp_sort_pipe__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ngp-sort-pipe */ "./node_modules/ngp-sort-pipe/__ivy_ngcc__/fesm5/ngp-sort-pipe.js");
+/* harmony import */ var ng2_charts__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ng2-charts */ "./node_modules/ng2-charts/fesm2015/valor-software-ng2-charts.js");
+/* harmony import */ var _usertrip_usertrip_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../../usertrip/usertrip.component */ "./src/app/usertrip/usertrip.component.ts");
+/* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../../login/login.component */ "./src/app/login/login.component.ts");
+/* harmony import */ var _user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../../user-profile/user-profile.component */ "./src/app/user-profile/user-profile.component.ts");
+/* harmony import */ var _team_members_team_members_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../../team-members/team-members.component */ "./src/app/team-members/team-members.component.ts");
+/* harmony import */ var _edit_profile_edit_profile_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ../../edit-profile/edit-profile.component */ "./src/app/edit-profile/edit-profile.component.ts");
+/* harmony import */ var _start_trip_start_trip_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ../../start-trip/start-trip.component */ "./src/app/start-trip/start-trip.component.ts");
+/* harmony import */ var _userslist_userslist_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ../../userslist/userslist.component */ "./src/app/userslist/userslist.component.ts");
+/* harmony import */ var _back_back_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ../../back/back.component */ "./src/app/back/back.component.ts");
+/* harmony import */ var _trans_log_trans_log_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ../../trans-log/trans-log.component */ "./src/app/trans-log/trans-log.component.ts");
+/* harmony import */ var _addcompany_addcompany_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ../../addcompany/addcompany.component */ "./src/app/addcompany/addcompany.component.ts");
+/* harmony import */ var _viewcompany_viewcompany_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ../../viewcompany/viewcompany.component */ "./src/app/viewcompany/viewcompany.component.ts");
+/* harmony import */ var _compmeet_compmeet_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ../../compmeet/compmeet.component */ "./src/app/compmeet/compmeet.component.ts");
+/* harmony import */ var _viewmeeting_viewmeeting_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ../../viewmeeting/viewmeeting.component */ "./src/app/viewmeeting/viewmeeting.component.ts");
+/* harmony import */ var _viewcomp_viewcomp_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ../../viewcomp/viewcomp.component */ "./src/app/viewcomp/viewcomp.component.ts");
+/* harmony import */ var _allcompanies_allcompanies_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ../../allcompanies/allcompanies.component */ "./src/app/allcompanies/allcompanies.component.ts");
+/* harmony import */ var _managerlist_managerlist_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ../../managerlist/managerlist.component */ "./src/app/managerlist/managerlist.component.ts");
+/* harmony import */ var _dsr_dsr_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ../../dsr/dsr.component */ "./src/app/dsr/dsr.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2286,6 +2476,8 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
   return (mod && mod.__esModule) ? mod : { "default": mod };
 };
+
+
 
 
 
@@ -2321,6 +2513,8 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 
 
+
+
 var AdminLayoutModule = /** @class */ (function () {
     function AdminLayoutModule() {
     }
@@ -2340,28 +2534,32 @@ var AdminLayoutModule = /** @class */ (function () {
                 _angular_material_radio__WEBPACK_IMPORTED_MODULE_15__["MatRadioModule"],
                 _angular_material_icon__WEBPACK_IMPORTED_MODULE_16__["MatIconModule"],
                 _angular_material_table__WEBPACK_IMPORTED_MODULE_5__["MatTableModule"],
+                _angular_material_tabs__WEBPACK_IMPORTED_MODULE_17__["MatTabsModule"],
                 _angular_cdk_table__WEBPACK_IMPORTED_MODULE_6__["CdkTableModule"],
+                ng2_charts__WEBPACK_IMPORTED_MODULE_19__["ChartsModule"],
                 ngx_pagination__WEBPACK_IMPORTED_MODULE_8__["NgxPaginationModule"],
-                ngp_sort_pipe__WEBPACK_IMPORTED_MODULE_17__["NgpSortModule"],
+                ngp_sort_pipe__WEBPACK_IMPORTED_MODULE_18__["NgpSortModule"],
                 _angular_material_expansion__WEBPACK_IMPORTED_MODULE_7__["MatExpansionModule"]
                 // MatPaginatorModule
             ],
             declarations: [
-                _login_login_component__WEBPACK_IMPORTED_MODULE_19__["LoginComponent"],
-                _user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_20__["UserProfileComponent"],
-                _edit_profile_edit_profile_component__WEBPACK_IMPORTED_MODULE_22__["EditProfileComponent"],
-                _usertrip_usertrip_component__WEBPACK_IMPORTED_MODULE_18__["UsertripComponent"],
-                _start_trip_start_trip_component__WEBPACK_IMPORTED_MODULE_23__["StartTripComponent"],
-                _userslist_userslist_component__WEBPACK_IMPORTED_MODULE_24__["UserslistComponent"],
-                _trans_log_trans_log_component__WEBPACK_IMPORTED_MODULE_26__["TransLogComponent"],
-                _back_back_component__WEBPACK_IMPORTED_MODULE_25__["BackComponent"],
-                _addcompany_addcompany_component__WEBPACK_IMPORTED_MODULE_27__["AddcompanyComponent"],
-                _viewcompany_viewcompany_component__WEBPACK_IMPORTED_MODULE_28__["ViewcompanyComponent"],
-                _viewmeeting_viewmeeting_component__WEBPACK_IMPORTED_MODULE_30__["ViewmeetingComponent"],
-                _compmeet_compmeet_component__WEBPACK_IMPORTED_MODULE_29__["CompmeetComponent"],
-                _viewcomp_viewcomp_component__WEBPACK_IMPORTED_MODULE_31__["ViewcompComponent"],
-                _allcompanies_allcompanies_component__WEBPACK_IMPORTED_MODULE_32__["AllcompaniesComponent"],
-                _team_members_team_members_component__WEBPACK_IMPORTED_MODULE_21__["TeamMembersComponent"]
+                _login_login_component__WEBPACK_IMPORTED_MODULE_21__["LoginComponent"],
+                _user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_22__["UserProfileComponent"],
+                _edit_profile_edit_profile_component__WEBPACK_IMPORTED_MODULE_24__["EditProfileComponent"],
+                _usertrip_usertrip_component__WEBPACK_IMPORTED_MODULE_20__["UsertripComponent"],
+                _start_trip_start_trip_component__WEBPACK_IMPORTED_MODULE_25__["StartTripComponent"],
+                _userslist_userslist_component__WEBPACK_IMPORTED_MODULE_26__["UserslistComponent"],
+                _trans_log_trans_log_component__WEBPACK_IMPORTED_MODULE_28__["TransLogComponent"],
+                _back_back_component__WEBPACK_IMPORTED_MODULE_27__["BackComponent"],
+                _addcompany_addcompany_component__WEBPACK_IMPORTED_MODULE_29__["AddcompanyComponent"],
+                _viewcompany_viewcompany_component__WEBPACK_IMPORTED_MODULE_30__["ViewcompanyComponent"],
+                _viewmeeting_viewmeeting_component__WEBPACK_IMPORTED_MODULE_32__["ViewmeetingComponent"],
+                _compmeet_compmeet_component__WEBPACK_IMPORTED_MODULE_31__["CompmeetComponent"],
+                _viewcomp_viewcomp_component__WEBPACK_IMPORTED_MODULE_33__["ViewcompComponent"],
+                _allcompanies_allcompanies_component__WEBPACK_IMPORTED_MODULE_34__["AllcompaniesComponent"],
+                _team_members_team_members_component__WEBPACK_IMPORTED_MODULE_23__["TeamMembersComponent"],
+                _managerlist_managerlist_component__WEBPACK_IMPORTED_MODULE_35__["ManagerlistComponent"],
+                _dsr_dsr_component__WEBPACK_IMPORTED_MODULE_36__["DsrComponent"]
             ]
         })
     ], AdminLayoutModule);
@@ -2398,6 +2596,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _viewcomp_viewcomp_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../viewcomp/viewcomp.component */ "./src/app/viewcomp/viewcomp.component.ts");
 /* harmony import */ var app_auth_home_guard__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! app/auth/home.guard */ "./src/app/auth/home.guard.ts");
 /* harmony import */ var _allcompanies_allcompanies_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../allcompanies/allcompanies.component */ "./src/app/allcompanies/allcompanies.component.ts");
+/* harmony import */ var _managerlist_managerlist_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../managerlist/managerlist.component */ "./src/app/managerlist/managerlist.component.ts");
+/* harmony import */ var _dsr_dsr_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../dsr/dsr.component */ "./src/app/dsr/dsr.component.ts");
 var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
   return (mod && mod.__esModule) ? mod : { "default": mod };
 };
@@ -2417,10 +2617,14 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 
 
+
+
 var AdminLayoutRoutes = [
     { path: 'user-profile', component: _user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_0__["UserProfileComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_14__["HomeGuard"]] },
     { path: 'userslist', component: _userslist_userslist_component__WEBPACK_IMPORTED_MODULE_1__["UserslistComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_14__["HomeGuard"]] },
+    { path: 'managerslist', component: _managerlist_managerlist_component__WEBPACK_IMPORTED_MODULE_16__["ManagerlistComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_14__["HomeGuard"]] },
     { path: 'team-members/:user_id', component: _team_members_team_members_component__WEBPACK_IMPORTED_MODULE_2__["TeamMembersComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_14__["HomeGuard"]] },
+    { path: 'dsr/:user_id', component: _dsr_dsr_component__WEBPACK_IMPORTED_MODULE_17__["DsrComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_14__["HomeGuard"]] },
     { path: 'edit-profile/:user_id/:i', component: _edit_profile_edit_profile_component__WEBPACK_IMPORTED_MODULE_3__["EditProfileComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_14__["HomeGuard"]] },
     { path: 'usertrips', component: _usertrip_usertrip_component__WEBPACK_IMPORTED_MODULE_4__["UsertripComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_14__["HomeGuard"]] },
     { path: 'log', component: _trans_log_trans_log_component__WEBPACK_IMPORTED_MODULE_8__["TransLogComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_14__["HomeGuard"]] },
@@ -2540,6 +2744,103 @@ var LoginComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"], _services_usercrud_service__WEBPACK_IMPORTED_MODULE_2__["UsercrudService"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"]])
     ], LoginComponent);
     return LoginComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/managerlist/managerlist.component.css":
+/*!*******************************************************!*\
+  !*** ./src/app/managerlist/managerlist.component.css ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\r\n.card-header{\r\n    background-color:#008080  ;\r\n}\r\n.card-title{\r\n    color: white;\r\n}\r\n.card-header .card-category {\r\n    color: white;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbWFuYWdlcmxpc3QvbWFuYWdlcmxpc3QuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQ0E7SUFDSSwwQkFBMEI7QUFDOUI7QUFDQTtJQUNJLFlBQVk7QUFDaEI7QUFDQTtJQUNJLFlBQVk7QUFDaEIiLCJmaWxlIjoic3JjL2FwcC9tYW5hZ2VybGlzdC9tYW5hZ2VybGlzdC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXHJcbi5jYXJkLWhlYWRlcntcclxuICAgIGJhY2tncm91bmQtY29sb3I6IzAwODA4MCAgO1xyXG59XHJcbi5jYXJkLXRpdGxle1xyXG4gICAgY29sb3I6IHdoaXRlO1xyXG59XHJcbi5jYXJkLWhlYWRlciAuY2FyZC1jYXRlZ29yeSB7XHJcbiAgICBjb2xvcjogd2hpdGU7XHJcbn1cclxuIl19 */");
+
+/***/ }),
+
+/***/ "./src/app/managerlist/managerlist.component.ts":
+/*!******************************************************!*\
+  !*** ./src/app/managerlist/managerlist.component.ts ***!
+  \******************************************************/
+/*! exports provided: ManagerlistComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ManagerlistComponent", function() { return ManagerlistComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm5/forms.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm5/router.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm5/http.js");
+/* harmony import */ var _services_usercrud_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../services/usercrud.service */ "./src/app/services/usercrud.service.ts");
+/* harmony import */ var _services_confirm_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../services/confirm.service */ "./src/app/services/confirm.service.ts");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/__ivy_ngcc__/fesm2015/ngx-toastr.js");
+/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/__ivy_ngcc__/fesm5/dialog.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+
+
+
+
+
+var ManagerlistComponent = /** @class */ (function () {
+    function ManagerlistComponent(userservice, conf, dialog, toastr, http, router, fb) {
+        this.userservice = userservice;
+        this.conf = conf;
+        this.dialog = dialog;
+        this.toastr = toastr;
+        this.http = http;
+        this.router = router;
+        this.fb = fb;
+        this.headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpHeaders"]().set('Content-Type', 'application/json')
+            .append('Authorization', 'Bearer ' + window.sessionStorage.getItem('access_token'));
+    }
+    ManagerlistComponent.prototype.ngOnInit = function () {
+        this.getManagers();
+    };
+    ManagerlistComponent.prototype.getManagers = function () {
+        var _this = this;
+        this.http.get('https://api.plint.in/admin/managers').subscribe(function (res) {
+            _this.items = res.data;
+            console.log(_this.items);
+        });
+    };
+    ManagerlistComponent.ctorParameters = function () { return [
+        { type: _services_usercrud_service__WEBPACK_IMPORTED_MODULE_4__["UsercrudService"] },
+        { type: _services_confirm_service__WEBPACK_IMPORTED_MODULE_5__["ConfirmService"] },
+        { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_7__["MatDialog"] },
+        { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_6__["ToastrService"] },
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
+        { type: _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"] }
+    ]; };
+    ManagerlistComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-managerlist',
+            template: __importDefault(__webpack_require__(/*! raw-loader!./managerlist.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/managerlist/managerlist.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./managerlist.component.css */ "./src/app/managerlist/managerlist.component.css")).default]
+        }),
+        __metadata("design:paramtypes", [_services_usercrud_service__WEBPACK_IMPORTED_MODULE_4__["UsercrudService"], _services_confirm_service__WEBPACK_IMPORTED_MODULE_5__["ConfirmService"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_7__["MatDialog"], ngx_toastr__WEBPACK_IMPORTED_MODULE_6__["ToastrService"], _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"]])
+    ], ManagerlistComponent);
+    return ManagerlistComponent;
 }());
 
 
@@ -2908,8 +3209,10 @@ var SingleTransComponent = /** @class */ (function () {
         var API_URL = this.Url + '/em/user/' + this.user_id + '/trip/' + this.trip_id + '/transaction/list?skip=0&limit=100&sortBy=created_on&sortOrder=desc&type=expense';
         this.http.get("" + API_URL)
             .subscribe(function (res) {
-            // console.log(res.data)
+            console.log(res);
+            // console.log(res.data.receipt_image_file_id)
             _this.expitems = res.data;
+            // console.log(this.expitems.receipt_image_file_id)
             _this.TotalRecords = res.length;
         });
     };
@@ -3020,6 +3323,10 @@ var SingleTransComponent = /** @class */ (function () {
                 }
             }
         });
+    };
+    SingleTransComponent.prototype.showimage = function (imghref, display) {
+        this.image = imghref;
+        this.showModal = true;
     };
     SingleTransComponent.prototype.show = function () {
         this.showModal = true; // Show-Hide Modal Check
@@ -3254,8 +3561,6 @@ var StartTripComponent = /** @class */ (function () {
             employee_id: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"](),
             itemRows: this.fb.array([this.initItemRows()]),
         });
-        // const toSelect = this.getCurrency();
-        // this.tripform.get('itemRows').setValue(toSelect[0]);
     }
     StartTripComponent.prototype.ngOnInit = function () {
         this.user_id = this.actRoute.snapshot.params.user_id;
@@ -3598,6 +3903,7 @@ var UserProfileComponent = /** @class */ (function () {
         this.user = {};
     }
     UserProfileComponent.prototype.ngOnInit = function () {
+        var _this = this;
         this.userform = this.fb.group({
             email: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].compose([
                     _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required,
@@ -3605,8 +3911,13 @@ var UserProfileComponent = /** @class */ (function () {
                 ])],
             name: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
             role: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
-            is_expense_manager_user: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+            parent_user_id: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required,],
+            is_expense_manager_user: [''],
             employee_code: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+        });
+        this.http.get('https://api.plint.in/admin/managers').subscribe(function (res) {
+            _this.parent_user_id = res.data;
+            console.log(_this.parent_user_id);
         });
     };
     UserProfileComponent.prototype.showSubmit = function () {
@@ -3621,7 +3932,7 @@ var UserProfileComponent = /** @class */ (function () {
     UserProfileComponent.prototype.onSubmit = function () {
         var _this = this;
         if (this.userform.valid) {
-            console.log(this.userform.value);
+            // console.log(this.userform.value)     
             this.userservice.createUser(this.userform.value)
                 .subscribe(function (data) {
                 _this.showSubmit();
@@ -3635,11 +3946,22 @@ var UserProfileComponent = /** @class */ (function () {
             });
         }
     };
+    UserProfileComponent.prototype.onEnter = function (val) {
+        // console.log(val)
+        this.value = val;
+        if ((this.value == 'admin') || (this.value == 'associate_vice_president')) {
+            this.display = 'false';
+        }
+        else {
+            this.display = 'true';
+        }
+    };
     UserProfileComponent.prototype.reset = function () {
         this.userform = this.fb.group({
             employee_code: "",
             name: "",
             email: "",
+            parent_user_id: "",
             role: "",
             is_expense_manager_user: "",
         });
@@ -3751,7 +4073,7 @@ var UserslistComponent = /** @class */ (function () {
             if (res) {
                 _this.userservice.deleteUser(_id)
                     .subscribe(function (val) {
-                    console.log(val);
+                    // console.log(val)
                     _this.showDelete();
                     _this.getData();
                 });
