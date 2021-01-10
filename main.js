@@ -373,7 +373,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<nav class=\"navbar navbar-expand-lg navbar-transparent  navbar-absolute fixed-top\">\n    <div class=\"container-fluid\">\n        <div class=\"navbar-wrapper\">\n          <a class=\"navbar-brand\" href=\"javascript:void(0)\"></a>\n        </div>\n        <button mat-raised-button class=\"navbar-toggler\" type=\"button\" (click)=\"sidebarToggle()\">\n            <span class=\"sr-only\">Toggle navigation</span>\n            <span class=\"navbar-toggler-icon icon-bar\"></span>\n            <span class=\"navbar-toggler-icon icon-bar\"></span>\n            <span class=\"navbar-toggler-icon icon-bar\"></span>\n        </button>\n       \n    </div>\n</nav>\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<nav class=\"navbar navbar-expand-lg navbar-transparent  navbar-absolute fixed-top\">\n    <div class=\"container-fluid\">\n        <div class=\"navbar-wrapper\">\n          <a class=\"navbar-brand\" href=\"javascript:void(0)\"></a>\n        </div>\n        <div class=\"col-md-4 mt-3 mb-3 text-right\">\n            <button mat-raised-button color=\"primary\" (click)=\"userservice.logout()\" >Logout</button>\n        </div>\n        <button mat-raised-button class=\"navbar-toggler\" type=\"button\" (click)=\"sidebarToggle()\">\n            <span class=\"sr-only\">Toggle navigation</span>\n            <span class=\"navbar-toggler-icon icon-bar\"></span>\n            <span class=\"navbar-toggler-icon icon-bar\"></span>\n            <span class=\"navbar-toggler-icon icon-bar\"></span>\n        </button>\n       \n    </div>\n</nav>\n\n");
 
 /***/ }),
 
@@ -386,7 +386,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"logo\">\n    <a href=\"\" class=\"simple-text\">\n        <!-- <div class=\"logo-img\">\n            <img style=\"color: aqua;\" src=\"/assets/images/logo.png\"/>\n        </div> -->\n        Admin\n    </a>\n</div>\n\n<div class=\"sidebar-wrapper\">\n\n  <div *ngIf=\"isMobileMenu()\">\n  \n  </div>\n\n    <ul class=\"nav\">\n        <li routerLinkActive=\"active\" *ngFor=\"let menuItem of menuItems\" class=\"{{menuItem.class}} nav-item\">\n            <a class=\"nav-link\" [routerLink]=\"[menuItem.path]\">\n                <i class=\"material-icons\">{{menuItem.icon}}</i>\n                <p>{{menuItem.title}}</p>\n            </a>\n        </li>\n       <!-- <li>\n        <mat-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\">\n            <mat-tree-node *matTreeNodeDef=\"let node\" matTreeNodePadding>\n              <button mat-icon-button disabled></button>\n              {{node.name}}\n            </mat-tree-node>\n            <mat-tree-node *matTreeNodeDef=\"let node;when: hasChild\" matTreeNodePadding>\n                {{node.name}}\n                <button mat-icon-button matTreeNodeToggle\n                [attr.aria-label]=\"'Toggle ' + node.name\">\n          <mat-icon class=\"mat-icon-rtl-mirror\">\n            {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n          </mat-icon>\n        </button>\n            </mat-tree-node>\n          </mat-tree>\n</li>           -->\n    </ul>\n\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"logo\">\n    <!-- <a class=\"simple-text\"> -->\n        <div class=\"logo-img mx-auto mt-5\">\n            <img style=\"color: aqua;\" src=\"./assets/images/plint.png\"/>\n        </div>\n        <!-- Admin -->\n    <!-- </a> -->\n</div>\n\n<div class=\"sidebar-wrapper\">\n\n  <div *ngIf=\"isMobileMenu()\">\n  \n  </div>\n\n    <ul class=\"nav\">\n        <li routerLinkActive=\"active\" *ngFor=\"let menuItem of menuItems\" class=\"{{menuItem.class}} nav-item\">\n            <a class=\"nav-link\" [routerLink]=\"[menuItem.path]\">\n                <i class=\"material-icons\">{{menuItem.icon}}</i>\n                <p>{{menuItem.title}}</p>\n            </a>\n        </li>\n       <!-- <li>\n        <mat-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\">\n            <mat-tree-node *matTreeNodeDef=\"let node\" matTreeNodePadding>\n              <button mat-icon-button disabled></button>\n              {{node.name}}\n            </mat-tree-node>\n            <mat-tree-node *matTreeNodeDef=\"let node;when: hasChild\" matTreeNodePadding>\n                {{node.name}}\n                <button mat-icon-button matTreeNodeToggle\n                [attr.aria-label]=\"'Toggle ' + node.name\">\n          <mat-icon class=\"mat-icon-rtl-mirror\">\n            {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n          </mat-icon>\n        </button>\n            </mat-tree-node>\n          </mat-tree>\n</li>           -->\n    </ul>\n\n</div>\n");
 
 /***/ }),
 
@@ -555,7 +555,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n<div class=\"main-content\">\n    <div class=\"container-fluid\">\n      <app-back></app-back>\n          <div class=\"row\">\n            <div class=\"col-md-12\">\n              <div class=\"card\">\n                <div  class=\"card-header rounded mdc-elevation--z6 card-header\">\n                    <h4 class=\"card-title \">Users List</h4>\n                    <p class=\"card-category \">About users info</p>\n                </div>\n                <div class=\"card-body rounded mdc-elevation--z6\">\n                    <div  class=\"table-responsive\">\n                        <table class=\"table\">\n                            <thead class=\"text-center text-black\">\n                                <th>Empcode</th>\n                                <th>Name</th>\n                                <th>Email</th>\n                                <th>Role</th>\n                                <th>Team members</th>\n                                <th>ExpenseManager</th>\n                                <th class=\"text-center\">DSR</th>\n                                <th colspan=\"2\" class=\"text-center mr-5\">Action</th>\n                            </thead>\n                            <tbody class=\"text-center\">\n                                <tr   *ngFor=\"let data of items; let i = index;\">\n                                    <td>{{data.employee_code}}</td>\n                                    <td>{{data.name}}</td>\n                                    <td>{{data.email}}</td>\n                                    <td>{{data.role}}</td>\n                                    <td *ngIf=\"data.role != 'senior_sales_manager' \">          \n                                      <button  mat-raised-button type=\"submit\" style=\"background-color: #1b96f3;\" [routerLink]=\"['/team-members/', data._id]\" class=\"btn btn-Success \">view</button>\n                                    </td>\n                                    <td *ngIf=\"data.role == 'senior_sales_manager' \"></td>\n                                    <td>{{data.is_expense_manager_user}}</td>\n                                    <td>\n                                      <button mat-raised-button color=\"primary\" type=\"submit\"  class=\"btn \" [routerLink]=\"['/dsr/', data._id]\">View</button></td>\n                                    <td class=\" \">\n                                      <button  mat-raised-button type=\"submit\" style=\"background-color: #1b96f3;\" [routerLink]=\"['/edit-profile/', data._id, i]\" class=\"btn btn-Success \">Edit</button>\n                                      <button mat-raised-button type=\"submit\"  class=\"btn btn-danger pull-right\" (click)=\"deluser(data._id)\">Delete</button>\n                                    </td>\n                                    \n                                   \n                                  </tr>\n                            </tbody>\n                        </table>\n            </div>\n          </div>\n  \n    \n    </div>\n  </div>\n  ");
+/* harmony default export */ __webpack_exports__["default"] = ("\n<div class=\"main-content\">\n    <div class=\"container-fluid\">\n      <app-back></app-back>\n          <div class=\"row\">\n            <div class=\"col-md-12\">\n              <div class=\"card\">\n                <div  class=\"card-header rounded mdc-elevation--z6 card-header\">\n                    <h4 class=\"card-title \">Users List</h4>\n                    <p class=\"card-category \">About users info</p>\n                </div>\n                <div class=\"card-body rounded mdc-elevation--z6\">\n                    <div  class=\"table-responsive\">\n                        <table class=\"table\">\n                            <thead class=\"text-center text-black\">\n                                <th>Empcode</th>\n                                <th>Name</th>\n                                <th>Email</th>\n                                <th>Role</th>\n                                <th>Reset</th>\n                                <th>Team members</th>\n                                <th>ExpenseManager</th>\n                                <th class=\"text-center\">DSR</th>\n                                <th colspan=\"2\" class=\"text-center mr-5\">Action</th>\n                            </thead>\n                            <tbody class=\"text-center\">\n                                <tr   *ngFor=\"let data of items; let i = index;\">\n                                    <td>{{data.employee_code}}</td>\n                                    <td>{{data.name}}</td>\n                                    <td>{{data.email}}</td>\n                                    <td>{{data.role}}</td>\n                                    <td class=\" \">\n                                      <button mat-raised-button type=\"submit\"  class=\"btn btn-primary pull-right\" (click)=\"resetuser(data._id)\">Reset</button>\n                                    </td>\n                                    <td *ngIf=\"data.role != 'senior_sales_manager' \">          \n                                      <button  mat-raised-button type=\"submit\" style=\"background-color: #1b96f3;\" [routerLink]=\"['/team-members/', data._id]\" class=\"btn btn-Success \">view</button>\n                                    </td>\n                                    <td *ngIf=\"data.role == 'senior_sales_manager' \"></td>\n                                    <td>{{data.is_expense_manager_user}}</td>\n                                    <td>\n                                      <button mat-raised-button color=\"primary\" type=\"submit\"  class=\"btn \" [routerLink]=\"['/dsr/', data._id]\">View</button></td>\n                                    <td class=\" \">\n                                      <button  mat-raised-button type=\"submit\" style=\"background-color: #1b96f3;\" [routerLink]=\"['/edit-profile/', data._id, i]\" class=\"btn btn-Success \">Edit</button>\n                                      <button mat-raised-button type=\"submit\"  class=\"btn btn-danger pull-right\" (click)=\"deluser(data._id)\">Delete</button>\n                                    </td>\n                                    \n                                   \n                                  </tr>\n                            </tbody>\n                        </table>\n            </div>\n          </div>\n  \n    \n    </div>\n  </div>\n  ");
 
 /***/ }),
 
@@ -1565,6 +1565,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../sidebar/sidebar.component */ "./src/app/components/sidebar/sidebar.component.ts");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm5/common.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm5/router.js");
+/* harmony import */ var _services_usercrud_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../services/usercrud.service */ "./src/app/services/usercrud.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1581,10 +1582,12 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 
 
+
 var NavbarComponent = /** @class */ (function () {
-    function NavbarComponent(location, element, router) {
+    function NavbarComponent(location, element, router, userservice) {
         this.element = element;
         this.router = router;
+        this.userservice = userservice;
         this.mobile_menu_visible = 0;
         this.location = location;
         this.sidebarVisible = false;
@@ -1686,7 +1689,8 @@ var NavbarComponent = /** @class */ (function () {
     NavbarComponent.ctorParameters = function () { return [
         { type: _angular_common__WEBPACK_IMPORTED_MODULE_2__["Location"] },
         { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"] },
-        { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+        { type: _services_usercrud_service__WEBPACK_IMPORTED_MODULE_4__["UsercrudService"] }
     ]; };
     NavbarComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -1694,7 +1698,7 @@ var NavbarComponent = /** @class */ (function () {
             template: __importDefault(__webpack_require__(/*! raw-loader!./navbar.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/components/navbar/navbar.component.html")).default,
             styles: [__importDefault(__webpack_require__(/*! ./navbar.component.css */ "./src/app/components/navbar/navbar.component.css")).default]
         }),
-        __metadata("design:paramtypes", [_angular_common__WEBPACK_IMPORTED_MODULE_2__["Location"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
+        __metadata("design:paramtypes", [_angular_common__WEBPACK_IMPORTED_MODULE_2__["Location"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _services_usercrud_service__WEBPACK_IMPORTED_MODULE_4__["UsercrudService"]])
     ], NavbarComponent);
     return NavbarComponent;
 }());
@@ -3088,6 +3092,11 @@ var UsercrudService = /** @class */ (function () {
             _this.router.navigate(['/user-profile']);
         });
     };
+    UsercrudService.prototype.logout = function () {
+        window.sessionStorage.removeItem('access_token');
+        this.isLogged = false;
+        this.router.navigate(['/login']);
+    };
     UsercrudService.prototype.getToken = function () {
         return sessionStorage.getItem('access_token');
     };
@@ -3118,6 +3127,22 @@ var UsercrudService = /** @class */ (function () {
         };
         var API_URL = this.Url + "/admin/users";
         return this.http.delete("" + API_URL, httpOptions);
+    };
+    UsercrudService.prototype.resetUser = function (user_id) {
+        this.http.get('https://api.plint.in/admin/users/' + user_id + '/reset').subscribe(function (res) {
+            // this.items = res.data;
+            console.log(res);
+        });
+        // const headers: HttpHeaders = new HttpHeaders()
+        // .append('Authorization', 'Bearer ' + window.sessionStorage.getItem('access_token'));
+        // const httpOptions = {
+        //   headers: headers,
+        //   body: {
+        //    "user_id": user_id
+        //   }
+        // }; 
+        // let API_URL = `${this.Url}/admin/users`;
+        // return this.http.get(`${API_URL}`, httpOptions);
     };
     // Returns true when user is logged in 
     UsercrudService.prototype.isLoggedIn = function () {
@@ -4284,7 +4309,8 @@ var UserslistComponent = /** @class */ (function () {
         this.http = http;
         this.router = router;
         this.fb = fb;
-        this.headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpHeaders"]().set('Content-Type', 'application/json');
+        this.headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpHeaders"]().set('Content-Type', 'application/json')
+            .append('Authorization', 'Bearer ' + window.sessionStorage.getItem('access_token'));
         this.role = ['admin', 'senior_sales_manager', 'regional_manager'];
         this.user = {};
     }
@@ -4311,6 +4337,33 @@ var UserslistComponent = /** @class */ (function () {
                     // console.log(val)
                     _this.showDelete();
                     _this.getData();
+                });
+            }
+        });
+    };
+    UserslistComponent.prototype.makeid = function () {
+        var text = "";
+        var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+        for (var i = 0; i < 8; i++)
+            text += possible.charAt(Math.floor(Math.random() * possible.length));
+        return text;
+    };
+    UserslistComponent.prototype.resetuser = function (_id) {
+        var _this = this;
+        this.conf.OpenDialog('Are you sure you want to reset your password?')
+            .afterClosed().subscribe(function (res) {
+            // console.log(res)
+            if (res) {
+                var pass = _this.makeid();
+                var httpOptions = {
+                    headers: _this.headers,
+                    "password": pass
+                };
+                _this.http.post('https://api.plint.in/admin/users/' + _id + '/reset', httpOptions).subscribe(function (response) {
+                    if (response)
+                        _this.toastr.success("Password changed successfully");
+                    else
+                        _this.toastr.error('Try Again!');
                 });
             }
         });
