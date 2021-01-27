@@ -325,6 +325,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/attd/attd.component.html":
+/*!********************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/attd/attd.component.html ***!
+  \********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n<div class=\"main-content\">\n    <div class=\"container-fluid\">\n      <app-back></app-back>\n          <div class=\"row\">\n            <div class=\"col-md-12\">\n              <div class=\"card\">\n                <div  class=\"card-header rounded mdc-elevation--z6 card-header\">\n                    <h4 class=\"card-title \">Attendence List</h4>\n                    <p class=\"card-category \">About users attendence info</p>\n                </div>\n                <div class=\"card-body rounded mdc-elevation--z6\">\n                    <div  class=\"table-responsive\">\n                        <table class=\"table\">\n                            <thead class=\"text-center text-black\">\n                                <th>Date</th>\n                                <th>Day Start</th>\n                                <th>Day End</th>\n                                <th>Location</th>\n                            </thead>\n                            <tbody class=\"text-center\">\n                                <tr   *ngFor=\"let data of att; let i = index;\">\n                                    <td>{{data.date}}</td>\n                                    <td>{{data.day_start | date:'d/M/yy, h:mm a'}}</td>\n                                    <td>{{data.day_end | date:'d/M/yy, h:mm a'}}</td>\n                                    <td></td>              \n                                </tr>\n                            </tbody>\n                        </table>\n            </div>\n          </div>\n  \n    \n    </div>\n  </div>\n");
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/attdialog/attdialog.component.html":
 /*!******************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/attdialog/attdialog.component.html ***!
@@ -568,7 +581,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n<div class=\"main-content\">\n    <div class=\"container-fluid\">\n      <app-back></app-back>\n          <div class=\"row\">\n            <div class=\"col-md-12\">\n              <div class=\"card\">\n                <div  class=\"card-header rounded mdc-elevation--z6 card-header\">\n                    <h4 class=\"card-title \">Users List</h4>\n                    <p class=\"card-category \">About users info</p>\n                </div>\n                <div class=\"card-body rounded mdc-elevation--z6\">\n                    <div  class=\"table-responsive\">\n                        <table class=\"table\">\n                            <thead class=\"text-center text-black\">\n                                <th>Empcode</th>\n                                <th>Name</th>\n                                <th>Email</th>\n                                <th>Role</th>\n                                <th>Reset</th>\n                                <th>Team members</th>\n                                <th>ExpenseManager</th>\n                                <th>Attendence</th>\n                                <th class=\"text-center\">LMS</th>\n                                <th colspan=\"2\" class=\"text-center mr-5\">Action</th>\n                            </thead>\n                            <tbody class=\"text-center\">\n                                <tr   *ngFor=\"let data of items; let i = index;\">\n                                    <td>{{data.employee_code}}</td>\n                                    <td>{{data.name}}</td>\n                                    <td>{{data.email}}</td>\n                                    <td>{{data.role}}</td>\n                                    <td class=\" \">\n                                      <button mat-raised-button type=\"submit\"  class=\"btn btn-primary pull-right\" (click)=\"resetuser(data._id)\">Reset</button>\n                                    </td>\n                                    <td *ngIf=\"data.role != 'senior_sales_manager' \">          \n                                      <button  mat-raised-button type=\"submit\" style=\"background-color: #1b96f3;\" [routerLink]=\"['/team-members/', data._id]\" class=\"btn btn-Success \">view</button>\n                                    </td>\n                                    <td *ngIf=\"data.role == 'senior_sales_manager' \"></td>\n                                    <td>{{data.is_expense_manager_user}}</td>\n                                    <td class=\" \">\n                                      <button mat-raised-button type=\"submit\"  class=\"btn btn-primary pull-right\" (click)=\"viewatt(data._id)\">View</button>\n                                    </td>\n                                    <td>\n                                      <button mat-raised-button color=\"primary\" type=\"submit\"  class=\"btn \" [routerLink]=\"['/dsr/', data._id]\">View</button></td>\n                                    <td class=\" \">\n                                      <button  mat-raised-button type=\"submit\" style=\"background-color: #1b96f3;\" [routerLink]=\"['/edit-profile/', data._id, i]\" class=\"btn btn-Success \">Edit</button>\n                                      <button mat-raised-button type=\"submit\"  class=\"btn btn-danger pull-right\" (click)=\"deluser(data._id)\">Delete</button>\n                                    </td>\n                                    \n                                   \n                                  </tr>\n                            </tbody>\n                        </table>\n            </div>\n          </div>\n  \n    \n    </div>\n  </div>\n  ");
+/* harmony default export */ __webpack_exports__["default"] = ("\n<div class=\"main-content\">\n    <div class=\"container-fluid\">\n      <app-back></app-back>\n          <div class=\"row\">\n            <div class=\"col-md-12\">\n              <div class=\"card\">\n                <div  class=\"card-header rounded mdc-elevation--z6 card-header\">\n                    <h4 class=\"card-title \">Users List</h4>\n                    <p class=\"card-category \">About users info</p>\n                </div>\n                <div class=\"card-body rounded mdc-elevation--z6\">\n                    <div  class=\"table-responsive\">\n                        <table class=\"table\">\n                            <thead class=\"text-center text-black\">\n                                <th>Empcode</th>\n                                <th>Name</th>\n                                <th>Email</th>\n                                <th>Role</th>\n                                <th>Reset</th>\n                                <th>Team members</th>\n                                <th>ExpenseManager</th>\n                                <th>Attendence</th>\n                                <th class=\"text-center\">LMS</th>\n                                <th colspan=\"2\" class=\"text-center mr-5\">Action</th>\n                            </thead>\n                            <tbody class=\"text-center\">\n                                <tr   *ngFor=\"let data of items; let i = index;\">\n                                    <td>{{data.employee_code}}</td>\n                                    <td>{{data.name}}</td>\n                                    <td>{{data.email}}</td>\n                                    <td>{{data.role}}</td>\n                                    <td class=\" \">\n                                      <button mat-raised-button type=\"submit\"  class=\"btn btn-primary pull-right\" (click)=\"resetuser(data._id)\">Reset</button>\n                                    </td>\n                                    <td *ngIf=\"data.role != 'senior_sales_manager' \">          \n                                      <button  mat-raised-button type=\"submit\" style=\"background-color: #1b96f3;\" [routerLink]=\"['/team-members/', data._id]\" class=\"btn btn-Success \">view</button>\n                                    </td>\n                                    <td *ngIf=\"data.role == 'senior_sales_manager' \"></td>\n                                    <td>{{data.is_expense_manager_user}}</td>\n                                    <td class=\" \">\n                                      <button mat-raised-button type=\"submit\"  class=\"btn btn-primary pull-right\" [routerLink]=\"['/attendence/', data._id]\">View</button>\n                                    </td>\n                                    <!-- <td class=\" \">\n                                      <button mat-raised-button type=\"submit\"  class=\"btn btn-primary pull-right\" (click)=\"viewatt(data._id)\">View</button>\n                                    </td> -->\n                                    <td>\n                                      <button mat-raised-button color=\"primary\" type=\"submit\"  class=\"btn \" [routerLink]=\"['/dsr/', data._id]\">View</button></td>\n                                    <td class=\" \">\n                                      <button  mat-raised-button type=\"submit\" style=\"background-color: #1b96f3;\" [routerLink]=\"['/edit-profile/', data._id, i]\" class=\"btn btn-Success \">Edit</button>\n                                      <button mat-raised-button type=\"submit\"  class=\"btn btn-danger pull-right\" (click)=\"deluser(data._id)\">Delete</button>\n                                    </td>\n                                    \n                                   \n                                  </tr>\n                            </tbody>\n                        </table>\n            </div>\n          </div>\n  \n    \n    </div>\n  </div>\n  ");
 
 /***/ }),
 
@@ -1074,10 +1087,6 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 
 
-// import { CompmeetComponent } from './compmeet/compmeet.component';
-// import { ViewmeetingComponent } from './viewmeeting/viewmeeting.component';
-// import { ViewcompComponent } from './viewcomp/viewcomp.component';
-// import { AllcompaniesComponent } from './allcompanies/allcompanies.component';
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -1124,7 +1133,7 @@ var AppModule = /** @class */ (function () {
                 _layouts_admin_layout_admin_layout_component__WEBPACK_IMPORTED_MODULE_13__["AdminLayoutComponent"],
                 _singleusertrip_singleusertrip_component__WEBPACK_IMPORTED_MODULE_18__["SingleusertripComponent"],
                 _single_trans_single_trans_component__WEBPACK_IMPORTED_MODULE_19__["SingleTransComponent"],
-                _confirm_confirm_component__WEBPACK_IMPORTED_MODULE_35__["ConfirmComponent"],
+                _confirm_confirm_component__WEBPACK_IMPORTED_MODULE_35__["ConfirmComponent"]
             ],
             providers: [
                 _services_usercrud_service__WEBPACK_IMPORTED_MODULE_16__["UsercrudService"],
@@ -1213,6 +1222,114 @@ var AppRoutingModule = /** @class */ (function () {
         })
     ], AppRoutingModule);
     return AppRoutingModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/attd/attd.component.css":
+/*!*****************************************!*\
+  !*** ./src/app/attd/attd.component.css ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("/* @import \"@material/elevation/mdc-elevation\"; */\r\n\r\n.card-header{\r\n    background-color:#008080  ;\r\n}\r\n\r\n.card-title{\r\n    color: white;\r\n}\r\n\r\n.card-header .card-category {\r\n    color: white;\r\n}\r\n\r\n.example-button-row button,\r\n.example-button-row a {\r\n  margin-right: 8px;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXR0ZC9hdHRkLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsaURBQWlEOztBQUVqRDtJQUNJLDBCQUEwQjtBQUM5Qjs7QUFDQTtJQUNJLFlBQVk7QUFDaEI7O0FBQ0E7SUFDSSxZQUFZO0FBQ2hCOztBQUVBOztFQUVFLGlCQUFpQjtBQUNuQiIsImZpbGUiOiJzcmMvYXBwL2F0dGQvYXR0ZC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLyogQGltcG9ydCBcIkBtYXRlcmlhbC9lbGV2YXRpb24vbWRjLWVsZXZhdGlvblwiOyAqL1xyXG5cclxuLmNhcmQtaGVhZGVye1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjojMDA4MDgwICA7XHJcbn1cclxuLmNhcmQtdGl0bGV7XHJcbiAgICBjb2xvcjogd2hpdGU7XHJcbn1cclxuLmNhcmQtaGVhZGVyIC5jYXJkLWNhdGVnb3J5IHtcclxuICAgIGNvbG9yOiB3aGl0ZTtcclxufVxyXG5cclxuLmV4YW1wbGUtYnV0dG9uLXJvdyBidXR0b24sXHJcbi5leGFtcGxlLWJ1dHRvbi1yb3cgYSB7XHJcbiAgbWFyZ2luLXJpZ2h0OiA4cHg7XHJcbn0iXX0= */");
+
+/***/ }),
+
+/***/ "./src/app/attd/attd.component.ts":
+/*!****************************************!*\
+  !*** ./src/app/attd/attd.component.ts ***!
+  \****************************************/
+/*! exports provided: AttdComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AttdComponent", function() { return AttdComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm5/forms.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm5/router.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm5/http.js");
+/* harmony import */ var _services_usercrud_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../services/usercrud.service */ "./src/app/services/usercrud.service.ts");
+/* harmony import */ var _services_confirm_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../services/confirm.service */ "./src/app/services/confirm.service.ts");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/__ivy_ngcc__/fesm2015/ngx-toastr.js");
+/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/__ivy_ngcc__/fesm5/dialog.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+
+
+
+
+
+var AttdComponent = /** @class */ (function () {
+    function AttdComponent(userservice, actRoute, conf, dialog, toastr, http, router, fb) {
+        this.userservice = userservice;
+        this.actRoute = actRoute;
+        this.conf = conf;
+        this.dialog = dialog;
+        this.toastr = toastr;
+        this.http = http;
+        this.router = router;
+        this.fb = fb;
+        this.headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpHeaders"]().set('Content-Type', 'application/json')
+            .append('Authorization', 'Bearer ' + window.sessionStorage.getItem('access_token'));
+        this.user = {};
+        this.user_id = this.actRoute.snapshot.params.user_id;
+    }
+    AttdComponent.prototype.ngOnInit = function () {
+        this.viewDialog();
+    };
+    // viewatt(_id)
+    // {
+    //   this.dialog.open(AttdialogComponent, {
+    //     width: '350',
+    //     data: { userid: _id }
+    //   });      
+    // }
+    AttdComponent.prototype.viewDialog = function () {
+        var _this = this;
+        this.http.get('https://api.plint.in/dsr/users/' + this.user_id + '/dayLog').subscribe(function (res) {
+            _this.att = res.data.logs;
+            console.log(res.data);
+        });
+    };
+    AttdComponent.ctorParameters = function () { return [
+        { type: _services_usercrud_service__WEBPACK_IMPORTED_MODULE_4__["UsercrudService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] },
+        { type: _services_confirm_service__WEBPACK_IMPORTED_MODULE_5__["ConfirmService"] },
+        { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_7__["MatDialog"] },
+        { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_6__["ToastrService"] },
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
+        { type: _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"] }
+    ]; };
+    AttdComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-attd',
+            template: __importDefault(__webpack_require__(/*! raw-loader!./attd.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/attd/attd.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./attd.component.css */ "./src/app/attd/attd.component.css")).default]
+        }),
+        __metadata("design:paramtypes", [_services_usercrud_service__WEBPACK_IMPORTED_MODULE_4__["UsercrudService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"], _services_confirm_service__WEBPACK_IMPORTED_MODULE_5__["ConfirmService"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_7__["MatDialog"], ngx_toastr__WEBPACK_IMPORTED_MODULE_6__["ToastrService"], _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"]])
+    ], AttdComponent);
+    return AttdComponent;
 }());
 
 
@@ -1863,7 +1980,7 @@ var ROUTES = [
     { path: '/managerslist', title: 'Managers List', icon: 'list', class: '' },
     { path: '/usertrips', title: 'Manage Trips', icon: 'loyalty', class: '' },
     { path: '/log', title: 'Transaction Log', icon: 'receipt_long', class: '' },
-    // { path: '/add_company', title: 'Add Company',  icon:'note_add', class: '' },
+    // { path: '/attendence', title: 'Attendence',  icon:'note_add', class: '' },
     { path: '/all_companies', title: 'All Companies', icon: 'dashboard', class: '' },
     { path: '/comp_meet', title: 'Company & Meeting', icon: 'meeting_room', class: '',
         children: [
@@ -2714,6 +2831,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _managerlist_managerlist_component__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ../../managerlist/managerlist.component */ "./src/app/managerlist/managerlist.component.ts");
 /* harmony import */ var _dsr_dsr_component__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ../../dsr/dsr.component */ "./src/app/dsr/dsr.component.ts");
 /* harmony import */ var _attdialog_attdialog_component__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ../../attdialog/attdialog.component */ "./src/app/attdialog/attdialog.component.ts");
+/* harmony import */ var _attd_attd_component__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ../../attd/attd.component */ "./src/app/attd/attd.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2769,6 +2887,7 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 
 
+
 var AdminLayoutModule = /** @class */ (function () {
     function AdminLayoutModule() {
     }
@@ -2805,7 +2924,7 @@ var AdminLayoutModule = /** @class */ (function () {
             exports: [
                 _angular_material_input__WEBPACK_IMPORTED_MODULE_10__["MatInputModule"],
                 _angular_material_form_field__WEBPACK_IMPORTED_MODULE_12__["MatFormFieldModule"],
-                _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_23__["MatDatepickerModule"]
+                _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_23__["MatDatepickerModule"],
             ],
             declarations: [
                 _login_login_component__WEBPACK_IMPORTED_MODULE_26__["LoginComponent"],
@@ -2825,7 +2944,8 @@ var AdminLayoutModule = /** @class */ (function () {
                 _team_members_team_members_component__WEBPACK_IMPORTED_MODULE_28__["TeamMembersComponent"],
                 _managerlist_managerlist_component__WEBPACK_IMPORTED_MODULE_40__["ManagerlistComponent"],
                 _dsr_dsr_component__WEBPACK_IMPORTED_MODULE_41__["DsrComponent"],
-                _attdialog_attdialog_component__WEBPACK_IMPORTED_MODULE_42__["AttdialogComponent"]
+                _attdialog_attdialog_component__WEBPACK_IMPORTED_MODULE_42__["AttdialogComponent"],
+                _attd_attd_component__WEBPACK_IMPORTED_MODULE_43__["AttdComponent"]
             ]
         })
     ], AdminLayoutModule);
@@ -2864,9 +2984,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _allcompanies_allcompanies_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../allcompanies/allcompanies.component */ "./src/app/allcompanies/allcompanies.component.ts");
 /* harmony import */ var _managerlist_managerlist_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../managerlist/managerlist.component */ "./src/app/managerlist/managerlist.component.ts");
 /* harmony import */ var _dsr_dsr_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../dsr/dsr.component */ "./src/app/dsr/dsr.component.ts");
+/* harmony import */ var _attd_attd_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../../attd/attd.component */ "./src/app/attd/attd.component.ts");
 var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
   return (mod && mod.__esModule) ? mod : { "default": mod };
 };
+
 
 
 
@@ -2899,6 +3021,7 @@ var AdminLayoutRoutes = [
     { path: 'comp_meet', component: _compmeet_compmeet_component__WEBPACK_IMPORTED_MODULE_11__["CompmeetComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_14__["HomeGuard"]],
     },
     { path: 'all_companies', component: _allcompanies_allcompanies_component__WEBPACK_IMPORTED_MODULE_15__["AllcompaniesComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_14__["HomeGuard"]] },
+    { path: 'attendence/:user_id', component: _attd_attd_component__WEBPACK_IMPORTED_MODULE_18__["AttdComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_14__["HomeGuard"]] },
     { path: 'view_meets/:user_id', component: _viewmeeting_viewmeeting_component__WEBPACK_IMPORTED_MODULE_12__["ViewmeetingComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_14__["HomeGuard"]] },
     { path: 'view_compainies/:user_id', component: _viewcomp_viewcomp_component__WEBPACK_IMPORTED_MODULE_13__["ViewcompComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_14__["HomeGuard"]] },
     { path: 'usertrip/start-trip/:_id', component: _start_trip_start_trip_component__WEBPACK_IMPORTED_MODULE_7__["StartTripComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_14__["HomeGuard"]] },
