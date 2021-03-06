@@ -2419,8 +2419,8 @@ var DsrComponent = /** @class */ (function () {
         this.http.get("" + API_URL1)
             .subscribe(function (res1) {
             // (res1.data.meetings_with_distinct_companies).toString()
-            if (res1.data.meetings_with_distinct_companies === 0)
-                _this.currUser_most_meetings = '5';
+            // if(res1.data.meetings_with_distinct_companies===0)
+            _this.currUser_most_meetings = res1.data.meetings_with_distinct_companies;
             _this.currUser_avg_meetings = res1.data.average_per_week_meetings_in_current_month;
             _this.currUser_top_meetings = res1.data.total_meetings_in_current_month;
             _this.currUser_top_qoutation = res1.data.total_employee_quotations;
@@ -2434,20 +2434,17 @@ var DsrComponent = /** @class */ (function () {
             // console.log(res)
             for (var i = 0; i < res.data.top_meetings_by_employees_with_unique_companies.length; i++) {
                 if (_this.user_id != res.data.top_meetings_by_employees_with_unique_companies[i]._id) {
-                    _this.mostuniqueClientsData.push({ label: '', backgroundColor: 'rgba(75,192,192,0.8)', hoverBackgroundColor: 'rgba(75,192,192,0.8)', data: [] });
+                    _this.mostuniqueClientsData.push({ label: res.data.top_meetings_by_employees_with_unique_companies[i].name, backgroundColor: 'rgba(75,192,192,0.8)', hoverBackgroundColor: 'rgba(75,192,192,0.8)', data: [] });
                     _this.mostuniqueClientsData[i].data[i] = (res.data.top_meetings_by_employees_with_unique_companies[i].num_meetings);
                     _this.mostuniqueClients.push(res.data.top_meetings_by_employees_with_unique_companies[i].name);
                 }
                 else {
-                    _this.mostuniqueClientsData.push({ label: '', backgroundColor: 'rgb(0, 128, 128)', hoverBackgroundColor: 'rgb(0, 128, 128)', data: [] });
+                    _this.mostuniqueClientsData.push({ label: _this.currUser_name, backgroundColor: 'rgb(0, 128, 128)', hoverBackgroundColor: 'rgb(0, 128, 128)', data: [] });
                     _this.mostuniqueClientsData[i].data[i] = (_this.currUser_most_meetings);
                     _this.mostuniqueClients.push(_this.currUser_name);
                 }
             }
-            // this.mostuniqueClientsData.push({label : '', backgroundColor: 'rgb(0, 128, 128)', hoverBackgroundColor: 'rgb(0, 128, 128)', data:[]});
-            // this.mostuniqueClientsData.data = (this.currUser_most_meetings);
-            // this.mostuniqueClients.push(this.currUser_name);
-            console.log(_this.mostuniqueClients, _this.mostuniqueClientsData);
+            console.log(_this.mostuniqueClientsData);
         });
     };
     DsrComponent.prototype.top_meetings_curr_month = function () {
@@ -2480,10 +2477,22 @@ var DsrComponent = /** @class */ (function () {
         var API_URL = this.Url + '/dsr/meetings/analytics';
         this.http.get("" + API_URL, { headers: this.headers })
             .subscribe(function (res) {
+            console.log(res);
             for (var i = 0; i < res.data.top_quotations_by_employees.length; i++) {
-                _this.topqoutationData.push({ label: res.data.top_quotations_by_employees[i].name, data: [] });
-                _this.topqoutationData[i].data[i] = (res.data.top_quotations_by_employees[i].total_quotations);
-                _this.topqoutation.push(res.data.top_quotations_by_employees[i].name);
+                // this.topqoutationData.push({label : res.data.top_quotations_by_employees[i].name, data:[]});      
+                // this.topqoutationData[i].data[i]=(res.data.top_quotations_by_employees[i].total_quotations  );
+                // this.topqoutation.push(res.data.top_quotations_by_employees[i].name);
+                if (_this.user_id != res.data.top_quotations_by_employees[i]._id) {
+                    _this.topqoutationData.push({ label: res.data.top_quotations_by_employees[i].name, backgroundColor: 'rgba(75,192,192,0.8)', hoverBackgroundColor: 'rgba(75,192,192,0.8)', data: [] });
+                    _this.topqoutationData[i].data[i] = (res.data.top_quotations_by_employees[i].total_quotations);
+                    _this.topqoutation.push(res.data.top_quotations_by_employees[i].name);
+                }
+                else {
+                    _this.topqoutationData.push({ label: _this.currUser_name, backgroundColor: 'rgb(0, 128, 128)', hoverBackgroundColor: 'rgb(0, 128, 128)', data: [] });
+                    _this.topqoutationData[i].data[i] = (_this.currUser_most_meetings);
+                    _this.topqoutation.push(_this.currUser_name);
+                }
+                console.log(_this.topqoutationData);
             }
         });
     };
