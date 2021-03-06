@@ -308,7 +308,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n<div class=\"main-content\">\n    <div class=\"container-fluid\">\n      <app-back></app-back>\n          <div class=\"row\">\n            <div class=\"col-md-12\">\n              <div class=\"card\">\n                <div  class=\"card-header rounded mdc-elevation--z6 card-header\">\n                    <h4 class=\"card-title \">All Companies</h4>\n                    <p class=\"card-category \">About company info</p>\n                </div>\n                <div class=\"card-body rounded mdc-elevation--z6\">\n                    <div  class=\"table-responsive\">\n                        <table class=\"table\">\n                            <thead class=\" text-black\">\n                                <th>Company Name</th>\n                                <th colspan=\"4\" class=\" text-center\">Person met</th>\n                                <th colspan=\"2\" class=\" text-center\">Location</th>\n                                <th class=\"\">Address</th>\n                                <th class=\"text-center\">Action</th>\n                            </thead>\n                            <tbody>\n                                <tr>\n                                    <td></td>\n                                    <th>Name</th>\n                                    <th>Designation</th>\n                                    <th>Email</th>\n                                    <th>Phone</th>\n                                    <th>Type</th>\n                                    <th>Area</th>\n                                    <td></td>\n                                </tr>\n                                <tr   *ngFor=\"let data of items; let i = index;\">\n                                    <td>{{data.company_name}}</td>\n                                    <td>{{data.default_person_met.name}}</td>\n                                    <td>{{data.default_person_met.designation}}</td>    \n                                    <td>{{data.default_person_met.email}}</td>\n                                    <td>{{data.default_person_met.mobile}}</td>\n                                    <td>{{data.location.type}}</td>\n                                    <td>{{data.location.area}}</td>\n                                    <td>{{data.company_address}}</td>\n                                    <button mat-raised-button type=\"submit\"  class=\"btn btn-danger pull-right\" (click)=\"deluser(data._id)\">Delete</button>\n                                </tr>\n                            </tbody>\n                        </table>\n            </div>\n          </div>\n  \n    \n    </div>\n  </div>\n  ");
+/* harmony default export */ __webpack_exports__["default"] = ("\n<div class=\"main-content\">\n    <div class=\"container-fluid\">\n      <app-back></app-back>\n        <div class=\"row mt-3\">\n          <div class=\"col-md-12\">\n            <a mat-raised-button  color=\"warn\"  href=\"{{this.export_item}}\" >Export</a>\n          </div>\n        </div>\n          <div class=\"row\">\n            <div class=\"col-md-12\">\n              <div class=\"card\">\n                <div  class=\"card-header rounded mdc-elevation--z6 card-header\">\n                    <h4 class=\"card-title \">All Companies</h4>\n                    <p class=\"card-category \">About company info</p>\n                </div>\n                <div class=\"card-body rounded mdc-elevation--z6\">\n                    <div  class=\"table-responsive\">\n                        <table class=\"table\">\n                            <thead class=\"text-center text-black\">\n                                <th>Company Name</th>\n                                <th colspan=\"4\" class=\" text-center\">Person met</th>\n                                <th colspan=\"2\" class=\" text-left\">Location</th>\n                                <th class=\"\">Address</th>\n                                <th class=\"text-center\">Action</th>\n                            </thead>\n                            <tbody>\n                                <tr>\n                                    <td></td>\n                                    <th>Name</th>\n                                    <th>Designation</th>\n                                    <th>Email</th>\n                                    <th>Phone</th>\n                                    <th>Type</th>\n                                    <th>Area</th>\n                                </tr>\n                                <tr *ngFor=\"let data of items; let i = index;\">\n                                    <td>{{data.company_name}}</td>\n                                    <td>{{data.default_person_met.name}}</td>\n                                    <td>{{data.default_person_met.designation}}</td>    \n                                    <td>{{data.default_person_met.email}}</td>\n                                    <td>{{data.default_person_met.mobile}}</td>\n                                    <td>{{data.location.type}}</td>\n                                    <td>{{data.location.area}}</td>\n                                    <td>{{data.company_address}}</td>\n                                    <button  mat-raised-button type=\"submit\" style=\"background-color: #1b96f3;\" [routerLink]=\"['/edit-company/', data._id, i]\" class=\"btn btn-Success \">Edit</button>\n                                    <button mat-raised-button type=\"submit\"  class=\"btn btn-danger pull-right\" (click)=\"deluser(data._id)\">Delete</button>\n                                </tr>\n                            </tbody>\n                        </table>\n            </div>\n          </div>\n  \n    \n    </div>\n  </div>\n  ");
 
 /***/ }),
 
@@ -334,7 +334,33 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n<div class=\"main-content\">\n    <div class=\"container-fluid\">\n      <app-back></app-back>\n          <div class=\"row\">\n            <div class=\"col-md-12\">\n              <div class=\"card\">\n                <div  class=\"card-header rounded mdc-elevation--z6 card-header\">\n                    <h4 class=\"card-title \">Attendence List</h4>\n                    <p class=\"card-category \">About users attendence info</p>\n                </div>\n                <div class=\"card-body rounded mdc-elevation--z6\">\n                    <div  class=\"table-responsive\">\n                        <table class=\"table\">\n                            <thead class=\"text-center text-black\">\n                                <th>Date</th>\n                                <th>Day Start</th>\n                                <th>Day End</th>\n                                <th>Location</th>\n                            </thead>\n                            <tbody class=\"text-center\">\n                                <tr   *ngFor=\"let data of att; let i = index;\">\n                                    <td>{{data.date}}</td>\n                                    <td>{{data.day_start | date:'d/M/yy, h:mm a'}}</td>\n                                    <td>{{data.day_end | date:'d/M/yy, h:mm a'}}</td>\n                                    <td></td>              \n                                </tr>\n                            </tbody>\n                        </table>\n            </div>\n          </div>\n  \n    \n    </div>\n  </div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("\n<div class=\"main-content\">\n    <div class=\"container-fluid\">\n      <app-back></app-back>\n          <div class=\"row\">\n            <div class=\"col-md-12\">\n              <div class=\"card\">\n                <div  class=\"card-header rounded mdc-elevation--z6 card-header\">\n                    <h4 class=\"card-title \">Attendence List</h4>\n                    <p class=\"card-category \">About users attendence info</p>\n                </div>\n                <div class=\"card-body rounded mdc-elevation--z6\">\n                    <div  class=\"table-responsive\">\n                        <table class=\"table\">\n                            <thead class=\"text-center text-black\">\n                                <th>Date</th>\n                                <th>Day Start</th>\n                                <th>Day End</th>\n                                <th>Day start Location</th>\n                                <th>View start location data</th>\n                                <th>Day end Location</th>\n                                <th>View end location data</th>\n                            </thead>\n                            <tbody class=\"text-center\">\n                                <tr *ngFor=\"let data of att; let i = index;\">\n                                    <td>{{data.date}}</td>\n                                    <td>{{data.day_start | date:'d/M/yy, h:mm a'}}</td>\n                                    <td>{{data.day_end | date:'d/M/yy, h:mm a'}}</td>\n                                    <td><a target=\"_blank\" href=\"https://www.google.com/maps/search/?api=1&query={{data.day_start_location.latitude}},{{data.day_start_location.longitude}}\">Address</a></td>\n                                    <td class=\"text-center\">\n                                        <button mat-raised-button type=\"button\" (click)=\"SlocDialog(data.day_start_location.address)\" class=\"btn btn-primary\">Location</button>\n                                    </td>\n                                    <td><a target=\"_blank\" href=\"https://www.google.com/maps/search/?api=1&query={{data.day_end_location.latitude}},{{data.day_end_location.longitude}}\">Address</a></td>\n                                    <td class=\" \">\n                                        <button mat-raised-button type=\"button\" (click)=\"ElocDialog(data.day_end_location.address)\" class=\"btn btn-primary\">Location</button>\n                                    </td>\n                                </tr>\n                            </tbody>\n                        </table>\n            </div>\n          </div>\n  \n    \n    </div>\n  </div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/attd/endLocation.html":
+/*!*****************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/attd/endLocation.html ***!
+  \*****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<h3 mat-dialog-title>View End Location Data</h3>\r\n<div mat-dialog-content>\r\n  <p>{{endData}}</p>\r\n</div>");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/attd/startLocation.html":
+/*!*******************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/attd/startLocation.html ***!
+  \*******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<h3 mat-dialog-title>View Start Location Data</h3>\r\n<div mat-dialog-content>\r\n  <p>{{startData}}</p>\r\n</div>");
 
 /***/ }),
 
@@ -438,7 +464,20 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- <mat-label>Enter a date range</mat-label>  \n                <mat-date-range-input [rangePicker]=\"picker\">   \n                  <input matStartDate matInput placeholder=\"Start date\" formControlName=\"start\">  \n                  <input matEndDate matInput placeholder=\"End date\" formControlName=\"end\">  \n                </mat-date-range-input>  \n                <mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle>  \n                <mat-date-range-picker #picker></mat-date-range-picker>   -->\n            \n<div class=\"main-content\">\n<div class=\"container-fluid\">\n   \n    <i class=\"fa fa-arrow-left\" (click)=\"goBack()\" aria-hidden=\"true\"></i>\n    \n    <form [formGroup]=\"rangeFormGroup\">\n        <div class=\"mt-5 mb-5\">\n\n            <mat-form-field  class=\"col-3\" appearance=\"fill\">\n                <mat-label>Enter a start date</mat-label>\n                <input matInput [matDatepicker]=\"picker\">\n                <mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle>\n                <mat-datepicker #picker></mat-datepicker>\n            </mat-form-field>\n              \n            <mat-form-field class=\"col-3\" appearance=\"fill\">\n                <mat-label>Enter a end date</mat-label>\n                <input matInput [matDatepicker]=\"picker1\">\n                <mat-datepicker-toggle matSuffix [for]=\"picker1\"></mat-datepicker-toggle>\n                <mat-datepicker #picker1></mat-datepicker>\n            </mat-form-field>\n\n            <button type=\"submit\" mat-raised-button class=\"ml-3\" color=\"primary\" (click)=\"export()\">Export</button>\n            \n        </div>\n    </form>\n\n    <mat-tab-group  mat-align-tabs=\"center\" animationDuration=\"0ms\">\n\n        <mat-tab label=\"stats\">\n          \n            <div class=\"row\">\n                <div class=\"col-md-12\">\n                    <div class=\"card  \">\n\n                        <div class=\"card-header rounded mdc-elevation--z6 card-header\">\n                            <h4 class=\"card-title text-black\">Most Meetings with Unique Clients</h4>\n                        </div>\n                        \n                        <div class=\"card-body rounded mdc-elevation--z8\">\n                            <div class=\"chart-wrapper\">                                \n                                \n                                <canvas *ngIf = \"mostuniqueClientsData.length > 0\" \n                                baseChart \n                                [datasets]=\"mostuniqueClientsData\"\n                                [labels]=\"mostuniqueClients\"\n                                [options]=\"barChartOptions\"\n                                [plugins]=\"barChartPlugins\"\n                                [legend]=\"barChartLegend\"\n                                [chartType]=\"barChartType\">\n                              </canvas>\n\n                            </div>\n                        </div>\n                    \n                    </div>\n                </div>\n            </div>\n            \n            <div class=\"row\">\n                <div class=\"col-md-12\">\n                    <div class=\"card  \">\n\n                        <div class=\"card-header rounded mdc-elevation--z6 card-header\">\n                            <h4 class=\"card-title text-black\">Average Meetings per week in Current Month</h4>\n                        </div>\n                        \n                        <div class=\"card-body rounded mdc-elevation--z8\">\n                            <div class=\"chart-wrapper\">                                \n                                \n                                <canvas *ngIf = \"perweekData.length > 0\" \n                                baseChart \n                                [datasets]=\"perweekData\"\n                                [labels]=\"perweek\"\n                                [options]=\"barChartOptions\"\n                                [plugins]=\"barChartPlugins\"\n                                [legend]=\"barChartLegend\"\n                                [chartType]=\"barChartType\">\n                              </canvas>\n\n                            </div>\n                        </div>\n                    \n                    </div>\n                </div>\n            </div>\n            \n            <div class=\"row\">\n                <div class=\"col-md-12\">\n                    <div class=\"card  \">\n\n                        <div class=\"card-header rounded mdc-elevation--z6 card-header\">\n                            <h4 class=\"card-title text-black\">Top Meetings in Current Month</h4>\n                        </div>\n                        \n                        <div class=\"card-body rounded mdc-elevation--z8\">\n                            <div class=\"chart-wrapper\">                                \n                                \n                                <canvas *ngIf = \"currmonthData.length > 0\" \n                                baseChart \n                                [datasets]=\"currmonthData\"\n                                [labels]=\"currmonth\"\n                                [options]=\"barChartOptions\"\n                                [plugins]=\"barChartPlugins\"\n                                [legend]=\"barChartLegend\"\n                                [chartType]=\"barChartType\">\n                              </canvas>\n\n                            </div>\n                        </div>\n                    \n                    </div>\n                </div>\n            </div>\n            \n            <div class=\"row\">\n                <div class=\"col-md-12\">\n                    <div class=\"card  \">\n\n                        <div class=\"card-header rounded mdc-elevation--z6 card-header\">\n                            <h4 class=\"card-title text-black\">Top Quotations by Employees</h4>\n                        </div>\n                        \n                        <div class=\"card-body rounded mdc-elevation--z8\">\n                            <div class=\"chart-wrapper\">                                \n                                \n                                <canvas *ngIf = \"topqoutationData.length > 0\" \n                                baseChart \n                                [datasets]=\"topqoutationData\"\n                                [labels]=\"topqoutation\"\n                                [options]=\"barChartOptions\"\n                                [plugins]=\"barChartPlugins\"\n                                [legend]=\"barChartLegend\"\n                                [chartType]=\"barChartType\">\n                              </canvas>\n\n                            </div>\n                        </div>\n                    \n                    </div>\n                </div>\n            </div>\n\n        </mat-tab>\n      \n        <mat-tab label=\"customers\">\n                \n                <div class=\"row mt-5 mb-0\">\n                    <div class=\"col-md-3 form-group\">\n                    <mat-form-field appearance=\"fill\">\n                        <mat-label>Location</mat-label>\n                        <select matNativeControl (change)=\"changeLoc($event.target.value); \" >\n                        <option value=\"{{data.area}}\" *ngFor=\"let data of locations; let i = index;\">{{data.area}}</option>\n                        <option value=\"\">All Locations</option>\n                        </select>\n                    </mat-form-field>\n                    </div>\n                </div>\n\n                <div class=\"row\" >\n\n                <div *ngFor=\"let data of cust; let i = index;\">                       \n                    <mat-card *ngIf = \"(this.current_loc==data.location.area)||(this.current_loc=='')\" class=\"example-card mr-5 mb-5 rounded mdc-elevation--z6\">\n                        <mat-card-header>\n                          <mat-card-title>{{data.company_name}}</mat-card-title>\n                        </mat-card-header>\n                        <mat-list role=\"list\">\n                            <mat-list-item role=\"listitem\">Name : {{data.default_person_met.name}}</mat-list-item> \n                            <mat-list-item role=\"listitem\">Designation : {{data.default_person_met.designation}}</mat-list-item>\n                            <mat-list-item role=\"listitem\">Email : {{data.default_person_met.email}}</mat-list-item>\n                            <mat-list-item role=\"listitem\">mobile : {{data.default_person_met.mobile}}</mat-list-item>  \n                            <mat-list-item role=\"listitem\">Company Address : {{data.company_address}}</mat-list-item> \n                            <mat-list-item role=\"listitem\">Location : {{data.location.type}}, {{data.location.area}}</mat-list-item>\n                            <mat-list-item role=\"listitem\">Reference : {{data.reference}}</mat-list-item>\n                        </mat-list>\n                    </mat-card>\n                </div>\n            \n                </div>\n\n        </mat-tab>\n      \n        <mat-tab label=\"meetings\">\n      \n            <div class=\"row mt-5 mb-0\">\n                <div class=\"col-md-3 form-group\">\n                <mat-form-field appearance=\"fill\">\n                    <mat-label>Days</mat-label>\n                    <select matNativeControl (change)=\"changeDays($event.target.value); \" >\n                    <option value=\"1\">1 Day</option>\n                    <option value=\"3\">3 Days</option>\n                    <option value=\"7\">7 Days</option>\n                    <option value=\"15\">15 Days</option>\n                    <option value=\"30\">30 Days</option>\n                    <option value=\"200\">200 Days</option>\n                    <option value=\"365\">365 Days</option>\n                    </select>\n                </mat-form-field>\n                </div>\n            </div>\n\n            <div class=\"row\" >\n\n                <div class=\"mt-4 mb-4\" *ngFor=\"let data of meetings; let i = index;\">\n                    <mat-card *ngIf=\"meetings.length > 0\" class=\"example-card mr-5 mb-5 rounded mdc-elevation--z6\">\n                        <mat-card-header class=\"text-center\">\n                          <mat-card-title class=\"text-center\">{{data.company_name}}</mat-card-title>\n                        </mat-card-header>\n                        <h4><b>Name : </b>{{data.person_met.name}}</h4>\n                        <h4><b>Designation : </b>{{data.person_met.designation}}</h4>\n                        <h4><b>Email : </b>{{data.person_met.email}}</h4>\n                        <h4><b>mobile : </b>{{data.person_met.mobile}}</h4>\n                        <h4><b>Image : </b>\n                            <img src=\"{{data.photo_url}}\" id=\"imagepreview\" style=\"width: 100px; height: 100px;margin-top: 20px;margin-bottom: 20px;\" >\n                        </h4>\n                        <h4><b>Meeting Details : </b>{{data.meeting_details}}</h4>\n                        <h4><b>Added on : </b>{{data.timestamp | date:'d/M/yy, h:mm a'}}</h4>\n                        <h4><b>Follow up date : </b>{{data.follow_up_date | date:'d/M/yy, h:mm a'}}</h4>\n                        <h4><b>Quotations : </b>{{data.no_of_quotations}}</h4>\n                        <h4><b>Location : </b>{{data.location.type}}, {{data.location.area}}</h4>\n                    </mat-card>\n                </div>\n\n                <!-- <div *ngFor=\"let data of meetings; let i = index;\">                       \n                    <mat-card *ngIf=\"meetings.length > 0\" class=\"example-card mr-5 mb-5 rounded mdc-elevation--z6\">\n                        <mat-card-header>\n                          <mat-card-title>{{data.company_name}}</mat-card-title>\n                        </mat-card-header>\n                        <mat-list role=\"list\">\n                            <mat-list-item role=\"listitem\">Name : {{data.person_met.name}}</mat-list-item> \n                            <mat-list-item role=\"listitem\">Designation : {{data.person_met.designation}}</mat-list-item>\n                            <mat-list-item role=\"listitem\">Email : {{data.person_met.email}}</mat-list-item>\n                            <mat-list-item role=\"listitem\">mobile : {{data.person_met.mobile}}</mat-list-item><br>\n                            <mat-list-item class=\"mt-4 mb-5\" role=\"listitem\">Image :&nbsp;  \n                                <img src=\"{{data.photo_url}}\" id=\"imagepreview\" style=\"width: 100px; height: 100px;margin-bottom: 50px;\" >\n                            </mat-list-item>\n                            <mat-list-item role=\"listitem\">Meeting Details : {{data.meeting_details}}</mat-list-item><br> \n                            <mat-list-item role=\"listitem\">Quotations : {{data.no_of_quotations}}</mat-list-item>\n                            <mat-list-item role=\"listitem\">Location : {{data.location.type}}, {{data.location.area}}</mat-list-item>\n                        </mat-list>\n                    </mat-card>\n                </div> -->\n            \n            </div>\n      \n        </mat-tab>\n      \n        <mat-tab label=\"alerts\">\n\n            <div class=\"row mt-5 mb-0\">\n                <div class=\"col-md-3 form-group\">\n                    <mat-form-field appearance=\"fill\">\n                        <mat-label>Days</mat-label>\n                        <select matNativeControl (change)=\"changeAlertDays($event.target.value); \" >\n                        <option value=\"1\">1 Day</option>\n                        <option value=\"3\">3 Days</option>\n                        <option value=\"7\">7 Days</option>\n                        <option value=\"15\">15 Days</option>\n                        <option value=\"30\">30 Days</option>\n                        <option value=\"200\">200 Days</option>\n                        </select>\n                    </mat-form-field>\n                </div>\n            </div>\n\n            <div class=\"row\" >\n\n                <div *ngFor=\"let data of alerts; let i = index;\">                       \n                    <mat-card *ngIf=\"alerts.length > 0\" class=\"example-card mr-5 mb-5 rounded mdc-elevation--z6\">\n                        <mat-card-header>\n                          <mat-card-title>{{data.company_name}}</mat-card-title>\n                        </mat-card-header>\n                        <mat-list role=\"list\">\n                            <mat-list-item role=\"listitem\">Name : {{data.person_met.name}}</mat-list-item> \n                            <mat-list-item role=\"listitem\">Designation : {{data.person_met.designation}}</mat-list-item>\n                            <mat-list-item role=\"listitem\">Email : {{data.person_met.email}}</mat-list-item>\n                            <mat-list-item role=\"listitem\">mobile : {{data.person_met.mobile}}</mat-list-item><br>\n                            <mat-list-item role=\"listitem\">Image :&nbsp;  \n                                <img src=\"{{data.photo_url}}\" id=\"imagepreview\" style=\"width: 100px; height: 100px;\" >\n                            </mat-list-item><br>  \n                            <mat-list-item role=\"listitem\">Quotations : {{data.no_of_quotations}}</mat-list-item>\n                            <mat-list-item role=\"listitem\" style=\"background-color: lightblue;\">Follow up date : {{data.follow_up_date}}</mat-list-item>\n                            <mat-list-item role=\"listitem\">Location : {{data.location.type}}, {{data.location.area}}</mat-list-item>\n                        </mat-list>\n                    </mat-card>\n                </div>\n            \n            </div>\n\n        </mat-tab>\n    \n    </mat-tab-group>\n    \n    \n\n\n\n</div>\n</div>\n\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("           \n<div class=\"main-content\">\n<div class=\"container-fluid\">\n   \n    <i class=\"fa fa-arrow-left\" (click)=\"goBack()\" aria-hidden=\"true\"></i>\n    \n    <p>{{currUser_name}}</p>\n    \n    <form [formGroup]=\"rangeFormGroup\" (ngSubmit)=\"onFormSubmit()\">\n        <div class=\"mt-5 mb-5\">\n\n            <mat-form-field  class=\"col-3\" appearance=\"fill\">\n                <mat-label>Enter a start date</mat-label>\n                <input matInput [matDatepicker]=\"picker\" formControlName=\"start\">\n                <mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle>\n                <mat-datepicker #picker></mat-datepicker>\n            </mat-form-field>\n              \n            <mat-form-field class=\"col-3\" appearance=\"fill\">\n                <mat-label>Enter a end date</mat-label>\n                <input matInput [matDatepicker]=\"picker1\" formControlName=\"end\">\n                <mat-datepicker-toggle matSuffix [for]=\"picker1\"></mat-datepicker-toggle>\n                <mat-datepicker #picker1></mat-datepicker>\n            </mat-form-field>\n\n            <div class=\"row col-md-12\">\n                <div *ngIf=\"sheet!==''\" class=\"col-md-6\">\n                    <a mat-raised-button  color=\"warn\"  href=\"{{sheet}}\">Download</a>\n                </div>\n                <div *ngIf=\"sheet==''\" class=\"col-md-6\">\n                    <button type=\"submit\" mat-raised-button class=\"ml-3\" color=\"primary\" >Generate</button>\n                </div>\n            </div>           \n            \n        </div>\n    </form>\n    <mat-tab-group  mat-align-tabs=\"center\" animationDuration=\"0ms\">\n\n        <mat-tab label=\"Stats\">\n          \n            <div class=\"row\">\n                <div class=\"col-md-12\">\n                    <div class=\"card  \">\n\n                        <div class=\"card-header rounded mdc-elevation--z6 card-header\">\n                            <h4 class=\"card-title text-black\">Most Meetings with Unique Clients</h4>\n                        </div>\n                        \n                        <div class=\"card-body rounded mdc-elevation--z8\">\n                            <div class=\"chart-wrapper\">                                \n                                \n                                <canvas *ngIf = \"mostuniqueClientsData.length > 0\" \n                                baseChart \n                                [datasets]=\"mostuniqueClientsData\"\n                                [labels]=\"mostuniqueClients\"\n                                [options]=\"barChartOptions\"\n                                [plugins]=\"barChartPlugins\"\n                                [legend]=\"barChartLegend\"\n                                [chartType]=\"barChartType\">\n                              </canvas>\n\n                            </div>\n                        </div>\n                    \n                    </div>\n                </div>\n            </div>\n            \n            <div class=\"row\">\n                <div class=\"col-md-12\">\n                    <div class=\"card  \">\n\n                        <div class=\"card-header rounded mdc-elevation--z6 card-header\">\n                            <h4 class=\"card-title text-black\">Average Meetings per week in Current Month</h4>\n                        </div>\n                        \n                        <div class=\"card-body rounded mdc-elevation--z8\">\n                            <div class=\"chart-wrapper\">                                \n                                \n                                <canvas *ngIf = \"perweekData.length > 0\" \n                                baseChart \n                                [datasets]=\"perweekData\"\n                                [labels]=\"perweek\"\n                                [options]=\"barChartOptions\"\n                                [plugins]=\"barChartPlugins\"\n                                [legend]=\"barChartLegend\"\n                                [chartType]=\"barChartType\">\n                              </canvas>\n\n                            </div>\n                        </div>\n                    \n                    </div>\n                </div>\n            </div>\n            \n            <div class=\"row\">\n                <div class=\"col-md-12\">\n                    <div class=\"card  \">\n\n                        <div class=\"card-header rounded mdc-elevation--z6 card-header\">\n                            <h4 class=\"card-title text-black\">Top Meetings in Current Month (including repeat meetings)</h4>\n                        </div>\n                        \n                        <div class=\"card-body rounded mdc-elevation--z8\">\n                            <div class=\"chart-wrapper\">                                \n                                \n                                <canvas *ngIf = \"currmonthData.length > 0\" \n                                baseChart \n                                [datasets]=\"currmonthData\"\n                                [labels]=\"currmonth\"\n                                [options]=\"barChartOptions\"\n                                [plugins]=\"barChartPlugins\"\n                                [legend]=\"barChartLegend\"\n                                [chartType]=\"barChartType\">\n                              </canvas>\n\n                            </div>\n                        </div>\n                    \n                    </div>\n                </div>\n            </div>\n            \n            <div class=\"row\">\n                <div class=\"col-md-12\">\n                    <div class=\"card  \">\n\n                        <div class=\"card-header rounded mdc-elevation--z6 card-header\">\n                            <h4 class=\"card-title text-black\">Top Quotations by Employees</h4>\n                        </div>\n                        \n                        <div class=\"card-body rounded mdc-elevation--z8\">\n                            <div class=\"chart-wrapper\">                                \n                                \n                                <canvas *ngIf = \"topqoutationData.length > 0\" \n                                baseChart \n                                [datasets]=\"topqoutationData\"\n                                [labels]=\"topqoutation\"\n                                [options]=\"barChartOptions\"\n                                [plugins]=\"barChartPlugins\"\n                                [legend]=\"barChartLegend\"\n                                [chartType]=\"barChartType\">\n                              </canvas>\n\n                            </div>\n                        </div>\n                    \n                    </div>\n                </div>\n            </div>\n\n        </mat-tab>\n      \n        <mat-tab label=\"Customers\">\n                \n                <div class=\"row mt-5 mb-0\">\n                    <div class=\"col-md-3 form-group\">\n                    <mat-form-field appearance=\"fill\">\n                        <mat-label>Location</mat-label>\n                        <select matNativeControl (change)=\"changeLoc($event.target.value); \" >\n                        <option value=\"{{data.area}}\" *ngFor=\"let data of locations; let i = index;\">{{data.area}}</option>\n                        <option value=\"\">All Locations</option>\n                        </select>\n                    </mat-form-field>\n                    </div>\n                </div>\n\n                <div class=\"row\" >\n\n                <div *ngFor=\"let data of cust; let i = index;\">                       \n                    <mat-card *ngIf = \"(this.current_loc==data.location.area)||(this.current_loc=='')\" class=\"example-card mr-5 mb-5 rounded mdc-elevation--z6\">\n                        <mat-card-header>\n                          <mat-card-title>{{data.company_name}}</mat-card-title>\n                        </mat-card-header>\n                        <mat-list role=\"list\">\n                            <mat-list-item role=\"listitem\">Name : {{data.default_person_met.name}}</mat-list-item> \n                            <mat-list-item role=\"listitem\">Designation : {{data.default_person_met.designation}}</mat-list-item>\n                            <mat-list-item role=\"listitem\">Email : {{data.default_person_met.email}}</mat-list-item>\n                            <mat-list-item role=\"listitem\">mobile : {{data.default_person_met.mobile}}</mat-list-item>  \n                            <mat-list-item role=\"listitem\">Company Address : {{data.company_address}}</mat-list-item> \n                            <mat-list-item role=\"listitem\">Location : {{data.location.type}}, {{data.location.area}}</mat-list-item>\n                            <mat-list-item role=\"listitem\">Reference : {{data.reference}}</mat-list-item>\n                        </mat-list>\n                    </mat-card>\n                </div>\n            \n                </div>\n\n        </mat-tab>\n      \n        <mat-tab label=\"Meetings\">\n      \n            <div class=\"row mt-5 mb-0\">\n                <div class=\"col-md-3 form-group\">\n                <mat-form-field appearance=\"fill\">\n                    <mat-label>Days</mat-label>\n                    <select matNativeControl (change)=\"changeDays($event.target.value); \" >\n                    <option value=\"1\">1 Day</option>\n                    <option value=\"3\">3 Days</option>\n                    <option value=\"7\">7 Days</option>\n                    <option value=\"15\">15 Days</option>\n                    <option value=\"30\">1 month</option>\n                    <option value=\"180\">6 months</option>\n                    <option value=\"365\">1 year</option>\n                    </select>\n                </mat-form-field>\n                </div>\n            </div>\n\n            <div class=\"row\" >\n\n                <div class=\"mt-4 mb-4\" *ngFor=\"let data of meetings; let i = index;\">\n                    <mat-card *ngIf=\"meetings.length > 0\" class=\"example-card mr-5 mb-5 rounded mdc-elevation--z6\">\n                        <mat-card-header class=\"text-center\">\n                          <mat-card-title class=\"text-center\">{{data.company_name}}</mat-card-title>\n                        </mat-card-header>\n                        <h4><b>Name : </b>{{data.person_met.name}}</h4>\n                        <h4><b>Designation : </b>{{data.person_met.designation}}</h4>\n                        <h4><b>Email : </b>{{data.person_met.email}}</h4>\n                        <h4><b>mobile : </b>{{data.person_met.mobile}}</h4>\n                        <h4><b>Image : </b>\n                            <img src=\"{{data.photo_url}}\" id=\"imagepreview\" style=\"width: 100px; height: 100px;margin-top: 20px;margin-bottom: 20px;\" >\n                        </h4>\n                        <h4><b>Meeting Details : </b>{{data.meeting_details}}</h4>\n                        <h4><b>Added on : </b>{{data.timestamp | date:'d/M/yy, h:mm a'}}</h4>\n                        <h4><b>Follow up date : </b>{{data.follow_up_date | date:'d/M/yy, h:mm a'}}</h4>\n                        <h4><b>Quotations : </b>{{data.no_of_quotations}}</h4>\n                        <h4><b>Location : </b>{{data.location.type}}, {{data.location.area}}</h4>\n                    </mat-card>\n                </div>\n\n                <!-- <div *ngFor=\"let data of meetings; let i = index;\">                       \n                    <mat-card *ngIf=\"meetings.length > 0\" class=\"example-card mr-5 mb-5 rounded mdc-elevation--z6\">\n                        <mat-card-header>\n                          <mat-card-title>{{data.company_name}}</mat-card-title>\n                        </mat-card-header>\n                        <mat-list role=\"list\">\n                            <mat-list-item role=\"listitem\">Name : {{data.person_met.name}}</mat-list-item> \n                            <mat-list-item role=\"listitem\">Designation : {{data.person_met.designation}}</mat-list-item>\n                            <mat-list-item role=\"listitem\">Email : {{data.person_met.email}}</mat-list-item>\n                            <mat-list-item role=\"listitem\">mobile : {{data.person_met.mobile}}</mat-list-item><br>\n                            <mat-list-item class=\"mt-4 mb-5\" role=\"listitem\">Image :&nbsp;  \n                                <img src=\"{{data.photo_url}}\" id=\"imagepreview\" style=\"width: 100px; height: 100px;margin-bottom: 50px;\" >\n                            </mat-list-item>\n                            <mat-list-item role=\"listitem\">Meeting Details : {{data.meeting_details}}</mat-list-item><br> \n                            <mat-list-item role=\"listitem\">Quotations : {{data.no_of_quotations}}</mat-list-item>\n                            <mat-list-item role=\"listitem\">Location : {{data.location.type}}, {{data.location.area}}</mat-list-item>\n                        </mat-list>\n                    </mat-card>\n                </div> -->\n            \n            </div>\n      \n        </mat-tab>\n      \n        <mat-tab label=\"Alerts\">\n\n            <div class=\"row mt-5 mb-0\">\n                <div class=\"col-md-3 form-group\">\n                    <mat-form-field appearance=\"fill\">\n                        <mat-label>Days</mat-label>\n                        <select matNativeControl (change)=\"changeAlertDays($event.target.value); \" >\n                        <option value=\"1\">1 Day</option>\n                        <option value=\"3\">3 Days</option>\n                        <option value=\"7\">7 Days</option>\n                        <option value=\"15\">15 Days</option>\n                        <option value=\"30\">1 month</option>\n                        <option value=\"180\">6 months</option>\n                        <option value=\"365\">1 year</option>\n                        </select>\n                    </mat-form-field>\n                </div>\n            </div>\n\n            <div class=\"row\" >\n\n                <div *ngFor=\"let data of alerts; let i = index;\">                       \n                    <mat-card *ngIf=\"alerts.length > 0\" class=\"example-card mr-5 mb-5 rounded mdc-elevation--z6\">\n                        <mat-card-header>\n                          <mat-card-title>{{data.company_name}}</mat-card-title>\n                        </mat-card-header>\n                        <mat-list role=\"list\">\n                            <mat-list-item role=\"listitem\">Name : {{data.person_met.name}}</mat-list-item> \n                            <mat-list-item role=\"listitem\">Designation : {{data.person_met.designation}}</mat-list-item>\n                            <mat-list-item role=\"listitem\">Email : {{data.person_met.email}}</mat-list-item>\n                            <mat-list-item role=\"listitem\">mobile : {{data.person_met.mobile}}</mat-list-item><br>\n                            <mat-list-item role=\"listitem\">Image :&nbsp;  \n                                <img src=\"{{data.photo_url}}\" id=\"imagepreview\" style=\"width: 100px; height: 100px;\" >\n                            </mat-list-item><br>  \n                            <mat-list-item role=\"listitem\">Quotations : {{data.no_of_quotations}}</mat-list-item>\n                            <mat-list-item role=\"listitem\" style=\"background-color: lightblue;\">Follow up date : {{data.follow_up_date}}</mat-list-item>\n                            <mat-list-item role=\"listitem\">Location : {{data.location.type}}, {{data.location.area}}</mat-list-item>\n                        </mat-list>\n                    </mat-card>\n                </div>\n            \n            </div>\n\n        </mat-tab>\n    \n    </mat-tab-group>\n    \n    \n\n\n\n</div>\n</div>\n\n\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/edit-company/edit-company.component.html":
+/*!************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/edit-company/edit-company.component.html ***!
+  \************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n<div class=\"main-content\">\n    <div class=\"container-fluid\">\n      <i class=\"fa fa-arrow-left\" (click)=\"goBack()\" aria-hidden=\"true\"></i>\n\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <div class=\"card  \">\n                    <div class=\"card-header rounded mdc-elevation--z6 card-header\">\n                        <h4 class=\"card-title\">Edit Company</h4>\n                        <p class=\"card-category\">update company profile</p>\n                    </div>\n                    <div class=\"card-body rounded mdc-elevation--z8\">\n                        <form [formGroup]=\"editform\" novalidate (ngSubmit)=\"onUpdate()\">\n  \n                             <div class=\"col-md-4 form-group\">\n                                <mat-form-field class=\"example-full-width\">\n                                  <input matInput placeholder=\"Company Name\" type=\"text\" formControlName=\"company_name\">\n                                </mat-form-field>\n                              </div>\n  \n                              <div class=\"col-md-4 form-group\">\n                                  <mat-form-field class=\"example-full-width\">\n                                    <input matInput placeholder=\"Full Name\" type=\"text\" formControlName=\"name\">\n                                  </mat-form-field>\n                              </div>\n\n                              <div class=\"col-md-4 form-group\">\n                                <mat-form-field class=\"example-full-width\">\n                                  <input matInput placeholder=\"Designation\" type=\"text\" formControlName=\"designation\">\n                                </mat-form-field>\n                              </div>\n\n                              <div class=\"col-md-4 form-group\" >\n                                  <mat-form-field class=\"example-full-width\">\n                                    <input matInput placeholder=\"Email\" formArrayName=\"email\" type=\"text\">\n                                  </mat-form-field>\n                              </div>\n\n                              <div class=\"col-md-4 form-group\">\n                                <mat-form-field class=\"example-full-width\">\n                                  <input matInput placeholder=\"Mobile\" formArrayName=\"mobile\" type=\"text\">\n                                </mat-form-field>\n                              </div>\n\n                              <div class=\"col-md-4 form-group\">\n                                <mat-form-field class=\"example-full-width\">\n                                  <input matInput placeholder=\"Location Type\" formControlName=\"type\" type=\"text\">\n                                </mat-form-field>\n                              </div>\n\n                                <div class=\"col-md-4 form-group\">\n                                    <mat-form-field class=\"example-full-width\">\n                                    <input matInput placeholder=\"Location Area\" formControlName=\"area\" type=\"text\">\n                                    </mat-form-field>\n                                </div>\n\n                                <div class=\"col-md-4 form-group\">\n                                    <mat-form-field class=\"example-full-width\">\n                                    <input matInput placeholder=\"Company Address\" formControlName=\"company_address\" type=\"text\">\n                                    </mat-form-field>\n                                </div>\n                            \n                              <div class=\"col-md-4 mt-3\">\n                                <button mat-raised-button type=\"submit\"  class=\"btn btn-Success pull-left\">Update</button>\n                              </div>\n  \n                            <div class=\"clearfix\"></div>\n                        \n                        </form>\n                    </div>\n                </div>\n            </div>\n        </div>\n    \n        \n  \n    \n    </div>\n</div>\n  ");
 
 /***/ }),
 
@@ -529,7 +568,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n<div class=\"main-content\">\n    <div class=\"container-fluid\">\n        <app-back></app-back>\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <div class=\"card  \">\n                    <div class=\"card-header rounded mdc-elevation--z6 card-header\">\n                        <h4 class=\"card-title\">Start User Trip</h4>\n                        <p class=\"card-category\">Fill user's trip info</p>\n                    </div>\n                    <div class=\"card-body rounded mdc-elevation--z8\">\n                        \n                <form [formGroup]=\"tripform\" novalidate (ngSubmit)=\"onSubmit()\">\n  \n                    <div formArrayName=\"itemRows\" *ngFor=\"let item of formArr.controls; let i = index\">                       \n                        <div class=\"row\"  [formGroupName]=\"i\">\n \n                            <div  class=\"col-sm-3 form-group\">\n                                <mat-form-field class=\"example-full-width\">\n                                  <input matInput placeholder=\"Amount\" type=\"text\" formControlName=\"amount\">\n                                </mat-form-field>\n                            </div>\n\n                            <div  class=\"col-sm-3 form-group\" >\n                                <mat-form-field appearance=\"fill\">\n                                  <mat-label>Currencies</mat-label>\n                                  <mat-select  (selectionChange)=\"onEnter($event.value)\" formControlName=\"currency\">\n                                    <mat-option  *ngFor=\"let curr of currency | sortBy: 'asc':'name' \" [value]=\"curr.identifier\">\n                                        {{curr.name}} ({{curr.identifier}})\n                                    </mat-option>\n                                  </mat-select>\n                                </mat-form-field>\n                            </div>\n                            \n                            <div  *ngIf=\"this.tripform.value.itemRows[i].currency !== 'USD' \" class=\"col-sm-3 form-group\" >\n                                <mat-form-field class=\"example-full-width\">\n                                  <input matInput placeholder=\"USD to {{this.value}} Conversion Rate\" type=\"text\" formControlName=\"rate\" >\n                                </mat-form-field>\n                            </div>\n\n                            <div  *ngIf=\"this.tripform.value.itemRows[i].currency == 'USD' \" class=\"col-sm-3 form-group\" >\n                                <mat-form-field class=\"example-full-width\">\n                                  <input matInput placeholder=\"\" type=\"text\" formControlName=\"rate\" >\n                                </mat-form-field>\n                            </div>\n\n                            <div class=\"col-sm-3\">\n                                <button  (click)=\"deleteRow(i)\" class=\"btn btn-danger\"><i class=\"fa fa-minus-circle\" aria-hidden=\"true\"></i></button>\n                            </div>\n\n                        </div>     \n                    </div>\n\n                        <div class=\"row col-md-4 \">\n                            <button type=\"button\" (click)=\"addNewRow()\" class=\"btn btn-primary\"><i class=\"fa fa-plus-circle\" aria-hidden=\"true\"></i></button>\n                        </div>\n\n                            <div class=\"col-md-4 mt-5\">\n                                <button  mat-raised-button color=\"primary\" type=\"submit\" class=\" ml-0\">SUBMIT</button>\n                            </div>\n  \n                            <div class=\"clearfix\"></div>\n                        \n                        </form>\n                    </div>\n                </div>\n            </div>\n        </div>\n    \n        \n  \n    \n    </div>\n</div>\n  ");
+/* harmony default export */ __webpack_exports__["default"] = ("\n<div class=\"main-content\">\n    <div class=\"container-fluid\">\n        <app-back></app-back>\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <div class=\"card  \">\n                    <div class=\"card-header rounded mdc-elevation--z6 card-header\">\n                        <h4 class=\"card-title\">Start User Trip</h4>\n                        <p class=\"card-category\">Fill user's trip info</p>\n                    </div>\n                    <div class=\"card-body rounded mdc-elevation--z8\">\n                        \n                <form [formGroup]=\"tripform\" novalidate (ngSubmit)=\"onSubmit()\">\n  \n                    <div formArrayName=\"itemRows\" *ngFor=\"let item of formArr.controls; let i = index\">                       \n                        <div class=\"row\"  [formGroupName]=\"i\">\n \n                            <div  class=\"col-sm-3 form-group\">\n                                <mat-form-field class=\"example-full-width\">\n                                  <input matInput placeholder=\"Amount\" type=\"text\" formControlName=\"amount\">\n                                </mat-form-field>\n                            </div>\n\n                            <div  class=\"col-sm-3 form-group\" >\n                                <mat-form-field appearance=\"fill\">\n                                  <mat-label>Currencies</mat-label>\n                                  <mat-select  (selectionChange)=\"onEnter($event.value)\" formControlName=\"currency\">\n                                    <mat-option  *ngFor=\"let curr of currency | sortBy: 'asc':'name' \" [value]=\"curr.identifier\">\n                                        {{curr.name}} ({{curr.identifier}})\n                                    </mat-option>\n                                  </mat-select>\n                                </mat-form-field>\n                            </div>\n                            \n                            <div  *ngIf=\"this.tripform.value.itemRows[i].currency !== 'USD' \" class=\"col-sm-3 form-group\" >\n                                <mat-form-field class=\"example-full-width\">\n                                  <input matInput placeholder=\"USD to {{this.value}} Conversion Rate\" type=\"text\" formControlName=\"rate\" >\n                                </mat-form-field>\n                            </div>\n\n                            <div  *ngIf=\"this.tripform.value.itemRows[i].currency == 'USD' \" class=\"col-sm-3 form-group\" >\n                                <mat-form-field class=\"example-full-width\">\n                                  <input matInput placeholder=\"USD to INR Conversion Rate\" type=\"text\" formControlName=\"rate\" >\n                                </mat-form-field>\n                            </div>\n\n                            <div class=\"col-sm-3\">\n                                <button  (click)=\"deleteRow(i)\" class=\"btn btn-danger\"><i class=\"fa fa-minus-circle\" aria-hidden=\"true\"></i></button>\n                            </div>\n\n                        </div>     \n                    </div>\n\n                        <div class=\"row col-md-4 \">\n                            <button type=\"button\" (click)=\"addNewRow()\" class=\"btn btn-primary\"><i class=\"fa fa-plus-circle\" aria-hidden=\"true\"></i></button>\n                        </div>\n\n                            <div class=\"col-md-4 mt-5\">\n                                <button  mat-raised-button color=\"primary\" type=\"submit\" class=\" ml-0\">SUBMIT</button>\n                            </div>\n  \n                            <div class=\"clearfix\"></div>\n                        \n                        </form>\n                    </div>\n                </div>\n            </div>\n        </div>\n    \n        \n  \n    \n    </div>\n</div>\n  ");
 
 /***/ }),
 
@@ -581,7 +620,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n<div class=\"main-content\">\n    <div class=\"container-fluid\">\n      <app-back></app-back>\n          <div class=\"row\">\n            <div class=\"col-md-12\">\n              <div class=\"card\">\n                <div  class=\"card-header rounded mdc-elevation--z6 card-header\">\n                    <h4 class=\"card-title \">Users List</h4>\n                    <p class=\"card-category \">About users info</p>\n                </div>\n                <div class=\"card-body rounded mdc-elevation--z6\">\n                    <div  class=\"table-responsive\">\n                        <table class=\"table\">\n                            <thead class=\"text-center text-black\">\n                                <th>Empcode</th>\n                                <th>Name</th>\n                                <th>Email</th>\n                                <th>Role</th>\n                                <th>Reset</th>\n                                <th>Team members</th>\n                                <th>ExpenseManager</th>\n                                <th>Attendence</th>\n                                <th class=\"text-center\">LMS</th>\n                                <th colspan=\"2\" class=\"text-center mr-5\">Action</th>\n                            </thead>\n                            <tbody class=\"text-center\">\n                                <tr   *ngFor=\"let data of items; let i = index;\">\n                                    <td>{{data.employee_code}}</td>\n                                    <td>{{data.name}}</td>\n                                    <td>{{data.email}}</td>\n                                    <td>{{data.role}}</td>\n                                    <td class=\" \">\n                                      <button mat-raised-button type=\"submit\"  class=\"btn btn-primary pull-right\" (click)=\"resetuser(data._id)\">Reset</button>\n                                    </td>\n                                    <td *ngIf=\"data.role != 'senior_sales_manager' \">          \n                                      <button  mat-raised-button type=\"submit\" style=\"background-color: #1b96f3;\" [routerLink]=\"['/team-members/', data._id]\" class=\"btn btn-Success \">view</button>\n                                    </td>\n                                    <td *ngIf=\"data.role == 'senior_sales_manager' \"></td>\n                                    <td>{{data.is_expense_manager_user}}</td>\n                                    <td class=\" \">\n                                      <button mat-raised-button type=\"submit\"  class=\"btn btn-primary pull-right\" [routerLink]=\"['/attendence/', data._id]\">View</button>\n                                    </td>\n                                    <!-- <td class=\" \">\n                                      <button mat-raised-button type=\"submit\"  class=\"btn btn-primary pull-right\" (click)=\"viewatt(data._id)\">View</button>\n                                    </td> -->\n                                    <td>\n                                      <button mat-raised-button color=\"primary\" type=\"submit\"  class=\"btn \" [routerLink]=\"['/dsr/', data._id]\">View</button></td>\n                                    <td class=\" \">\n                                      <button  mat-raised-button type=\"submit\" style=\"background-color: #1b96f3;\" [routerLink]=\"['/edit-profile/', data._id, i]\" class=\"btn btn-Success \">Edit</button>\n                                      <button mat-raised-button type=\"submit\"  class=\"btn btn-danger pull-right\" (click)=\"deluser(data._id)\">Delete</button>\n                                    </td>\n                                    \n                                   \n                                  </tr>\n                            </tbody>\n                        </table>\n            </div>\n          </div>\n  \n    \n    </div>\n  </div>\n  ");
+/* harmony default export */ __webpack_exports__["default"] = ("\n<div class=\"main-content\">\n    <div class=\"container-fluid\">\n      <app-back></app-back>\n          <div class=\"row\">\n            <div class=\"col-md-12\">\n              <div class=\"card\">\n                <div  class=\"card-header rounded mdc-elevation--z6 card-header\">\n                    <h4 class=\"card-title \">Users List</h4>\n                    <p class=\"card-category \">About users info</p>\n                </div>\n                <div class=\"card-body rounded mdc-elevation--z6\">\n                    <div  class=\"table-responsive\">\n                        <table class=\"table\">\n                            <thead class=\"text-center text-black\">\n                                <th>Empcode</th>\n                                <th>Name</th>\n                                <th>Email</th>\n                                <th>Role</th>\n                                <th>Reset Password</th>\n                                <th>Team members</th>\n                                <th>ExpenseManager</th>\n                                <th>Attendence</th>\n                                <th class=\"text-center\">LMS</th>\n                                <th colspan=\"2\" class=\"text-center mr-5\">Action</th>\n                            </thead>\n                            <tbody class=\"text-center\">\n                                <tr   *ngFor=\"let data of items; let i = index;\">\n                                    <td>{{data.employee_code}}</td>\n                                    <td>{{data.name}}</td>\n                                    <td>{{data.email}}</td>\n                                    <td>{{data.role}}</td>\n                                    <td class=\" \">\n                                      <button mat-raised-button type=\"submit\"  class=\"btn btn-primary pull-right\" (click)=\"resetuser(data._id)\">Reset</button>\n                                    </td>\n                                    <td *ngIf=\"data.role != 'senior_sales_manager' \">          \n                                      <button  mat-raised-button type=\"submit\" style=\"background-color: #1b96f3;\" [routerLink]=\"['/team-members/', data._id]\" class=\"btn btn-Success \">view</button>\n                                    </td>\n                                    <td *ngIf=\"data.role == 'senior_sales_manager' \"></td>\n                                    <td>{{data.is_expense_manager_user}}</td>\n                                    <td class=\" \">\n                                      <button mat-raised-button type=\"submit\"  class=\"btn btn-primary pull-right\" [routerLink]=\"['/attendence/', data._id]\">View</button>\n                                    </td>\n                                    <!-- <td class=\" \">\n                                      <button mat-raised-button type=\"submit\"  class=\"btn btn-primary pull-right\" (click)=\"viewatt(data._id)\">View</button>\n                                    </td> -->\n                                    <td>\n                                      <button mat-raised-button color=\"primary\" type=\"submit\"  class=\"btn \" [routerLink]=\"['/dsr/', data._id]\">View</button></td>\n                                    <td class=\" \">\n                                      <button  mat-raised-button type=\"submit\" style=\"background-color: #1b96f3;\" [routerLink]=\"['/edit-profile/', data._id, i]\" class=\"btn btn-Success \">Edit</button>\n                                      <button mat-raised-button type=\"submit\"  class=\"btn btn-danger pull-right\" (click)=\"deluser(data._id)\">Delete</button>\n                                    </td>\n                                    \n                                   \n                                  </tr>\n                            </tbody>\n                        </table>\n            </div>\n          </div>\n  \n    \n    </div>\n  </div>\n  ");
 
 /***/ }),
 
@@ -887,6 +926,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm5/router.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm5/http.js");
+/* harmony import */ var _services_usercrud_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../services/usercrud.service */ "./src/app/services/usercrud.service.ts");
+/* harmony import */ var _services_confirm_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../services/confirm.service */ "./src/app/services/confirm.service.ts");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/__ivy_ngcc__/fesm2015/ngx-toastr.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -902,18 +944,29 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 
 
+
+
+
 var AllcompaniesComponent = /** @class */ (function () {
-    function AllcompaniesComponent(actRoute, http) {
+    function AllcompaniesComponent(actRoute, conf, http, userservice, toastr) {
         this.actRoute = actRoute;
+        this.conf = conf;
         this.http = http;
+        this.userservice = userservice;
+        this.toastr = toastr;
         this.Url = 'https://api.plint.in';
         this.headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]().set('Content-Type', 'application/json')
             .append('Authorization', 'Bearer ' + window.sessionStorage.getItem('access_token'));
         this.user_id = this.actRoute.snapshot.params.user_id;
     }
     AllcompaniesComponent.prototype.ngOnInit = function () {
-        // console.log(this.user_id);
+        var _this = this;
         this.getCompanyData();
+        var API_URL = this.Url + "/dsr/companies/export";
+        this.http.get("" + API_URL).subscribe(function (res) {
+            _this.export_item = res.data.url;
+            // console.log(this.export_item); 
+        });
     };
     AllcompaniesComponent.prototype.getCompanyData = function () {
         var _this = this;
@@ -921,12 +974,36 @@ var AllcompaniesComponent = /** @class */ (function () {
         this.http.get("" + API_URL)
             .subscribe(function (res) {
             _this.items = res.data;
-            console.log(res);
+            // console.log(res);
         });
+    };
+    AllcompaniesComponent.prototype.deluser = function (_id) {
+        var _this = this;
+        this.conf.OpenDialog('Are you sure you want to delete this record?')
+            .afterClosed().subscribe(function (res) {
+            if (res) {
+                var API_URL = _this.Url + "/dsr/companies/" + _id;
+                _this.http.delete("" + API_URL, { headers: _this.headers })
+                    .subscribe(function (val) {
+                    // console.log(val);
+                    _this.showDelete();
+                    _this.getCompanyData();
+                });
+            }
+        });
+    };
+    AllcompaniesComponent.prototype.showupdate = function () {
+        this.toastr.success('updated successfully!');
+    };
+    AllcompaniesComponent.prototype.showDelete = function () {
+        this.toastr.success('Deleted successfully!');
     };
     AllcompaniesComponent.ctorParameters = function () { return [
         { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"] },
-        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] }
+        { type: _services_confirm_service__WEBPACK_IMPORTED_MODULE_4__["ConfirmService"] },
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] },
+        { type: _services_usercrud_service__WEBPACK_IMPORTED_MODULE_3__["UsercrudService"] },
+        { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_5__["ToastrService"] }
     ]; };
     AllcompaniesComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -934,7 +1011,7 @@ var AllcompaniesComponent = /** @class */ (function () {
             template: __importDefault(__webpack_require__(/*! raw-loader!./allcompanies.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/allcompanies/allcompanies.component.html")).default,
             styles: [__importDefault(__webpack_require__(/*! ./allcompanies.component.css */ "./src/app/allcompanies/allcompanies.component.css")).default]
         }),
-        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"], _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"], _services_confirm_service__WEBPACK_IMPORTED_MODULE_4__["ConfirmService"], _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"], _services_usercrud_service__WEBPACK_IMPORTED_MODULE_3__["UsercrudService"], ngx_toastr__WEBPACK_IMPORTED_MODULE_5__["ToastrService"]])
     ], AllcompaniesComponent);
     return AllcompaniesComponent;
 }());
@@ -1133,7 +1210,7 @@ var AppModule = /** @class */ (function () {
                 _layouts_admin_layout_admin_layout_component__WEBPACK_IMPORTED_MODULE_13__["AdminLayoutComponent"],
                 _singleusertrip_singleusertrip_component__WEBPACK_IMPORTED_MODULE_18__["SingleusertripComponent"],
                 _single_trans_single_trans_component__WEBPACK_IMPORTED_MODULE_19__["SingleTransComponent"],
-                _confirm_confirm_component__WEBPACK_IMPORTED_MODULE_35__["ConfirmComponent"]
+                _confirm_confirm_component__WEBPACK_IMPORTED_MODULE_35__["ConfirmComponent"],
             ],
             providers: [
                 _services_usercrud_service__WEBPACK_IMPORTED_MODULE_16__["UsercrudService"],
@@ -1245,12 +1322,14 @@ __webpack_require__.r(__webpack_exports__);
 /*!****************************************!*\
   !*** ./src/app/attd/attd.component.ts ***!
   \****************************************/
-/*! exports provided: AttdComponent */
+/*! exports provided: AttdComponent, startLocation, endLocation */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AttdComponent", function() { return AttdComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "startLocation", function() { return startLocation; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "endLocation", function() { return endLocation; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm5/forms.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm5/router.js");
@@ -1267,6 +1346,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (undefined && undefined.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
 };
 var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
   return (mod && mod.__esModule) ? mod : { "default": mod };
@@ -1311,6 +1393,18 @@ var AttdComponent = /** @class */ (function () {
             console.log(res.data);
         });
     };
+    AttdComponent.prototype.SlocDialog = function (Sloc_data) {
+        var dialogRef = this.dialog.open(startLocation, {
+            width: '350px',
+            data: { s_loc_data: Sloc_data }
+        });
+    };
+    AttdComponent.prototype.ElocDialog = function (Eloc_data) {
+        var dialogRef = this.dialog.open(endLocation, {
+            width: '350px',
+            data: { e_loc_data: Eloc_data }
+        });
+    };
     AttdComponent.ctorParameters = function () { return [
         { type: _services_usercrud_service__WEBPACK_IMPORTED_MODULE_4__["UsercrudService"] },
         { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] },
@@ -1330,6 +1424,54 @@ var AttdComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [_services_usercrud_service__WEBPACK_IMPORTED_MODULE_4__["UsercrudService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"], _services_confirm_service__WEBPACK_IMPORTED_MODULE_5__["ConfirmService"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_7__["MatDialog"], ngx_toastr__WEBPACK_IMPORTED_MODULE_6__["ToastrService"], _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"]])
     ], AttdComponent);
     return AttdComponent;
+}());
+
+var startLocation = /** @class */ (function () {
+    function startLocation(dialogRef, data) {
+        this.dialogRef = dialogRef;
+        this.data = data;
+        this.startData = data.s_loc_data;
+    }
+    startLocation.prototype.onNoClick = function () {
+        this.dialogRef.close();
+    };
+    startLocation.ctorParameters = function () { return [
+        { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_7__["MatDialogRef"] },
+        { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"], args: [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_7__["MAT_DIALOG_DATA"],] }] }
+    ]; };
+    startLocation = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'startLocation',
+            template: __importDefault(__webpack_require__(/*! raw-loader!./startLocation.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/attd/startLocation.html")).default,
+        }),
+        __param(1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])(_angular_material_dialog__WEBPACK_IMPORTED_MODULE_7__["MAT_DIALOG_DATA"])),
+        __metadata("design:paramtypes", [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_7__["MatDialogRef"], Object])
+    ], startLocation);
+    return startLocation;
+}());
+
+var endLocation = /** @class */ (function () {
+    function endLocation(dialogRef, data) {
+        this.dialogRef = dialogRef;
+        this.data = data;
+        this.endData = data.e_loc_data;
+    }
+    endLocation.prototype.onNoClick = function () {
+        this.dialogRef.close();
+    };
+    endLocation.ctorParameters = function () { return [
+        { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_7__["MatDialogRef"] },
+        { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"], args: [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_7__["MAT_DIALOG_DATA"],] }] }
+    ]; };
+    endLocation = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'endLocation',
+            template: __importDefault(__webpack_require__(/*! raw-loader!./endLocation.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/attd/endLocation.html")).default,
+        }),
+        __param(1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])(_angular_material_dialog__WEBPACK_IMPORTED_MODULE_7__["MAT_DIALOG_DATA"])),
+        __metadata("design:paramtypes", [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_7__["MatDialogRef"], Object])
+    ], endLocation);
+    return endLocation;
 }());
 
 
@@ -2156,13 +2298,15 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 
 var DsrComponent = /** @class */ (function () {
-    function DsrComponent(http, actRoute, location) {
+    function DsrComponent(http, fb, actRoute, location) {
         this.http = http;
+        this.fb = fb;
         this.actRoute = actRoute;
         this.location = location;
         this.Url = 'https://api.plint.in';
         this.headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpHeaders"]().set('Content-Type', 'application/json')
             .append('Authorization', 'Bearer ' + window.sessionStorage.getItem('access_token'));
+        this.sheet = '';
         this.current_loc = '';
         this.current_day = 200;
         this.elseBlock = true;
@@ -2174,8 +2318,12 @@ var DsrComponent = /** @class */ (function () {
                             beginAtZero: true
                         }
                     }]
-            }
+            },
         };
+        this.currUser = [];
+        this.currUserData = [
+            { data: [] }
+        ];
         this.mostuniqueClients = [];
         this.mostuniqueClientsData = [];
         this.currmonth = [];
@@ -2188,29 +2336,48 @@ var DsrComponent = /** @class */ (function () {
         this.barChartLegend = false;
         this.barChartPlugins = [];
         this.rangeFormGroup = new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormGroup"]({
-            start: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"](null, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required),
-            end: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"](null, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required)
+            start: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required),
+            end: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required)
         });
         this.user_id = this.actRoute.snapshot.params.user_id;
     }
     DsrComponent.prototype.ngOnInit = function () {
         var _this = this;
+        this.CurrUser();
         this.most_meetings_unique_companies();
         this.top_meetings_curr_month();
         this.top_quotation_by_emp();
         this.avg_meetings_per_week();
         this.http.get('https://api.plint.in/dsr/users/' + this.user_id + '/companies/list').subscribe(function (res) {
             _this.cust = res.data;
-            // console.log(this.cust)
         });
         this.http.get('https://api.plint.in/dsr/locations').subscribe(function (res) {
             _this.locations = res.data;
-            console.log(_this.locations);
         });
-        // this.http.get<any>('https://api.plint.in/dsr/users/'+this.user_id+'/meetings?limit=10&skip =0&d='+e).subscribe(res => {
-        //   this.meetings = res.data;
-        //   console.log(this.meetings)
-        // });
+        this.http.get('https://api.plint.in/admin/users?nonAdminUsers=false').subscribe(function (res2) {
+            for (var i = 0; i < res2.data.length; i++) {
+                if (_this.user_id == res2.data[i]._id) {
+                    _this.currUser_name = res2.data[i].name;
+                    break;
+                }
+            }
+        });
+        this.rangeFormGroup = this.fb.group({
+            start: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required),
+            end: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required)
+        });
+    };
+    DsrComponent.prototype.onFormSubmit = function () {
+        var _this = this;
+        if (this.rangeFormGroup.valid) {
+            var from = new Date(this.rangeFormGroup.value.start).toISOString();
+            var to = new Date(this.rangeFormGroup.value.end).toISOString();
+            this.http.get('https://api.plint.in/dsr/users/' + this.user_id + '/meetings/sheet?startDate=' + from + '&endDate=' + to).subscribe(function (res) {
+                _this.sheet = res.data;
+            });
+        }
+        else
+            console.log(this.rangeFormGroup.value);
     };
     DsrComponent.prototype.goBack = function () {
         this.location.back();
@@ -2225,10 +2392,8 @@ var DsrComponent = /** @class */ (function () {
         }
         else {
             this.http.get('https://api.plint.in/dsr/locations').subscribe(function (res) {
-                // console.log(res.data);
                 for (var i = 0; i < res.data.length; i++) {
                     if (e == res.data[i].area) {
-                        console.log(res.data[i].area);
                         _this.current_loc = res.data[i].area;
                         break;
                     }
@@ -2238,62 +2403,51 @@ var DsrComponent = /** @class */ (function () {
     };
     DsrComponent.prototype.changeDays = function (e) {
         var _this = this;
-        // if(e==200)
-        // {
-        //  this.current_day = 200;
-        // }
-        // else
-        // {
-        this.http.get('https://api.plint.in/dsr/users/' + this.user_id + '/meetings?limit=10&skip =0&d=' + e).subscribe(function (res) {
-            console.log(res);
+        this.http.get('https://api.plint.in/dsr/users/' + this.user_id + '/meetings?limit=10&skip=0&d=' + e).subscribe(function (res) {
             _this.meetings = res.data;
-            // for(let i=0; i < res.data.length; i++)
-            // {
-            //   if(e==res.data[i].area)
-            //   {
-            //     console.log(res.data[i].area);
-            //     this.current_loc = res.data[i].area;
-            //     break;
-            //   }
-            // }
         });
-        // }
     };
     DsrComponent.prototype.changeAlertDays = function (e) {
         var _this = this;
-        // if(e==200)
-        // {
-        //  this.current_day = 200;
-        // }
-        // else
-        // {
-        this.http.get('https://api.plint.in/dsr/users/' + this.user_id + '/meetings?limit=10&skip =0&follow_up_days =' + e).subscribe(function (res) {
-            console.log(res);
+        this.http.get('https://api.plint.in/dsr/users/' + this.user_id + '/meetings?limit=10&skip=0&follow_up_days=' + e).subscribe(function (res) {
             _this.alerts = res.data;
-            // for(let i=0; i < res.data.length; i++)
-            // {
-            //   if(e==res.data[i].area)
-            //   {
-            //     console.log(res.data[i].area);
-            //     this.current_loc = res.data[i].area;
-            //     break;
-            //   }
-            // }
         });
-        // }
+    };
+    DsrComponent.prototype.CurrUser = function () {
+        var _this = this;
+        var API_URL1 = this.Url + '/dsr/users/' + this.user_id + '/meetings/analytics';
+        this.http.get("" + API_URL1)
+            .subscribe(function (res1) {
+            // (res1.data.meetings_with_distinct_companies).toString()
+            if (res1.data.meetings_with_distinct_companies === 0)
+                _this.currUser_most_meetings = '5';
+            _this.currUser_avg_meetings = res1.data.average_per_week_meetings_in_current_month;
+            _this.currUser_top_meetings = res1.data.total_meetings_in_current_month;
+            _this.currUser_top_qoutation = res1.data.total_employee_quotations;
+        });
     };
     DsrComponent.prototype.most_meetings_unique_companies = function () {
         var _this = this;
         var API_URL = this.Url + '/dsr/meetings/analytics';
         this.http.get("" + API_URL, { headers: this.headers })
             .subscribe(function (res) {
-            // console.log(res.data); 
+            // console.log(res)
             for (var i = 0; i < res.data.top_meetings_by_employees_with_unique_companies.length; i++) {
-                _this.mostuniqueClientsData.push({ label: res.data.top_meetings_by_employees_with_unique_companies[i].name, data: [] });
-                _this.mostuniqueClientsData[i].data[i] = (res.data.top_meetings_by_employees_with_unique_companies[i].num_meetings);
-                _this.mostuniqueClients.push(res.data.top_meetings_by_employees_with_unique_companies[i].name);
+                if (_this.user_id != res.data.top_meetings_by_employees_with_unique_companies[i]._id) {
+                    _this.mostuniqueClientsData.push({ label: '', backgroundColor: 'rgba(75,192,192,0.8)', hoverBackgroundColor: 'rgba(75,192,192,0.8)', data: [] });
+                    _this.mostuniqueClientsData[i].data[i] = (res.data.top_meetings_by_employees_with_unique_companies[i].num_meetings);
+                    _this.mostuniqueClients.push(res.data.top_meetings_by_employees_with_unique_companies[i].name);
+                }
+                else {
+                    _this.mostuniqueClientsData.push({ label: '', backgroundColor: 'rgb(0, 128, 128)', hoverBackgroundColor: 'rgb(0, 128, 128)', data: [] });
+                    _this.mostuniqueClientsData[i].data[i] = (_this.currUser_most_meetings);
+                    _this.mostuniqueClients.push(_this.currUser_name);
+                }
             }
-            //  console.log(this.mostuniqueClients, this.mostuniqueClientsData);
+            // this.mostuniqueClientsData.push({label : '', backgroundColor: 'rgb(0, 128, 128)', hoverBackgroundColor: 'rgb(0, 128, 128)', data:[]});
+            // this.mostuniqueClientsData.data = (this.currUser_most_meetings);
+            // this.mostuniqueClients.push(this.currUser_name);
+            console.log(_this.mostuniqueClients, _this.mostuniqueClientsData);
         });
     };
     DsrComponent.prototype.top_meetings_curr_month = function () {
@@ -2306,27 +2460,19 @@ var DsrComponent = /** @class */ (function () {
                 _this.currmonthData[i].data[i] = (res.data.top_meetings_in_current_month[i].total_meetings);
                 _this.currmonth.push(res.data.top_meetings_in_current_month[i].name);
             }
-            //  console.log(this.currmonth, this.currmonthData);
         });
     };
     DsrComponent.prototype.avg_meetings_per_week = function () {
         var _this = this;
-        // let API_URL = this.Url+'/dsr/users/'+this.user_id+'/meetings/analytics';
         var API_URL = this.Url + '/dsr/meetings/analytics';
         this.http.get("" + API_URL, { headers: this.headers })
             .subscribe(function (res) {
-            // for(let i=0; i < res.data.average_per_week_meetings_in_current_month.length; i++)
-            //   {
-            //     this.perweekData.push({label : res.data.average_per_week_meetings_in_current_month[i].name, data:[]});      
-            //     this.perweekData[i].data[i]=(res.data.average_per_week_meetings_in_current_month[i].num_meetings);
-            //     this.perweek.push(res.data.average_per_week_meetings_in_current_month[i].name);
-            //   }
             for (var i = 0; i < res.data.average_meetings_per_week_in_current_month.length; i++) {
                 _this.perweekData.push({ label: res.data.average_meetings_per_week_in_current_month[i].name, data: [] });
                 _this.perweekData[i].data[i] = (res.data.average_meetings_per_week_in_current_month[i].total_meetings);
                 _this.perweek.push(res.data.average_meetings_per_week_in_current_month[i].name);
             }
-            console.log(_this.perweek, _this.perweekData);
+            //  console.log(this.perweek, this.perweekData);
         });
     };
     DsrComponent.prototype.top_quotation_by_emp = function () {
@@ -2339,11 +2485,11 @@ var DsrComponent = /** @class */ (function () {
                 _this.topqoutationData[i].data[i] = (res.data.top_quotations_by_employees[i].total_quotations);
                 _this.topqoutation.push(res.data.top_quotations_by_employees[i].name);
             }
-            //  console.log(this.topqoutation, this.topqoutationData);
         });
     };
     DsrComponent.ctorParameters = function () { return [
         { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"] },
+        { type: _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"] },
         { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] },
         { type: _angular_common__WEBPACK_IMPORTED_MODULE_4__["Location"] }
     ]; };
@@ -2353,9 +2499,189 @@ var DsrComponent = /** @class */ (function () {
             template: __importDefault(__webpack_require__(/*! raw-loader!./dsr.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/dsr/dsr.component.html")).default,
             styles: [__importDefault(__webpack_require__(/*! ./dsr.component.css */ "./src/app/dsr/dsr.component.css")).default]
         }),
-        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"], _angular_common__WEBPACK_IMPORTED_MODULE_4__["Location"]])
+        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"], _angular_common__WEBPACK_IMPORTED_MODULE_4__["Location"]])
     ], DsrComponent);
     return DsrComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/edit-company/edit-company.component.css":
+/*!*********************************************************!*\
+  !*** ./src/app/edit-company/edit-company.component.css ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("/* @import \"@material/elevation/mdc-elevation\"; */\r\n\r\n.card-header{\r\n    background-color:#008080  ;\r\n}\r\n\r\n.card-title{\r\n    color: white;\r\n}\r\n\r\n.card-header .card-category {\r\n    color: white;\r\n}\r\n\r\n.mat-radio-button ~ .mat-radio-button {\r\n    margin-left: 16px;\r\n  }\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZWRpdC1jb21wYW55L2VkaXQtY29tcGFueS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLGlEQUFpRDs7QUFFakQ7SUFDSSwwQkFBMEI7QUFDOUI7O0FBQ0E7SUFDSSxZQUFZO0FBQ2hCOztBQUNBO0lBQ0ksWUFBWTtBQUNoQjs7QUFFQTtJQUNJLGlCQUFpQjtFQUNuQiIsImZpbGUiOiJzcmMvYXBwL2VkaXQtY29tcGFueS9lZGl0LWNvbXBhbnkuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qIEBpbXBvcnQgXCJAbWF0ZXJpYWwvZWxldmF0aW9uL21kYy1lbGV2YXRpb25cIjsgKi9cclxuXHJcbi5jYXJkLWhlYWRlcntcclxuICAgIGJhY2tncm91bmQtY29sb3I6IzAwODA4MCAgO1xyXG59XHJcbi5jYXJkLXRpdGxle1xyXG4gICAgY29sb3I6IHdoaXRlO1xyXG59XHJcbi5jYXJkLWhlYWRlciAuY2FyZC1jYXRlZ29yeSB7XHJcbiAgICBjb2xvcjogd2hpdGU7XHJcbn1cclxuXHJcbi5tYXQtcmFkaW8tYnV0dG9uIH4gLm1hdC1yYWRpby1idXR0b24ge1xyXG4gICAgbWFyZ2luLWxlZnQ6IDE2cHg7XHJcbiAgfSJdfQ== */");
+
+/***/ }),
+
+/***/ "./src/app/edit-company/edit-company.component.ts":
+/*!********************************************************!*\
+  !*** ./src/app/edit-company/edit-company.component.ts ***!
+  \********************************************************/
+/*! exports provided: EditCompanyComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EditCompanyComponent", function() { return EditCompanyComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm5/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm5/forms.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm5/router.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm5/http.js");
+/* harmony import */ var _services_usercrud_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../services/usercrud.service */ "./src/app/services/usercrud.service.ts");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/__ivy_ngcc__/fesm2015/ngx-toastr.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm5/common.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+
+
+
+
+var EditCompanyComponent = /** @class */ (function () {
+    function EditCompanyComponent(userservice, toastr, location, http, router, actRoute, fb) {
+        this.userservice = userservice;
+        this.toastr = toastr;
+        this.location = location;
+        this.http = http;
+        this.router = router;
+        this.actRoute = actRoute;
+        this.fb = fb;
+        this.headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpHeaders"]().set('Content-Type', 'application/json');
+        this.role = ['admin', 'senior_sales_manager', 'regional_manager', 'associate_vice_president'];
+        this.formupdated = false;
+        this.display = '';
+        this.editform = this.fb.group({
+            email: this.fb.array(['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].compose([
+                    _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required,
+                    _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')
+                ])]),
+            mobile: this.fb.array(['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].pattern("[0-9]{11}")]]),
+            name: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+            type: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+            area: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+            designation: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+            company_address: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+            company_name: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+        });
+        this.user_id = this.actRoute.snapshot.params.user_id;
+        this.pos = this.actRoute.snapshot.params.i;
+    }
+    EditCompanyComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.http.get('https://api.plint.in/dsr/companies').subscribe(function (res) {
+            _this.items = res.data;
+            // console.log(this.items);
+            for (var index in res.data) {
+                if (_this.user_id == res.data[index]._id) {
+                    _this.emp_id = res.data[index].employee_id;
+                    _this.editform = _this.fb.group({
+                        email: _this.fb.array([res.data[index].default_person_met.email, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].compose([
+                                _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required,
+                                _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')
+                            ])]),
+                        mobile: _this.fb.array([res.data[index].default_person_met.mobile, [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].pattern("[0-9]{11}")]]),
+                        name: [res.data[index].default_person_met.name, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+                        type: [res.data[index].location.type, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+                        area: [res.data[index].location.area, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+                        designation: [res.data[index].default_person_met.designation, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+                        company_address: [res.data[index].company_address, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+                        company_name: [res.data[index].company_name, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+                    });
+                    // this.editform = new FormGroup({
+                    //   company_name: new FormControl(res.data[index].company_name),
+                    //   company_address: new FormControl(res.data[index].company_address),
+                    //   name: new FormControl(res.data[index].default_person_met.name),
+                    //   designation: new FormControl(res.data[index].default_person_met.designation),
+                    //   email: new FormArray([res.data[index].default_person_met.email]),
+                    //   mobile: new FormArray([res.data[index].default_person_met.mobile]),
+                    //   type: new FormControl(res.data[index].location.type),
+                    //   area: new FormControl(res.data[index].location.area),            
+                    // })
+                    break;
+                }
+            }
+        });
+    };
+    EditCompanyComponent.prototype.goBack = function () {
+        this.location.back();
+    };
+    EditCompanyComponent.prototype.goForward = function () {
+        this.location.forward();
+    };
+    EditCompanyComponent.prototype.showupdate = function () {
+        this.toastr.success('updated successfully!');
+    };
+    EditCompanyComponent.prototype.onUpdate = function () {
+        var _this = this;
+        var cmp_data = {
+            "company_name": this.editform.value.company_name,
+            "default_person_met": {
+                "name": this.editform.value.name,
+                "designation": this.editform.value.designation,
+                "mobile": [this.editform.value.mobile],
+                "email": [this.editform.value.email]
+            },
+            "company_address": this.editform.value.company_address,
+            "location": {
+                "type": this.editform.value.type,
+                "area": this.editform.value.area
+            }
+        };
+        console.log(cmp_data);
+        this.userservice.updateCompany(cmp_data, this.user_id)
+            // .pipe(first())
+            .subscribe(function (res) {
+            if (res.message === "Company details successfully updated") {
+                _this.showupdate();
+                _this.router.navigate(['all_companies']);
+            }
+            else {
+                _this.toastr.error('Error', 'Try again', {
+                    timeOut: 3000,
+                });
+            }
+        }, function (error) {
+            console.log(error);
+        });
+    };
+    EditCompanyComponent.ctorParameters = function () { return [
+        { type: _services_usercrud_service__WEBPACK_IMPORTED_MODULE_4__["UsercrudService"] },
+        { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_5__["ToastrService"] },
+        { type: _angular_common__WEBPACK_IMPORTED_MODULE_6__["Location"] },
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] },
+        { type: _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"] }
+    ]; };
+    EditCompanyComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-edit-company',
+            template: __importDefault(__webpack_require__(/*! raw-loader!./edit-company.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/edit-company/edit-company.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./edit-company.component.css */ "./src/app/edit-company/edit-company.component.css")).default]
+        }),
+        __metadata("design:paramtypes", [_services_usercrud_service__WEBPACK_IMPORTED_MODULE_4__["UsercrudService"], ngx_toastr__WEBPACK_IMPORTED_MODULE_5__["ToastrService"], _angular_common__WEBPACK_IMPORTED_MODULE_6__["Location"], _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"]])
+    ], EditCompanyComponent);
+    return EditCompanyComponent;
 }());
 
 
@@ -2818,20 +3144,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ../../user-profile/user-profile.component */ "./src/app/user-profile/user-profile.component.ts");
 /* harmony import */ var _team_members_team_members_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ../../team-members/team-members.component */ "./src/app/team-members/team-members.component.ts");
 /* harmony import */ var _edit_profile_edit_profile_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ../../edit-profile/edit-profile.component */ "./src/app/edit-profile/edit-profile.component.ts");
-/* harmony import */ var _start_trip_start_trip_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ../../start-trip/start-trip.component */ "./src/app/start-trip/start-trip.component.ts");
-/* harmony import */ var _userslist_userslist_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ../../userslist/userslist.component */ "./src/app/userslist/userslist.component.ts");
-/* harmony import */ var _back_back_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ../../back/back.component */ "./src/app/back/back.component.ts");
-/* harmony import */ var _trans_log_trans_log_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ../../trans-log/trans-log.component */ "./src/app/trans-log/trans-log.component.ts");
-/* harmony import */ var _addcompany_addcompany_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ../../addcompany/addcompany.component */ "./src/app/addcompany/addcompany.component.ts");
-/* harmony import */ var _viewcompany_viewcompany_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ../../viewcompany/viewcompany.component */ "./src/app/viewcompany/viewcompany.component.ts");
-/* harmony import */ var _compmeet_compmeet_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ../../compmeet/compmeet.component */ "./src/app/compmeet/compmeet.component.ts");
-/* harmony import */ var _viewmeeting_viewmeeting_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ../../viewmeeting/viewmeeting.component */ "./src/app/viewmeeting/viewmeeting.component.ts");
-/* harmony import */ var _viewcomp_viewcomp_component__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ../../viewcomp/viewcomp.component */ "./src/app/viewcomp/viewcomp.component.ts");
-/* harmony import */ var _allcompanies_allcompanies_component__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ../../allcompanies/allcompanies.component */ "./src/app/allcompanies/allcompanies.component.ts");
-/* harmony import */ var _managerlist_managerlist_component__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ../../managerlist/managerlist.component */ "./src/app/managerlist/managerlist.component.ts");
-/* harmony import */ var _dsr_dsr_component__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ../../dsr/dsr.component */ "./src/app/dsr/dsr.component.ts");
-/* harmony import */ var _attdialog_attdialog_component__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ../../attdialog/attdialog.component */ "./src/app/attdialog/attdialog.component.ts");
-/* harmony import */ var _attd_attd_component__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ../../attd/attd.component */ "./src/app/attd/attd.component.ts");
+/* harmony import */ var _edit_company_edit_company_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ../../edit-company/edit-company.component */ "./src/app/edit-company/edit-company.component.ts");
+/* harmony import */ var _start_trip_start_trip_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ../../start-trip/start-trip.component */ "./src/app/start-trip/start-trip.component.ts");
+/* harmony import */ var _userslist_userslist_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ../../userslist/userslist.component */ "./src/app/userslist/userslist.component.ts");
+/* harmony import */ var _back_back_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ../../back/back.component */ "./src/app/back/back.component.ts");
+/* harmony import */ var _trans_log_trans_log_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ../../trans-log/trans-log.component */ "./src/app/trans-log/trans-log.component.ts");
+/* harmony import */ var _addcompany_addcompany_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ../../addcompany/addcompany.component */ "./src/app/addcompany/addcompany.component.ts");
+/* harmony import */ var _viewcompany_viewcompany_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ../../viewcompany/viewcompany.component */ "./src/app/viewcompany/viewcompany.component.ts");
+/* harmony import */ var _compmeet_compmeet_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ../../compmeet/compmeet.component */ "./src/app/compmeet/compmeet.component.ts");
+/* harmony import */ var _viewmeeting_viewmeeting_component__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ../../viewmeeting/viewmeeting.component */ "./src/app/viewmeeting/viewmeeting.component.ts");
+/* harmony import */ var _viewcomp_viewcomp_component__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ../../viewcomp/viewcomp.component */ "./src/app/viewcomp/viewcomp.component.ts");
+/* harmony import */ var _allcompanies_allcompanies_component__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ../../allcompanies/allcompanies.component */ "./src/app/allcompanies/allcompanies.component.ts");
+/* harmony import */ var _managerlist_managerlist_component__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ../../managerlist/managerlist.component */ "./src/app/managerlist/managerlist.component.ts");
+/* harmony import */ var _dsr_dsr_component__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ../../dsr/dsr.component */ "./src/app/dsr/dsr.component.ts");
+/* harmony import */ var _attdialog_attdialog_component__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ../../attdialog/attdialog.component */ "./src/app/attdialog/attdialog.component.ts");
+/* harmony import */ var _attd_attd_component__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ../../attd/attd.component */ "./src/app/attd/attd.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2888,6 +3215,7 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 
 
+
 var AdminLayoutModule = /** @class */ (function () {
     function AdminLayoutModule() {
     }
@@ -2919,7 +3247,6 @@ var AdminLayoutModule = /** @class */ (function () {
                 _angular_material_expansion__WEBPACK_IMPORTED_MODULE_7__["MatExpansionModule"],
                 _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_23__["MatDatepickerModule"],
                 _angular_material_core__WEBPACK_IMPORTED_MODULE_11__["MatNativeDateModule"]
-                // MatPaginatorModule
             ],
             exports: [
                 _angular_material_input__WEBPACK_IMPORTED_MODULE_10__["MatInputModule"],
@@ -2930,22 +3257,23 @@ var AdminLayoutModule = /** @class */ (function () {
                 _login_login_component__WEBPACK_IMPORTED_MODULE_26__["LoginComponent"],
                 _user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_27__["UserProfileComponent"],
                 _edit_profile_edit_profile_component__WEBPACK_IMPORTED_MODULE_29__["EditProfileComponent"],
+                _edit_company_edit_company_component__WEBPACK_IMPORTED_MODULE_30__["EditCompanyComponent"],
                 _usertrip_usertrip_component__WEBPACK_IMPORTED_MODULE_25__["UsertripComponent"],
-                _start_trip_start_trip_component__WEBPACK_IMPORTED_MODULE_30__["StartTripComponent"],
-                _userslist_userslist_component__WEBPACK_IMPORTED_MODULE_31__["UserslistComponent"],
-                _trans_log_trans_log_component__WEBPACK_IMPORTED_MODULE_33__["TransLogComponent"],
-                _back_back_component__WEBPACK_IMPORTED_MODULE_32__["BackComponent"],
-                _addcompany_addcompany_component__WEBPACK_IMPORTED_MODULE_34__["AddcompanyComponent"],
-                _viewcompany_viewcompany_component__WEBPACK_IMPORTED_MODULE_35__["ViewcompanyComponent"],
-                _viewmeeting_viewmeeting_component__WEBPACK_IMPORTED_MODULE_37__["ViewmeetingComponent"],
-                _compmeet_compmeet_component__WEBPACK_IMPORTED_MODULE_36__["CompmeetComponent"],
-                _viewcomp_viewcomp_component__WEBPACK_IMPORTED_MODULE_38__["ViewcompComponent"],
-                _allcompanies_allcompanies_component__WEBPACK_IMPORTED_MODULE_39__["AllcompaniesComponent"],
+                _start_trip_start_trip_component__WEBPACK_IMPORTED_MODULE_31__["StartTripComponent"],
+                _userslist_userslist_component__WEBPACK_IMPORTED_MODULE_32__["UserslistComponent"],
+                _trans_log_trans_log_component__WEBPACK_IMPORTED_MODULE_34__["TransLogComponent"],
+                _back_back_component__WEBPACK_IMPORTED_MODULE_33__["BackComponent"],
+                _addcompany_addcompany_component__WEBPACK_IMPORTED_MODULE_35__["AddcompanyComponent"],
+                _viewcompany_viewcompany_component__WEBPACK_IMPORTED_MODULE_36__["ViewcompanyComponent"],
+                _viewmeeting_viewmeeting_component__WEBPACK_IMPORTED_MODULE_38__["ViewmeetingComponent"],
+                _compmeet_compmeet_component__WEBPACK_IMPORTED_MODULE_37__["CompmeetComponent"],
+                _viewcomp_viewcomp_component__WEBPACK_IMPORTED_MODULE_39__["ViewcompComponent"],
+                _allcompanies_allcompanies_component__WEBPACK_IMPORTED_MODULE_40__["AllcompaniesComponent"],
                 _team_members_team_members_component__WEBPACK_IMPORTED_MODULE_28__["TeamMembersComponent"],
-                _managerlist_managerlist_component__WEBPACK_IMPORTED_MODULE_40__["ManagerlistComponent"],
-                _dsr_dsr_component__WEBPACK_IMPORTED_MODULE_41__["DsrComponent"],
-                _attdialog_attdialog_component__WEBPACK_IMPORTED_MODULE_42__["AttdialogComponent"],
-                _attd_attd_component__WEBPACK_IMPORTED_MODULE_43__["AttdComponent"]
+                _managerlist_managerlist_component__WEBPACK_IMPORTED_MODULE_41__["ManagerlistComponent"],
+                _dsr_dsr_component__WEBPACK_IMPORTED_MODULE_42__["DsrComponent"],
+                _attdialog_attdialog_component__WEBPACK_IMPORTED_MODULE_43__["AttdialogComponent"],
+                _attd_attd_component__WEBPACK_IMPORTED_MODULE_44__["AttdComponent"]
             ]
         })
     ], AdminLayoutModule);
@@ -2970,21 +3298,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _userslist_userslist_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../userslist/userslist.component */ "./src/app/userslist/userslist.component.ts");
 /* harmony import */ var _team_members_team_members_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../team-members/team-members.component */ "./src/app/team-members/team-members.component.ts");
 /* harmony import */ var _edit_profile_edit_profile_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../edit-profile/edit-profile.component */ "./src/app/edit-profile/edit-profile.component.ts");
-/* harmony import */ var _usertrip_usertrip_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../usertrip/usertrip.component */ "./src/app/usertrip/usertrip.component.ts");
-/* harmony import */ var _singleusertrip_singleusertrip_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../singleusertrip/singleusertrip.component */ "./src/app/singleusertrip/singleusertrip.component.ts");
-/* harmony import */ var _single_trans_single_trans_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../single-trans/single-trans.component */ "./src/app/single-trans/single-trans.component.ts");
-/* harmony import */ var _start_trip_start_trip_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../start-trip/start-trip.component */ "./src/app/start-trip/start-trip.component.ts");
-/* harmony import */ var _trans_log_trans_log_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../trans-log/trans-log.component */ "./src/app/trans-log/trans-log.component.ts");
-/* harmony import */ var _addcompany_addcompany_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../addcompany/addcompany.component */ "./src/app/addcompany/addcompany.component.ts");
-/* harmony import */ var _viewcompany_viewcompany_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../viewcompany/viewcompany.component */ "./src/app/viewcompany/viewcompany.component.ts");
-/* harmony import */ var _compmeet_compmeet_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../compmeet/compmeet.component */ "./src/app/compmeet/compmeet.component.ts");
-/* harmony import */ var _viewmeeting_viewmeeting_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../viewmeeting/viewmeeting.component */ "./src/app/viewmeeting/viewmeeting.component.ts");
-/* harmony import */ var _viewcomp_viewcomp_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../viewcomp/viewcomp.component */ "./src/app/viewcomp/viewcomp.component.ts");
-/* harmony import */ var app_auth_home_guard__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! app/auth/home.guard */ "./src/app/auth/home.guard.ts");
-/* harmony import */ var _allcompanies_allcompanies_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../allcompanies/allcompanies.component */ "./src/app/allcompanies/allcompanies.component.ts");
-/* harmony import */ var _managerlist_managerlist_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../managerlist/managerlist.component */ "./src/app/managerlist/managerlist.component.ts");
-/* harmony import */ var _dsr_dsr_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../dsr/dsr.component */ "./src/app/dsr/dsr.component.ts");
-/* harmony import */ var _attd_attd_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../../attd/attd.component */ "./src/app/attd/attd.component.ts");
+/* harmony import */ var _edit_company_edit_company_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../edit-company/edit-company.component */ "./src/app/edit-company/edit-company.component.ts");
+/* harmony import */ var _usertrip_usertrip_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../usertrip/usertrip.component */ "./src/app/usertrip/usertrip.component.ts");
+/* harmony import */ var _singleusertrip_singleusertrip_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../singleusertrip/singleusertrip.component */ "./src/app/singleusertrip/singleusertrip.component.ts");
+/* harmony import */ var _single_trans_single_trans_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../single-trans/single-trans.component */ "./src/app/single-trans/single-trans.component.ts");
+/* harmony import */ var _start_trip_start_trip_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../start-trip/start-trip.component */ "./src/app/start-trip/start-trip.component.ts");
+/* harmony import */ var _trans_log_trans_log_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../trans-log/trans-log.component */ "./src/app/trans-log/trans-log.component.ts");
+/* harmony import */ var _addcompany_addcompany_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../addcompany/addcompany.component */ "./src/app/addcompany/addcompany.component.ts");
+/* harmony import */ var _viewcompany_viewcompany_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../viewcompany/viewcompany.component */ "./src/app/viewcompany/viewcompany.component.ts");
+/* harmony import */ var _compmeet_compmeet_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../compmeet/compmeet.component */ "./src/app/compmeet/compmeet.component.ts");
+/* harmony import */ var _viewmeeting_viewmeeting_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../viewmeeting/viewmeeting.component */ "./src/app/viewmeeting/viewmeeting.component.ts");
+/* harmony import */ var _viewcomp_viewcomp_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../viewcomp/viewcomp.component */ "./src/app/viewcomp/viewcomp.component.ts");
+/* harmony import */ var app_auth_home_guard__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! app/auth/home.guard */ "./src/app/auth/home.guard.ts");
+/* harmony import */ var _allcompanies_allcompanies_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../allcompanies/allcompanies.component */ "./src/app/allcompanies/allcompanies.component.ts");
+/* harmony import */ var _managerlist_managerlist_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../managerlist/managerlist.component */ "./src/app/managerlist/managerlist.component.ts");
+/* harmony import */ var _dsr_dsr_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../../dsr/dsr.component */ "./src/app/dsr/dsr.component.ts");
+/* harmony import */ var _attd_attd_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../../attd/attd.component */ "./src/app/attd/attd.component.ts");
 var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
   return (mod && mod.__esModule) ? mod : { "default": mod };
 };
@@ -3007,26 +3336,28 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 
 
+
 var AdminLayoutRoutes = [
-    { path: 'user-profile', component: _user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_0__["UserProfileComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_14__["HomeGuard"]] },
-    { path: 'userslist', component: _userslist_userslist_component__WEBPACK_IMPORTED_MODULE_1__["UserslistComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_14__["HomeGuard"]] },
-    { path: 'managerslist', component: _managerlist_managerlist_component__WEBPACK_IMPORTED_MODULE_16__["ManagerlistComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_14__["HomeGuard"]] },
-    { path: 'team-members/:user_id', component: _team_members_team_members_component__WEBPACK_IMPORTED_MODULE_2__["TeamMembersComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_14__["HomeGuard"]] },
-    { path: 'dsr/:user_id', component: _dsr_dsr_component__WEBPACK_IMPORTED_MODULE_17__["DsrComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_14__["HomeGuard"]] },
-    { path: 'edit-profile/:user_id/:i', component: _edit_profile_edit_profile_component__WEBPACK_IMPORTED_MODULE_3__["EditProfileComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_14__["HomeGuard"]] },
-    { path: 'usertrips', component: _usertrip_usertrip_component__WEBPACK_IMPORTED_MODULE_4__["UsertripComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_14__["HomeGuard"]] },
-    { path: 'log', component: _trans_log_trans_log_component__WEBPACK_IMPORTED_MODULE_8__["TransLogComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_14__["HomeGuard"]] },
-    { path: 'add_company', component: _addcompany_addcompany_component__WEBPACK_IMPORTED_MODULE_9__["AddcompanyComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_14__["HomeGuard"]] },
-    { path: 'view_company', component: _viewcompany_viewcompany_component__WEBPACK_IMPORTED_MODULE_10__["ViewcompanyComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_14__["HomeGuard"]] },
-    { path: 'comp_meet', component: _compmeet_compmeet_component__WEBPACK_IMPORTED_MODULE_11__["CompmeetComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_14__["HomeGuard"]],
+    { path: 'user-profile', component: _user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_0__["UserProfileComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_15__["HomeGuard"]] },
+    { path: 'userslist', component: _userslist_userslist_component__WEBPACK_IMPORTED_MODULE_1__["UserslistComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_15__["HomeGuard"]] },
+    { path: 'managerslist', component: _managerlist_managerlist_component__WEBPACK_IMPORTED_MODULE_17__["ManagerlistComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_15__["HomeGuard"]] },
+    { path: 'team-members/:user_id', component: _team_members_team_members_component__WEBPACK_IMPORTED_MODULE_2__["TeamMembersComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_15__["HomeGuard"]] },
+    { path: 'dsr/:user_id', component: _dsr_dsr_component__WEBPACK_IMPORTED_MODULE_18__["DsrComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_15__["HomeGuard"]] },
+    { path: 'edit-profile/:user_id/:i', component: _edit_profile_edit_profile_component__WEBPACK_IMPORTED_MODULE_3__["EditProfileComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_15__["HomeGuard"]] },
+    { path: 'edit-company/:user_id/:i', component: _edit_company_edit_company_component__WEBPACK_IMPORTED_MODULE_4__["EditCompanyComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_15__["HomeGuard"]] },
+    { path: 'usertrips', component: _usertrip_usertrip_component__WEBPACK_IMPORTED_MODULE_5__["UsertripComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_15__["HomeGuard"]] },
+    { path: 'log', component: _trans_log_trans_log_component__WEBPACK_IMPORTED_MODULE_9__["TransLogComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_15__["HomeGuard"]] },
+    { path: 'add_company', component: _addcompany_addcompany_component__WEBPACK_IMPORTED_MODULE_10__["AddcompanyComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_15__["HomeGuard"]] },
+    { path: 'view_company', component: _viewcompany_viewcompany_component__WEBPACK_IMPORTED_MODULE_11__["ViewcompanyComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_15__["HomeGuard"]] },
+    { path: 'comp_meet', component: _compmeet_compmeet_component__WEBPACK_IMPORTED_MODULE_12__["CompmeetComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_15__["HomeGuard"]],
     },
-    { path: 'all_companies', component: _allcompanies_allcompanies_component__WEBPACK_IMPORTED_MODULE_15__["AllcompaniesComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_14__["HomeGuard"]] },
-    { path: 'attendence/:user_id', component: _attd_attd_component__WEBPACK_IMPORTED_MODULE_18__["AttdComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_14__["HomeGuard"]] },
-    { path: 'view_meets/:user_id', component: _viewmeeting_viewmeeting_component__WEBPACK_IMPORTED_MODULE_12__["ViewmeetingComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_14__["HomeGuard"]] },
-    { path: 'view_compainies/:user_id', component: _viewcomp_viewcomp_component__WEBPACK_IMPORTED_MODULE_13__["ViewcompComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_14__["HomeGuard"]] },
-    { path: 'usertrip/start-trip/:_id', component: _start_trip_start_trip_component__WEBPACK_IMPORTED_MODULE_7__["StartTripComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_14__["HomeGuard"]] },
-    { path: 'usertrip/:user_id', component: _singleusertrip_singleusertrip_component__WEBPACK_IMPORTED_MODULE_5__["SingleusertripComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_14__["HomeGuard"]] },
-    { path: 'transactions/:user_id/:trip_id/:state', component: _single_trans_single_trans_component__WEBPACK_IMPORTED_MODULE_6__["SingleTransComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_14__["HomeGuard"]] }
+    { path: 'all_companies', component: _allcompanies_allcompanies_component__WEBPACK_IMPORTED_MODULE_16__["AllcompaniesComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_15__["HomeGuard"]] },
+    { path: 'attendence/:user_id', component: _attd_attd_component__WEBPACK_IMPORTED_MODULE_19__["AttdComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_15__["HomeGuard"]] },
+    { path: 'view_meets/:user_id', component: _viewmeeting_viewmeeting_component__WEBPACK_IMPORTED_MODULE_13__["ViewmeetingComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_15__["HomeGuard"]] },
+    { path: 'view_compainies/:user_id', component: _viewcomp_viewcomp_component__WEBPACK_IMPORTED_MODULE_14__["ViewcompComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_15__["HomeGuard"]] },
+    { path: 'usertrip/start-trip/:_id', component: _start_trip_start_trip_component__WEBPACK_IMPORTED_MODULE_8__["StartTripComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_15__["HomeGuard"]] },
+    { path: 'usertrip/:user_id', component: _singleusertrip_singleusertrip_component__WEBPACK_IMPORTED_MODULE_6__["SingleusertripComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_15__["HomeGuard"]] },
+    { path: 'transactions/:user_id/:trip_id/:state', component: _single_trans_single_trans_component__WEBPACK_IMPORTED_MODULE_7__["SingleTransComponent"], canActivate: [app_auth_home_guard__WEBPACK_IMPORTED_MODULE_15__["HomeGuard"]] }
 ];
 
 
@@ -3390,16 +3721,6 @@ var UsercrudService = /** @class */ (function () {
             // this.items = res.data;
             console.log(res);
         });
-        // const headers: HttpHeaders = new HttpHeaders()
-        // .append('Authorization', 'Bearer ' + window.sessionStorage.getItem('access_token'));
-        // const httpOptions = {
-        //   headers: headers,
-        //   body: {
-        //    "user_id": user_id
-        //   }
-        // }; 
-        // let API_URL = `${this.Url}/admin/users`;
-        // return this.http.get(`${API_URL}`, httpOptions);
     };
     // Returns true when user is logged in 
     UsercrudService.prototype.isLoggedIn = function () {
@@ -3416,6 +3737,10 @@ var UsercrudService = /** @class */ (function () {
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (data) {
             return data;
         }));
+    };
+    UsercrudService.prototype.updateCompany = function (cmp, user_id) {
+        var API_URL = this.Url + "/dsr/companies";
+        return this.http.put(API_URL + "/" + user_id, cmp, { headers: this.headers });
     };
     UsercrudService.ctorParameters = function () { return [
         { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"] },
@@ -4071,7 +4396,7 @@ var StartTripComponent = /** @class */ (function () {
                     starting_balance.push({
                         "holding": {
                             "currency": this.tripform.value.itemRows[i].currency,
-                            "amount": usdamount
+                            "amount": (1 / usdamount)
                         },
                         "inr_to_usd_conversion_rate": usdrate
                     });
@@ -4589,8 +4914,7 @@ var UserslistComponent = /** @class */ (function () {
             .afterClosed().subscribe(function (res) {
             // console.log(res)
             if (res) {
-                _this.userservice.deleteUser(_id)
-                    .subscribe(function (val) {
+                _this.userservice.deleteUser(_id).subscribe(function (val) {
                     // console.log(val)
                     _this.showDelete();
                     _this.getData();
