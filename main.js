@@ -516,7 +516,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n\t<section class=\"emp-login-form\">\n\t\t<div id=\"form-section\">\n\t\t\t<div class=\"wrapp  pull-center\">\n\n\t\t\t\t<!-- logo -->\n\t\t\t\t<div class=\"logo \">\n                    <img class=\"brand-logo\" src=\"../../assets/images/logo.png\" alt=\"\">\n\t\t\t\t\t<!-- <a class=\"brand-logo\" href=\"index.html\">Welcome Admin</a> -->\n\t\t\t\t</div>\n\t\t\t\t<!-- //logo -->\n\n\t\t\t\t<!-- form -->\n\t\t\t\t<div class=\"login-form \">\n\n\t\t\t\t\t<form  [formGroup]=\"myform\" (ngSubmit)=\"onSubmit()\">\n                \n                            <div class=\"col-md-6 col-md-12 form-group\">\n                            <input type=\"text\" formControlName=\"email\" placeholder=\"Email\" required=\"required\" />\n                            <div *ngFor=\"let validation of account_validation_messages.email\">\n                                <div class=\"error-message\" *ngIf=\"myform.get('email').hasError(validation.type) && (myform.get('email').dirty || myform.get('email').touched)\">{{validation.message}}</div>\n                            </div>\n                            </div>\n                            \n                             <div class=\" col-md-6 col-md-12 form-group\">\n                            <input type=\"password\" formControlName=\"password\" placeholder=\"Password\" required=\"required\" />\n                            <div *ngFor=\"let validation of account_validation_messages.password\">\n                                <div class=\"error-message\" *ngIf=\"myform.get('password').hasError(validation.type) && (myform.get('password').dirty || myform.get('password').touched)\">{{validation.message}}</div>\n                            </div>\n                            </div>\n                        \n                        <button type=\"submit\" >Login</button>\n                    \n                    </form>\n                \n                </div>\n                \n\n\t\t\t</div>\n\t\t</div>\n\t</section>\n\t");
+/* harmony default export */ __webpack_exports__["default"] = ("\n\t<section class=\"emp-login-form\">\n\t\t<div id=\"form-section\">\n\t\t\t<div class=\"wrapp  pull-center\">\n\n\t\t\t\t<!-- logo -->\n\t\t\t\t<div class=\"logo \">\n                    <img class=\"brand-logo\" src=\"../../assets/images/logo.png\" alt=\"\">\n\t\t\t\t\t<!-- <a class=\"brand-logo\" href=\"index.html\">Welcome Admin</a> -->\n\t\t\t\t</div>\n\t\t\t\t<!-- //logo -->\n\n\t\t\t\t<!-- form -->\n\t\t\t\t<div class=\"login-form \">\n\n\t\t\t\t\t<form  [formGroup]=\"myform\" (ngSubmit)=\"onSubmit()\">\n                \n                            <div class=\"col-md-6 col-md-12 form-group\">\n                            <input type=\"text\" formControlName=\"email\" placeholder=\"Email\" required=\"required\" />\n                            <div *ngFor=\"let validation of account_validation_messages.email\">\n                                <div class=\"error-message\" *ngIf=\"myform.get('email').hasError(validation.type) && (myform.get('email').dirty || myform.get('email').touched)\">{{validation.message}}</div>\n                            </div>\n                            </div>\n                            \n                            <div class=\" col-md-6 col-md-12 form-group\">\n                            <input type=\"password\" formControlName=\"password\" placeholder=\"Password\" required=\"required\" />\n                            <div *ngFor=\"let validation of account_validation_messages.password\">\n                                <div class=\"error-message\" *ngIf=\"myform.get('password').hasError(validation.type) && (myform.get('password').dirty || myform.get('password').touched)\">{{validation.message}}</div>\n                            </div>\n                            </div>\n                        \n                        <button type=\"submit\" >Login</button>\n                    \n                    </form>\n                \n                </div>\n                \n\n\t\t\t</div>\n\t\t</div>\n\t</section>\n\t");
 
 /***/ }),
 
@@ -555,7 +555,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"main-content\">\n    <div class=\"container-fluid\">\n        <i class=\"row mb-3 ml-2 fa fa-arrow-left\" (click)=\"goBack()\" aria-hidden=\"true\"></i>\n    \n        <div class=\"row py-3\">\n            <div class=\"col-md-5\">\n                <mat-card  *ngFor=\"let data of showuser\" >\n                   <h3 class=\"text-center pb-3\"><b>User's Info</b></h3>\n                   <h4  class=\"py-2\">Employee code : {{data.employee_code}}</h4>\n                   <h4  class=\"py-2\">Name : {{data.name}}</h4>\n                   <h4  class=\"py-2\">Email : {{data.email}}</h4>\n                   <h4 class=\"py-2\">Role : {{data.role}}</h4>\n                </mat-card>\n            </div> \n        </div>      \n\n        <div *ngIf=\"this.count == false; else elseBlock\"></div>\n            <ng-template #elseBlock>\n                <button [routerLink]=\"['/usertrip/start-trip/', this.user_id]\" mat-raised-button color=\"primary\">START TRIP</button>\n            </ng-template>\n\n        <!-- <button *ngIf=\"this.items == null\" (click)=\"StartTrip()\"  mat-raised-button color=\"primary\">START TRIP</button> -->\n\n<div class=\"row \">\n    <div class=\"col-md-12\">\n      <div class=\"card\">\n        <div  class=\"card-header rounded mdc-elevation--z6 card-header\">\n            <h4 class=\"card-title \">User Trips</h4>\n            <p class=\"card-category \">user's trip info</p>\n        </div>\n        <div class=\"card-body rounded mdc-elevation--z6\">\n            <div  class=\"table-responsive\">\n                <table class=\"table\">\n                    <thead class=\" text-black\">\n                        <th>Start Time</th>\n                        <th>End Time</th>\n                        <th>Starting Bal.</th>\n                        <th>Current Bal.</th>\n                        <th>Reimbursement Bal.</th>\n                        <th>Sheet</th>\n                        <th>Status</th>\n                        <th>Action</th>\n                    </thead>\n                    <tbody>\n                        <tr  *ngFor=\"let data of items\">\n                            <td>{{data.started_at | date:'dd/MM/yyyy'}}</td>\n                            <td *ngIf=\"data.ongoing != true\">{{data.ended_at | date:'dd/MM/yyyy'}}</td>\n                            <td *ngIf=\"data.ongoing == true\"></td> \n                            <td>\n                                <li style=\"list-style: none;\" *ngFor=\"let s_bal of data.starting_balance\">{{s_bal.holding.amount}} {{s_bal.holding.currency}}</li>\n                            </td>\n                            <td>\n                                  <li style=\"list-style: none;\" *ngFor=\"let c_bal of data.current_balance\">{{c_bal.amount}} {{c_bal.currency}}</li>\n                            </td> \n                            <td>\n                                  <li style=\"list-style: none;\" *ngFor=\"let r_bal of data.reimbursement_balance\">{{r_bal.amount}} {{r_bal.currency}}</li>\n                            </td> \n                            <td *ngIf=\"data.expense_sheet_url == '' && data.last_generated_expense_sheet_url == ''\">\n                                <a mat-raised-button  color=\"accent\"  (click)=\"Generate_sheet(data._id)\" >Generate</a>\n                            </td>\n                            <td *ngIf=\"data.last_generated_expense_sheet_url && !(data.expense_sheet_url)\">\n                                <a mat-raised-button  color=\"warn\"  href=\"{{data.last_generated_expense_sheet_url}}\" >Download</a>\n                            </td>\n                            <td *ngIf=\"data.expense_sheet_url\">\n                                <a mat-raised-button color=\"warn\"  href=\"{{data.expense_sheet_url}}\">Download</a>\n                            </td>\n                            <td style=\"color:green;font-weight: 600;\" *ngIf=\"data.ongoing == true\">Active</td>\n                            <td style=\"color:blue;font-weight: 600;\" *ngIf=\"data.ongoing == false\">Completed</td>\n                            <td>   \n                                <div class=\"example-button-row\">\n                                   <a mat-button  [routerLink]=\"['/transactions/', this.user_id , data._id, data.ongoing]\">View</a>\n                                </div>\n                            </td>\n                        </tr>\n                    </tbody>\n                </table>\n    </div>\n  </div>\n</div>\n</div>\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"main-content\">\n    <div class=\"container-fluid\">\n        <i class=\"row mb-3 ml-2 fa fa-arrow-left\" (click)=\"goBack()\" aria-hidden=\"true\"></i>\n    \n        <div class=\"row py-3\">\n            <div class=\"col-md-5\">\n                <mat-card  *ngFor=\"let data of showuser\" >\n                   <h3 class=\"text-center pb-3\"><b>User's Info</b></h3>\n                   <h4  class=\"py-2\">Employee code : {{data.employee_code}}</h4>\n                   <h4  class=\"py-2\">Name : {{data.name}}</h4>\n                   <h4  class=\"py-2\">Email : {{data.email}}</h4>\n                   <h4 class=\"py-2\">Role : {{data.role}}</h4>\n                </mat-card>\n            </div> \n        </div>      \n\n        <div *ngIf=\"this.count == false; else elseBlock\"></div>\n            <ng-template #elseBlock>\n                <button [routerLink]=\"['/usertrip/start-trip/', this.user_id]\" mat-raised-button color=\"primary\">START TRIP</button>\n            </ng-template>\n\n        <!-- <button *ngIf=\"this.items == null\" (click)=\"StartTrip()\"  mat-raised-button color=\"primary\">START TRIP</button> -->\n\n<div class=\"row \">\n    <div class=\"col-md-12\">\n      <div class=\"card\">\n        <div  class=\"card-header rounded mdc-elevation--z6 card-header\">\n            <h4 class=\"card-title \">User Trips</h4>\n            <p class=\"card-category \">user's trip info</p>\n        </div>\n        <div class=\"card-body rounded mdc-elevation--z6\">\n            <div  class=\"table-responsive\">\n                <table class=\"table\">\n                    <thead class=\" text-black\">\n                        <th>Start Time</th>\n                        <th>End Time</th>\n                        <th>Starting Bal.</th>\n                        <th>Current Bal.</th>\n                        <th>Reimbursement Bal.</th>\n                        <th>Sheet</th>\n                        <th>Status</th>\n                        <th>Action</th>\n                    </thead>\n                    <tbody>\n                        <tr  *ngFor=\"let data of items; let i = index\">\n                            <td>{{data.started_at | date:'dd/MM/yyyy'}}</td>\n                            <td *ngIf=\"data.ongoing != true\">{{data.ended_at | date:'dd/MM/yyyy'}}</td>\n                            <td *ngIf=\"data.ongoing == true\"></td> \n                            <td>\n                                <li style=\"list-style: none;\" *ngFor=\"let s_bal of data.starting_balance\">{{s_bal.holding.amount}} {{s_bal.holding.currency}}</li>\n                            </td>\n                            <td>\n                                  <li style=\"list-style: none;\" *ngFor=\"let c_bal of data.current_balance\">{{c_bal.amount}} {{c_bal.currency}}</li>\n                            </td> \n                            <td>\n                                  <li style=\"list-style: none;\" *ngFor=\"let r_bal of data.reimbursement_balance\">{{r_bal.amount}} {{r_bal.currency}}</li>\n                            </td> \n                            <!-- <td *ngIf=\"data.last_generated_expense_sheet_url == ''\"> -->\n                            <td *ngIf=\"status[i] == true\">\n                                <a mat-raised-button  color=\"accent\"  (click)=\"Generate_sheet(i)\" >Generate</a>\n                            </td>\n                            <!-- <td *ngIf=\"data.last_generated_expense_sheet_url && !(data.expense_sheet_url)\"> -->\n                            <td *ngIf=\"status[i] != true\">\n                                <a mat-raised-button  color=\"warn\"  href=\"{{data.last_generated_expense_sheet_url}}\" >Download</a>\n                            </td>\n                            <!-- <td *ngIf=\"data.expense_sheet_url\">\n                                <a mat-raised-button color=\"warn\"  href=\"{{data.expense_sheet_url}}\">Download</a>\n                            </td> -->\n                            <td style=\"color:green;font-weight: 600;\" *ngIf=\"data.ongoing == true\">Active</td>\n                            <td style=\"color:blue;font-weight: 600;\" *ngIf=\"data.ongoing == false\">Completed</td>\n                            <td>   \n                                <div class=\"example-button-row\">\n                                   <a mat-button  [routerLink]=\"['/transactions/', this.user_id , data._id, data.ongoing]\">View</a>\n                                </div>\n                            </td>\n                        </tr>\n                    </tbody>\n                </table>\n    </div>\n  </div>\n</div>\n</div>\n\n");
 
 /***/ }),
 
@@ -4171,6 +4171,7 @@ var SingleusertripComponent = /** @class */ (function () {
             .append('Authorization', 'Bearer ' + window.sessionStorage.getItem('access_token'));
         this.count = true;
         this.showuser = [];
+        this.status = [];
         this.user_id = this.actRoute.snapshot.params.user_id;
     }
     SingleusertripComponent.prototype.ngOnInit = function () {
@@ -4179,39 +4180,19 @@ var SingleusertripComponent = /** @class */ (function () {
         this.http.get('https://api.plint.in/admin/users?emUsersOnly=true&nonAdminUsers=false').subscribe(function (res) {
             _this.user = res.data;
             // console.log(this.user);
-            // for (var index in res.data) 
-            // {
-            //   if(this.user_id == res.data[index]._id)
-            //   { 
-            //     let showuser = [];
-            //     showuser = [...res.data[index]];        
-            //     this.showuser = [...res.data[index]]; 
-            //     // this.showuser.push(
-            //     // //  var since = 
-            //     //  {
-            //     //       "employee_code":res.data[index].employee_code,
-            //     //       "name":res.data[index].name,
-            //     //       "email":res.data[index].email,
-            //     //       "role":res.data[index].role,
-            //     //    }
-            //     // );
-            // // console.log(res.data[index]);  
-            //   }
-            //   // console.log(showuser);
-            //   console.log(this.showuser);
-            // break;      
-            // }
         });
         this.OngoingTrip().subscribe(function (res) {
             // console.log(res);   
             _this.items = res.data;
             for (var index in res.data) {
+                _this.status.push(res.data[index].ongoing);
                 if (res.data[index].ongoing) {
                     _this.count = false;
                     break;
                 }
             }
         });
+        // console.log(this.status);
     };
     SingleusertripComponent.prototype.goBack = function () {
         this.location.back();
@@ -4228,18 +4209,17 @@ var SingleusertripComponent = /** @class */ (function () {
     };
     SingleusertripComponent.prototype.LinkGenerated = function () {
         this.toastr.success('You can dwonload now!');
+        this.ngOnInit();
     };
-    SingleusertripComponent.prototype.Generate_sheet = function (trip_id) {
-        var _this = this;
-        var API_URL = this.Url + "/admin/trip/" + trip_id + "/expenseSheet";
-        return this.http.get("" + API_URL)
-            .subscribe(function (res) {
-            _this.LinkGenerated();
-            _this.ngOnInit();
-            // console.log(res.data.last_generated_expense_sheet_url);
-            //       console.log(res.data.expense_sheet_url);
-            // this.sheet = res.data.last_generated_expense_sheet_url;
-        });
+    SingleusertripComponent.prototype.Generate_sheet = function (id) {
+        this.status[id] = false;
+        // let API_URL = `${this.Url}/admin/trip/`+trip_id+`/expenseSheet`;
+        // return this.http.get<any>(`${API_URL}`)
+        // .subscribe(res => {
+        this.LinkGenerated();
+        // console.log(res.data.last_generated_expense_sheet_url);
+        //       console.log(res.data.expense_sheet_url);       
+        // });
     };
     SingleusertripComponent.prototype.getData = function () {
         var _this = this;
@@ -4406,9 +4386,9 @@ var StartTripComponent = /** @class */ (function () {
                     starting_balance.push({
                         "holding": {
                             "currency": this.tripform.value.itemRows[i].currency,
-                            "amount": (1 / usdamount)
+                            "amount": (usdamount)
                         },
-                        "inr_to_usd_conversion_rate": usdrate
+                        "inr_to_usd_conversion_rate": (1 / usdrate)
                     });
                 }
                 else {
