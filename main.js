@@ -607,7 +607,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n<div class=\"main-content\">\n  <div class=\"container-fluid\">\n      <div class=\"row\">\n          <div class=\"col-md-12\">\n              <div class=\"card  \">\n                  <div class=\"card-header rounded mdc-elevation--z6 card-header\">\n                      <h4 class=\"card-title\">Add User</h4>\n                      <p class=\"card-category\">Add new User</p>\n                  </div>\n                  <div class=\"card-body rounded mdc-elevation--z6\">\n                      <form [formGroup]=\"userform\" novalidate (ngSubmit)=\"onSubmit()\">\n\n                           <div class=\"col-md-4 form-group\">\n                              <mat-form-field class=\"example-full-width\">\n                                <input matInput placeholder=\"Employee Code\" type=\"text\" formControlName=\"employee_code\">\n                              </mat-form-field>\n                            </div>\n\n                            <div class=\"col-md-4 form-group\">\n                                <mat-form-field class=\"example-full-width\">\n                                  <input matInput placeholder=\"Full Name\" type=\"text\" formControlName=\"name\">\n                                </mat-form-field>\n                            </div>\n                            \n                            <div  class=\"col-md-4 form-group\">\n                                <mat-form-field appearance=\"fill\">\n                                  <mat-label>Role</mat-label>\n                                  <mat-select (selectionChange)=\"onEnter($event.value)\" formControlName=\"role\" >\n                                    <mat-option *ngFor=\"let rol of role\" [value]=\"rol\">\n                                      {{rol}}\n                                    </mat-option>\n                                  </mat-select>\n                                </mat-form-field>\n                            </div>\n\n                            <div *ngIf=\"display == 'true'\" class=\"col-md-4 form-group\" >\n                              <mat-form-field appearance=\"fill\">\n                                <mat-label>Manager Name</mat-label>\n                                <mat-select *ngIf=\"value == 'senior_sales_manager'\" formControlName=\"parent_user_id\">\n                                  <mat-option *ngFor=\"let data of ssmitems\" [value]=\"data._id\">\n                                    {{data.name}}\n                                  </mat-option>\n                                </mat-select>\n                                <mat-select *ngIf=\"value == 'regional_manager'\" formControlName=\"parent_user_id\">\n                                  <mat-option *ngFor=\"let data of rmitems\" [value]=\"data._id\">\n                                    {{data.name}}\n                                  </mat-option>\n                                </mat-select>\n                                <mat-select *ngIf=\"value == 'associate_vice_president'\" formControlName=\"parent_user_id\">\n                                  <mat-option *ngFor=\"let data of avpitems\" [value]=\"data._id\">\n                                    {{data.name}}\n                                  </mat-option>\n                                </mat-select>\n                                <!-- <mat-select *ngIf=\"value != 'senior_sales_manager'\" formControlName=\"parent_user_id\">\n                                  <mat-option *ngFor=\"let mn of parent_user_id\" [value]=\"mn._id\">\n                                    {{mn.name}}\n                                  </mat-option>\n                                </mat-select> -->\n                              </mat-form-field>\n                            </div>\n\n                            <!-- <div *ngIf=\"display == 'false'\" class=\"col-md-4 form-group\" >\n                              <mat-form-field appearance=\"fill\">\n                                <mat-label>Manager Name</mat-label>\n                                <mat-select  formControlName=\"parent_user_id\">\n                                  <mat-option *ngFor=\"let p of parentid\" [value]=\"p.value\">\n                                    {{ p.name }}\n                                  </mat-option>\n                                </mat-select>\n                              </mat-form-field>\n                            </div> -->\n                            \n                            <div class=\"col-md-4 form-group\">\n                                <mat-form-field class=\"example-full-width\">\n                                  <input matInput placeholder=\"Email\" formControlName=\"email\" type=\"text\">\n                                </mat-form-field>\n                            </div>\n                          \n                            <div class=\"col-md-4 form-group\">\n                                  <mat-label class=\"row  mb-3 ml-0\">Will this user use the Expense Manager?</mat-label>\n                                  <mat-radio-group class=\"row mb-3 ml-0\" formControlName=\"is_expense_manager_user\" aria-label=\"Expense Manager\">\n                                    <mat-radio-button [value]=true>Yes</mat-radio-button>\n                                    <mat-radio-button [value]=false>No</mat-radio-button>\n                                  </mat-radio-group>\n                            </div>\n                          \n                            <div class=\"col-md-4 mt-3 mb-3\">\n                              <button mat-raised-button color=\"warn\" type=\"submit\" >SUBMIT</button>\n                            </div>\n\n                          <div class=\"clearfix\"></div>\n                      \n                      </form>\n                  </div>\n              </div>\n          </div>\n        </div>\n  \n      \n  </div>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("\n<div class=\"main-content\">\n  <div class=\"container-fluid\">\n      <div class=\"row\">\n          <div class=\"col-md-12\">\n              <div class=\"card  \">\n                  <div class=\"card-header rounded mdc-elevation--z6 card-header\">\n                      <h4 class=\"card-title\">Add User</h4>\n                      <p class=\"card-category\">Add new User</p>\n                  </div>\n                  <div class=\"card-body rounded mdc-elevation--z6\">\n                      <form [formGroup]=\"userform\" novalidate (ngSubmit)=\"onSubmit()\">\n\n                           <div class=\"col-md-4 form-group\">\n                              <mat-form-field class=\"example-full-width\">\n                                <input matInput placeholder=\"Employee Code\" type=\"text\" formControlName=\"employee_code\">\n                              </mat-form-field>\n                            </div>\n\n                            <div class=\"col-md-4 form-group\">\n                                <mat-form-field class=\"example-full-width\">\n                                  <input matInput placeholder=\"Full Name\" type=\"text\" formControlName=\"name\">\n                                </mat-form-field>\n                            </div>\n                            \n                            <div  class=\"col-md-4 form-group\">\n                                <mat-form-field appearance=\"fill\">\n                                  <mat-label>Role</mat-label>\n                                  <mat-select (selectionChange)=\"onEnter($event.value)\" formControlName=\"role\" >\n                                    <mat-option *ngFor=\"let rol of role\" [value]=\"rol\">\n                                      {{rol}}\n                                    </mat-option>\n                                  </mat-select>\n                                </mat-form-field>\n                            </div>\n\n                            <div *ngIf=\"display == 'true'\" class=\"col-md-4 form-group\" >\n                              <mat-form-field appearance=\"fill\">\n                                <mat-label>Manager Name</mat-label>\n                                <mat-select *ngIf=\"value == 'senior_sales_manager'\" formControlName=\"parent_user_id\">\n                                  <mat-option *ngFor=\"let data of ssmitems\" [value]=\"data._id\">\n                                    {{data.name}}\n                                  </mat-option>\n                                </mat-select>\n                                <mat-select *ngIf=\"value == 'regional_manager'\" formControlName=\"parent_user_id\">\n                                  <mat-option *ngFor=\"let data of rmitems\" [value]=\"data._id\">\n                                    {{data.name}}\n                                  </mat-option>\n                                </mat-select>\n                                <mat-select *ngIf=\"value == 'associate_vice_president'\" formControlName=\"parent_user_id\">\n                                  <mat-option *ngFor=\"let data of avpitems\" [value]=\"data._id\">\n                                    {{data.name}}\n                                  </mat-option>\n                                </mat-select>\n                              </mat-form-field>\n                            </div>\n\n                            \n                            <div class=\"col-md-4 form-group\">\n                                <mat-form-field class=\"example-full-width\">\n                                  <input matInput placeholder=\"Email\" formControlName=\"email\" type=\"text\">\n                                </mat-form-field>\n                            </div>\n                          \n                            <div class=\"col-md-4 form-group\">\n                                  <mat-label class=\"row  mb-3 ml-0\">Will this user use the Expense Manager?</mat-label>\n                                  <mat-radio-group class=\"row mb-3 ml-0\" formControlName=\"is_expense_manager_user\" aria-label=\"Expense Manager\">\n                                    <mat-radio-button [value]=true>Yes</mat-radio-button>\n                                    <mat-radio-button [value]=false>No</mat-radio-button>\n                                  </mat-radio-group>\n                            </div>\n                          \n                            <div class=\"col-md-4 mt-3 mb-3\">\n                              <button mat-raised-button color=\"warn\" type=\"submit\" >SUBMIT</button>\n                            </div>\n\n                          <div class=\"clearfix\"></div>\n                      \n                      </form>\n                  </div>\n              </div>\n          </div>\n        </div>\n  \n      \n  </div>\n</div>\n");
 
 /***/ }),
 
@@ -4671,6 +4671,7 @@ var UserProfileComponent = /** @class */ (function () {
         this.ssmitems = [];
         this.user = {};
         this.userprofile = [];
+        this.userFlag = 0;
         this.parentid = [{
                 name: 'None',
                 value: 'null'
@@ -4743,39 +4744,28 @@ var UserProfileComponent = /** @class */ (function () {
     UserProfileComponent.prototype.onSubmit = function () {
         var _this = this;
         if (this.userform.valid) {
-            // if((this.userform.value.role == "admin")||(this.userform.value.role == "associate_vice_president"))
-            // {
-            //   let userprofile = [];
-            //   userprofile.push({
-            //       "email": this.userform.value.email,
-            //       "employee_code": this.userform.value.employee_code,
-            //       "is_expense_manager_user": this.userform.value.is_expense_manager_user,
-            //       "name": this.userform.value.name,
-            //       "role": this.userform.value.role,
-            //       "parent_user_id": ""
-            //     });
-            // console.log(this.userform.value);
-            this.userservice.createUser(this.userform.value)
-                .subscribe(function (data) {
-                console.log(data);
-                _this.showSubmit();
-                _this.router.navigateByUrl('/userslist');
+            this.http.get('https://api.plint.in/admin/users?nonAdminUsers=false').subscribe(function (res) {
+                for (var i = 0; i < res.data.length; i++) {
+                    if (res.data[i].employee_code == _this.userform.value.employee_code) {
+                        _this.userFlag = 1;
+                        _this.toastr.error('User with this employee code already exists', '', {
+                            timeOut: 3000,
+                        });
+                        break;
+                    }
+                }
             });
-            // this.reset();
-            // }
-            // else
-            // {
-            // console.log(this.userform.value);
-            // this.userservice.createUser(this.userform.value)
-            // .subscribe(data => {
-            //   this.showSubmit();
-            //   this.router.navigateByUrl('/userslist');
-            // });
-            // this.reset();
-            // }
+            if (this.userFlag == 0) {
+                this.userservice.createUser(this.userform.value)
+                    .subscribe(function (data) {
+                    console.log(data);
+                    _this.showSubmit();
+                    _this.router.navigateByUrl('/userslist');
+                });
+            }
         }
         else {
-            console.error();
+            // console.log();      
             this.toastr.error('Error', 'Try again', {
                 timeOut: 3000,
             });
